@@ -1,0 +1,30 @@
+nav li{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+h5.my-0 {
+background-color: #343a40;
+padding: 5px 20px;
+border-radius: 5px;
+color: white;
+}
+
+#meat{
+	width: 400px;
+	border: solid;
+	border-width: 5px;
+}
+.img-thumbnail{
+	height: 500px;
+}
+
+.jumbotron{
+	padding: 40px 60px;
+}
+
+/*this disables the 3 other sections*/
+#disabled{
+	color: grey;
+	pointer-events: none;
+}
