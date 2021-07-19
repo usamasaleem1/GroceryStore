@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Meat Section</title>
-	<link rel="icon" href="icon2.png">
-
-<!-- general -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="project.css">
+	
+	<meta charset="utf-8">
+	<title>Extra lean Beef</title>
+	<link rel="icon" href="icon2.png">
 
 </head>
 <body>
+
 <!-- header -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
       <h5 class="my-0 mr-md-auto font-weight-normal">Online Grocery Shopping</h5>
@@ -26,9 +26,8 @@
 
 
 
-
 <!-- Nav bar -->
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
 	    <img src="trolley.png" class="navbar-brand" style="width: 40px;">
 	    <a class="navbar-brand" href="groceryshop.html">Shopping</a>
 
@@ -66,61 +65,81 @@
 	</nav>
 
 
-<!-- section name -->
-	<div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-      <h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Meat & Poultry Section</h5>
-    </div>
 
-
-
-
-<!-- main body -->
-
+<!-- main section -->
 <main>
-		<div class="row">
-      <div class="col-sm-6 col-md-6 col-xl-3 mb-3">
-        <a href="beefdescription.html">
-          <img class="img-thumbnail mb-3" src="leanbeef.jpg" alt="Album screenshot" width="960" height="600">
-          <h6 class="mb-1" style="text-align: center;">Extra Lean Beef</h6>
-        </a>
-      </div>
-    
-  
-    
-      <div class="col-sm-6 col-md-6 col-xl-3 mb-3">
-        <a href="#">
-          <img class="img-thumbnail mb-3" src="pork.jpg" alt="Pricing screenshot" width="960" height="600">
-          <h6 class="mb-1" style="text-align: center;">Pork</h6>
-        </a>
-      </div>
-    
-  
-    
-      <div class="col-sm-6 col-md-6 col-xl-3 mb-3">
-        <a href="#">
-          <img class="img-thumbnail mb-3" src="chicken.jpg" alt="Checkout screenshot" width="960" height="600">
-          <h6 class="mb-1" style="text-align: center;">Chicken</h6>
-        </a>
-      </div>
-    
-  
-    
-      <div class="col-sm-6 col-md-6 col-xl-3 mb-3">
-        <a href="#">
-          <img class="img-thumbnail mb-3" src="steak.jpg" alt="Product screenshot" width="960" height="600">
-          <h6 class="mb-1" style="text-align: center;">Steak</h6>
-        </a>
-      </div>
-    </main>
-     
+	<div class="row justify-content-center">
+		<div class="col-sm-6 col-md-6 col-xl-3 mb-3 pr-0">
 
+			<img class="img-thumbnail mb-3 pr-0" src="leanbeef.jpg" alt="Album screenshot" width="960" height="600">
+
+		</div>
+
+
+
+		<div class="col-sm-6 col-md-6 col-xl-3 mb-3">
+			<h5 class="mb-4 pl-2" style="text-align: left;">Extra Lean Beef</h5>
+			<h5 class="mb-5 pl-2" style="text-align: left;"><em>$12.20/kg</em> $5.54/lb</h5>
+			
+
+			<!-- more description -->
+
+			<div id="accordion">
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h5 class="mb-0">
+							<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								More Description
+							</button>
+						</h5>
+					</div>
+
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body">
+							Our loin ground beef is of AAA quality. We boast a 6% fat for the extra lean type.
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+		<!--Add to cart  -->
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- special offer -->
   	<main>
   		<div class="jumbotron">
-        <h2>Special Offer!</h2>
-        <p class="lead">Free Delivery for orders over $150</p>
-      </div>
+        	<h2>Special Offer!</h2>
+        	<p class="lead">Free Delivery for orders over $150</p>
+      	</div>
   	</main>  
- 
 
 
 
@@ -158,6 +177,8 @@
           </div>
         </div>
       </footer>
+
+
 
 
 </body>

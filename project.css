@@ -23,8 +23,3 @@ color: white;
 	padding: 40px 60px;
 }
 
-/*this disables the 3 other sections*/
-#disabled{
-	color: grey;
-	pointer-events: none;
-}
