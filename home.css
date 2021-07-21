@@ -15,7 +15,7 @@ body, html {
   /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
   position: relative;
   /* Add a white text color to all elements inside the .bgimg container */
-  color: white;
+  color: rgb(29, 29, 29);
   /* Add a font */
   font-family: Helvetica, sans-serif;
   /* Set the font-size to 25 pixels */
