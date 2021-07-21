@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="project.css">
+	
+	<meta charset="utf-8">
+	<title>Chocolate Milk</title>
+	<link rel="icon" href="milkicon.png">
+
+</head>
+<body>
+
+<!-- header -->
+<div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Online Grocery Shopping</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        
+      </nav>
+      <a class="btn btn-outline-primary" href="#">Sign in</a>
+    </div>
+
+
+
+<!-- Nav bar -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+	    <img src="trolley.png" class="navbar-brand" style="width: 40px;">
+	    <a class="navbar-brand" href="groceryshop.html">Shopping</a>
+
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto mx-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="groceryshop.html">Home <span class="sr-only"></span></a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">All Products</a>
+	      </li>
+	      <li class="nav-item dropdown active">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Aisles
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="meataisle.html">Meat</a>
+	          <a class="dropdown-item" href="#">Dairy</a>  
+	          <a class="dropdown-item" href="#">Beverages</a>
+	          <a class="dropdown-item" href="#">Detergents</a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link disabled" href="#">Contacts</a>
+	      </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+	  </div>
+	</nav>
+
+
+
+<!-- main section -->
+<main>
+	<div class="row justify-content-center">
+		<div class="col-sm-6 col-md-6 col-xl-3 mb-3 pr-0">
+
+			<img class="img-thumbnail mb-3 pr-0" src="choco.png" alt="Chocolate Milk Bottle" width="960" height="600">
+
+		</div>
+
+
+
+		<div class="col-sm-6 col-md-6 col-xl-3 mb-3">
+			<h5 class="mb-4 pl-2" style="text-align: left;">MILK 2GO Chocolate Milk</h5>
+			<h5 class="mb-5 pl-2" style="text-align: left;"><em>$2.25</em></h5>
+			
+
+			<!-- more description -->
+
+			<div id="accordion">
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+
+						<h5 class="mb-0">
+							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								More Description
+							</button>
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+						<div class="card-body">
+							MILK 2GO's 310mL chocolate milk bottle has a resealable cap and is made with fresh milk. Perfect size for everyone.
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+<!--Add to cart  -->
+<form>
+	<div class="form-group mt-4">
+		<label for="exampleInputPassword1">Quantity</label>
+		<input type="Quantity" style="width: 100px;" class="form-control" id="cart" placeholder="Quantity">
+	</div>
+	<button type="submit" class="btn btn-primary">Add To Cart</button>
+</form>
+		</div>
+	</div>
+	
+</main>
+
+
+
+<!-- special offer -->
+  	<main>
+  		<div class="jumbotron">
+        	<h2>Special Offer!</h2>
+        	<p class="lead">Free Delivery for orders over $150</p>
+      	</div>
+  	</main>  
+
+
+
+ <!-- footer -->
+   	<footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <p></p>
+            <small class="d-block mb-3 text-muted"></small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Contacts</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">HR Team</a></li>
+              <li><a class="text-muted" href="#">Manager</a></li>
+              <li><a class="text-muted" href="#">superviser</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Carreers</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Meat Section</a></li>
+              <li><a class="text-muted" href="#">Delivery</a></li>
+              <li><a class="text-muted" href="#">Developer</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Team</a></li>
+              <li><a class="text-muted" href="#">Locations</a></li>
+              <li><a class="text-muted" href="#">Privacy</a></li>
+              <li><a class="text-muted" href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+</body>
+</html>
