@@ -17,7 +17,7 @@ body, html {
   /* Add a white text color to all elements inside the .bgimg container */
   color: white;
   /* Add a font */
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Helvetica", Courier, monospace;
   /* Set the font-size to 25 pixels */
   font-size: 25px;
 }
