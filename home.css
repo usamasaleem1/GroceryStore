@@ -29,6 +29,14 @@ body, html {
   left: 16px;
 }
 
+.topmiddle {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
 /* Position text in the bottom-left corner */
 .bottomleft {
   position: absolute;
