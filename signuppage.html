@@ -7,10 +7,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="project.css">
+	<link rel="stylesheet" type="text/css" href="signinup.css">
 	
 	<meta charset="utf-8">
-	<title>Extra lean Beef</title>
-	<link rel="icon" href="waterbottle.png">
+	<title>Sign Up</title>
+	<link rel="icon" href="trolley.png">
 
 </head>
 <body>
@@ -62,87 +63,75 @@
 
 <!-- main section -->
 <main>
-	<div class="row justify-content-center">
-		<div class="col-sm-6 col-md-6 col-xl-3 mb-3 pr-0">
 
-			<img class="img-thumbnail mb-3 pr-0" src="mtndew.png" alt="Album screenshot" width="960" height="600">
-
-		</div>
-
-
-
-		<div class="col-sm-6 col-md-6 col-xl-3 mb-3">
-			<h5 class="mb-4 pl-2" style="text-align: left;">Mountain Dew</h5>
-			<h5 class="mb-1 pl-2" style="text-align: left;">$2.00/each</h5>
-			<h6 class="mb-5 pl-2" style="text-align: left;">$15$/12-pack</h6>
-
-			<!-- more description -->
-
-			<div id="accordion">
-				<div class="card">
-					<div class="card-header" id="headingTwo">
-
-						<h5 class="mb-0">
-							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-								More Description
-							</button>
-						</h5>
-					</div>
-					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-						<div class="card-body">
-							Bring on the BBQs, skate park meetups, and backyard activities with mountain dew! A proud sponsor of the national association of skateboarding.
-						</div>
-					</div>
+		<div class="middle">
+			<h1 class="topspacing">Sign Up For An Account!</h1>
+			<a href="signinpage.html"><p class="topspacing">Already have an account? Sign in here!</p></a>
+			<form>
+				<h5>Select an avatar</h5>
+				<img class="spacing" src="avatar.png">
+				<input type="radio" name="test">
+				<img class="spacing" src="avatar1.png">
+				<input type="radio" name="test">
+				<img class="spacing" src="avatar2.png">
+				<input type="radio" name="test"><br>
+				
+				<div class="boxalign">
+					<label for="firstname">First Name</label>
+					<input class="spacing" type="text" name="firstname" placeholder="First Name" required><br>
+					<label for="lastname">Last Name</label>
+					<input class="spacing" type="text" name="lastname" placeholder="Last Name" required><br>
+					<label for="email">Email</label>
+					<input class="spacing" type="text" name="email" placeholder="Email" required><br>
+					<label for="confirmemail">Confirm email</label>
+					<input class="spacing" type="text" name="confirmemail" placeholder="Confirm" required><br>
+					<label for="password">Password</label>
+					<input class="spacing" type="password" name="password" placeholder="Password" required><br>
+					<label for="address">Address</label>
+					<input class="spacing" type="text" name="address" placeholder="Address" required><br>
+					<label for="postal">Postal Code</label>
+					<input class="spacing" type="text" name="postal" placeholder="Postal Code" required><br>
 				</div>
+				
+				<div>
+					<label class="spacing">Province</label>
+					<select>
+						<option value="alberta">Alberta</option>
+						<option value="britishcolumbia">British Columbia</option>
+						<option value="manitoba">Manitoba</option>
+						<option value="newbrunswick">New Brunswick</option>
+						<option value="newfoundland">Newfoundland and Labrador</option>
+						<option value="northwest">Northwest Territories</option>
+						<option value="novascotia">Nova Scotia</option>
+						<option value="nunavut">Nunavut</option>
+						<option value="ontario">Ontario</option>
+						<option value="pei">Prince Edward Island</option>
+						<option value="quebec">Quebec</option>
+						<option value="saskatchewan">Saskatchewan</option>
+						<option value="yukon">Yukon</option>
+					</select>
+				</div>
+				
+				<div>
+					<input class ="spacing" type="checkbox" name="newsletter"> I would like to subscribe to the newsletter.
+				</div>
+				
+				<div>
+					<input class="spacing" type="checkbox" name="terms"> By checking this box, I confirm having read the <br><a href="terms.html" target="_blank">terms and conditions</a> and agree to conform to them.
+				</div>
+				
+				<div>
+					<input class="spacing" type="submit" value="Create Account">
+					<input class="spacing" type="reset" value="Reset">
+				</div>
+				
 
-			</div>
-
-<!--Add to cart  -->
-<form>
-	<div class="form-group mt-4">
-		<label for="exampleInputPassword1">Quantity</label>
-		<input type="Quantity" style="width: 100px;" class="form-control" id="cart" placeholder="Quantity">
-	</div>
-	<button type="submit" class="btn btn-primary">Add To Cart</button>
-</form>
-
-
-
-
-
-
-
-
-
-
-
+			</form>
 		</div>
-	</div>
-
-		
-
- 
-
-
-
-
 
 
 
 </main>
-
-
-
-
-<!-- special offer -->
-  	<main>
-  		<div class="jumbotron">
-        	<h2>Special Offer!</h2>
-        	<p class="lead">Free Delivery for orders over $150</p>
-      	</div>
-  	</main>  
-
-
 
  <!-- footer -->
    	<footer class="pt-4 my-md-5 pt-md-5 border-top">

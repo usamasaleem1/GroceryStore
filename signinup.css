@@ -1,0 +1,48 @@
+.boxed{
+	position: relative;
+	width: 1000px;
+	height: 300px;
+	margin: 10px auto;
+	border: 1px solid black;
+	background-color: #fff3d2;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Position text in the middle */
+.middle {
+  text-align: center;
+}
+
+.spacing {
+	margin-bottom: 5px;
+	margin-top:5px;
+}
+
+.topspacing{
+	margin-top: 12px;
+}
+
+.right{
+	border-right: 1px solid black;
+}
+
+.boxalign label{
+    display: inline-block;
+    float: middle;
+    clear: middle;
+    width: 250px;
+    text-align: right;
+}
+.boxalign input {
+	display: inline-block;
+	float: middle;
+  	margin-right: 10%;
+}
+
+.centerleftalign{
+	text-align: left;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 1%;
+}
