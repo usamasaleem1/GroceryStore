@@ -49,8 +49,7 @@
 		  <a id="disabled" class="dropdown-item" href="dairy.html">Dairy</a>  
 		  <a id="disabled" class="dropdown-item" href="beveragesaisle.html">Beverages</a>
 		  <a id="disabled" class="dropdown-item" href="detergents.html">Detergents</a>
-		  <a id="disabled" class="dropdown-item" href="snacks.html">Snacks</a>
-    
+		<a id="disabled" class="dropdown-item" href="snacks.html">Snacks</a>
 	  </li>
 	  <li class="nav-item active">
 		<a class="nav-link disabled" href="contact.html">Contacts</a>
@@ -65,7 +64,7 @@
 
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore Order List</h5>
+	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore Order List Editor</h5>
    <button class="btn btn-outline-primary"> Add <img src="edit.png" width="30px" height="30px"> </button>
 	 <button class="btn btn-outline-primary">Delete Items <img src="edit.png" width="30px" height="30px"> </button>
    <button class="btn btn-outline-primary">Save <img src="edit.png" width="30px" height="30px"> </button>
@@ -87,27 +86,60 @@
     <tbody>
       <tr>
         <th scope="row">1</th>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
+        <td>
+            <input type="date" id="start" name="trip-start"
+            value="2020-04-20"
+            min="1969-04-20" max="2169-06-09">
+        </td>
+        <td><input type="text" id="total" name="total" value="Placeholder"></td>
+        <td><input type="text" id="orderName" name="orderName" value="Placeholder"></td>
+        <td><input type="text" id="address" name="address" value="Placeholder"></td>
+        <td>
+          <select name="status" id="status">
+            <option value="selivered">Delivered</option>
+            <option value="sending">Pending</option>
+            <option value="shipped">Shipped</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </td>
       </tr>
       <tr>
         <th scope="row">2</th>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
+        <td>
+            <input type="date" id="start" name="trip-start"
+            value="2020-04-20"
+            min="1969-04-20" max="2169-06-09">
+        </td>
+        <td><input type="text" id="total" name="total" value="Placeholder"></td>
+        <td><input type="text" id="orderName" name="orderName" value="Placeholder"></td>
+        <td><input type="text" id="address" name="address" value="Placeholder"></td>
+        <td>
+          <select name="status" id="status">
+            <option value="selivered">Delivered</option>
+            <option value="sending">Pending</option>
+            <option value="shipped">Shipped</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
+        <td>
+            <input type="date" id="start" name="trip-start"
+            value="2020-04-20"
+            min="1969-04-20" max="2169-06-09">
+        </td>
+        <td><input type="text" id="total" name="total" value="Placeholder"></td>
+        <td><input type="text" id="orderName" name="orderName" value="Placeholder"></td>
+        <td><input type="text" id="address" name="address" value="Placeholder"></td>
+        <td>
+          <select name="status" id="status">
+            <option value="selivered">Delivered</option>
+            <option value="sending">Pending</option>
+            <option value="shipped">Shipped</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </td>
       </tr>
     </tbody>
   </table>
