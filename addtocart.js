@@ -1,8 +1,21 @@
 inputElement = document.getElementById("cartCount");
 addToCart = document.getElementById("addToCartButton");
 price = document.getElementById("price");
+titleName = document.getElementsByTagName("title")[0].innerText;
 
 function updateCartPrice()
 {
-    addToCart.innerText = "$" + Number(inputElement.value) * Number(price.innerHTML.replace("$", "")) + " Add To Cart";
+    if (typeof(Storage) !== "undefined") 
+    {
+        // Store
+        sessionStorage.setItem(titleName, Number(inputElement.value));
+        // Retrieve
+        addToCart.innerText = "$" + Number(sessionStorage.getItem(titleName)) * Number(price.innerHTML.replace("$", "")) + " Add To Cart";
+
+        console.log(sessionStorage.getItem(titleName));
+    } 
+    else 
+    {
+        alert("Sorry, your browser does not support Web Storage...");
+    }
 }
