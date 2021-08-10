@@ -19,7 +19,6 @@ function updateCartPrice()
         {
             localStorage.setItem(String(titleName), String(inputElement.value));
             addToCart.innerText = "$" + (Number(localStorage.getItem(String(titleName))) * Number(price.innerHTML.replace("$", ""))).toFixed(2) + " Add To Cart";
-            console.log(localStorage.getItem(String(titleName)));
         }
     } 
     else 
