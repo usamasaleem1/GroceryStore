@@ -10,7 +10,7 @@ function updateCartPrice()
         // Store
         sessionStorage.setItem(titleName, Number(inputElement.value));
         // Retrieve
-        addToCart.innerText = "$" + Number(sessionStorage.getItem(titleName)) * Number(price.innerHTML.replace("$", "")) + " Add To Cart";
+        addToCart.innerText = "$" + (Number(sessionStorage.getItem(titleName)) * Number(price.innerHTML.replace("$", ""))).toFixed(2) + " Add To Cart";
 
         console.log(sessionStorage.getItem(titleName));
     } 
