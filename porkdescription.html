@@ -92,7 +92,7 @@
 
 		<div class="col-sm-6 col-md-6 col-xl-3 mb-3">
 			<h5 class="mb-4 pl-2" style="text-align: left;">Pork Ribs</h5>
-			<h5 class="mb-1 pl-2" style="text-align: left;">$10.50/kg</h5>
+			<h5 class="mb-1 pl-2" id="price" style="text-align: left;">$10.50</h5>
 			<h6 class="mb-5 pl-2" style="text-align: left;">$4.76/lb</h6>
 
 			<!-- more description -->
@@ -116,18 +116,17 @@
 
 			</div>
 
-<!--Add to cart  -->
-<form>
-	<div class="form-group mt-4">
-		<label for="exampleInputPassword1">Quantity</label>
-		<input type="Quantity" style="width: 100px;" class="form-control" id="cart" placeholder="Quantity">
-	</div>
-	<button type="submit" class="btn btn-primary">Add To Cart</button>
-</form>
-
-
+			<!--Add to cart  -->
+			<form>
+				<div class="form-group mt-4">
+					<label for="exampleInputPassword1">Quantity</label>
+					<input id="cartCount" onchange="updateCartPrice()" type="number" style="width: 100px;" class="form-control" value="1" id="cart" placeholder="Quantity">
+				</div>
+				<button id="addToCartButton" type="submit" class="btn btn-primary">Add To Cart</button>
+			</form>
 		</div>
 	</div>
+<script onload="updateCartPrice()" src="addtocart.js"></script>
 </main>
 
 <!-- special offer -->
