@@ -1,3 +1,34 @@
+<?php 
+
+$host="localhost";
+$user="root";
+$password="";
+$db="loginform";
+
+mysql_connect($host,$user,$password);
+mysql_select_db($db);
+
+if(isset($_POST['username'])){
+    
+    $uname=$_POST['username'];
+    $password=$_POST['password'];
+    
+    $sql="select * from loginform where user='".$uname."'AND Pass='".$password."' limit 1";
+    
+    $result=mysql_query($sql);
+    
+    if(mysql_num_rows($result)==1){
+        echo " You Have Successfully Logged in";
+        exit();
+    }
+    else{
+        echo " You Have Entered Incorrect Password";
+        exit();
+    }
+        
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,37 +91,6 @@
   </div>
 </nav>
 
-<?php 
-
-$host="localhost";
-$user="root";
-$password="";
-$db="loginform";
-
-mysql_connect($host,$user,$password);
-mysql_select_db($db);
-
-if(isset($_POST['username'])){
-    
-    $uname=$_POST['username'];
-    $password=$_POST['password'];
-    
-    $sql="select * from loginform where user='".$uname."'AND Pass='".$password."' limit 1";
-    
-    $result=mysql_query($sql);
-    
-    if(mysql_num_rows($result)==1){
-        echo " You Have Successfully Logged in";
-        exit();
-    }
-    else{
-        echo " You Have Entered Incorrect Password";
-        exit();
-    }
-        
-}
-?>
-
 
 <!-- main section -->
 <main>
@@ -101,7 +101,7 @@ if(isset($_POST['username'])){
 				<input class="spacing" type="text" name="email" placeholder="Email" required><br>
 				<input class="spacing" type="password" name="password" placeholder="Password" required><br>
 				<a class="spacing" href="forgotpassword.html">Forgot Password?</a><br>
-				<input class = "spacing" type="submit" value="Login"><br>
+				<input class = "spacing" type="submit" value="Login"> <br>
 				<input type="checkbox" name="remember"> Remember me
 			</form>
 			<a href="signuppage.html">Don't have an account? Sign up for one now!</a><br>
