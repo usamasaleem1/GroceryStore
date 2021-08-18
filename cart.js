@@ -57,13 +57,13 @@ function adjustAmount(){
 
 
 
- let carts = document.querySelectorAll('#addToCartButton');
+var carts = document.querySelectorAll('#addToCartButton');
 
- for(let i = 0 ;  i < carts.length; i++){
+ for(var i = 0 ;  i < carts.length; i++){
+
+ 	carts[i].addEventListener("click", function(){ prompt("added to cart"); 	});
  
-	carts[i].addEventListener('click', () => {
- 		alert('added to cart');
- 	})
  } 
+ 
 
  
