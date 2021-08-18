@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
 
 $host="localhost";
 $user="root";
@@ -27,7 +27,7 @@ if(isset($_POST['username'])){
     }
         
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html>
