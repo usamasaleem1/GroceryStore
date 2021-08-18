@@ -1,0 +1,173 @@
+<?<?xml version="1.0" encoding="UTF-8"?>
+
+<productDescription>
+	
+	<product id = "1">
+		<name>Extra Lean Beef</name>
+		<price>12.20</price>
+		<weight>1kg</weight>
+		<description>Our loin ground beef is of AAA quality. We boast a 6% fat for the extra lean type.</description>
+	</product>
+
+	<product id = "2">
+		<name>Pork</name>
+		<price>10.50</price>
+		<weight>1kg</weight>
+		<description>Fatty Pork Ribs, best suited for oven cooking. Adding some Barbecue sauce would make it magical.</description>
+	</product>
+	
+	<product id = "3">
+		<name>Chicken</name>
+		<price>16.75</price>
+		<weight><1kg</weight>
+		<description>Our grass fed chicken lived naturally, steriod, and stress free.</description>
+	</product>
+
+	<product id = "4">
+		<name>Steak</name>
+		<price>15.00</price>
+		<weight>1kg</weight>
+		<description>This steak is Sirloin steak. You can never go wrong with this steak. It's juicy but not overwhelmingly fatty.</description>
+	</product>
+
+	<product id = "5">
+		<name>Milk</name>
+		<price>4.40</price>
+		<weight>2L</weight>
+		<description>Rich in nutrients, milk has been a food staple for centuries. Farquhars is a trusted milk distributor and provides the highest quality.</description>
+	</product>
+
+	<product id = "6">
+		<name>Chocolate Milk</name>
+		<price>2.25</price>
+		<weight>310ml</weight>
+		<description>MILK 2GO's 310mL chocolate milk bottle has a resealable cap and is made with fresh milk. Perfect size for everyone.</description>
+	</product>
+
+	<product id = "7">
+		<name>Yogurt</name>
+		<price>5.99</price>
+		<weight>750g</weight>
+		<description>This savory cheese wheel is aged for 24 months and is imported directly from Italy where it is made with the freshest milk there is.</description>
+	</product>
+
+	<product id = "8">
+		<name>Parmesan Cheese Wheel</name>
+		<price>24.50</price>
+		<weight>1Lb</weight>
+		<description>Gain Wash Aroma Boost original is guaranteed to clean your clothes and leave a long lasting freshness to them. Now, 33% larger.</description>
+	</product>
+
+	<product id = "9">
+		<name>Sanpellegrino Lemonade</name>
+		<price>1.50</price>
+		<weight>330ml</weight>
+		<description>Take on this summer with a refreshing and low calorie lemonade drink which will surely quench your thirst!</description>
+	</product>
+
+	<product id = "10">
+		<name>Sanpellegrino Pomegranate</name>
+		<price>1.50</price>
+		<weight>330ml</weight>
+		<description>Take on this summer with a refreshing and low calorie pomegranate drink which will surely quench your thirst!</description>
+	</product>
+
+	<product id = "11">
+		<name>Mountain Dew </name>
+		<price>2.00</price>
+		<weight>500ml</weight>
+		<description>Bring on the BBQs, skate park meetups, and backyard activities with mountain dew! A proud sponsor of the national association of skateboarding.</description>
+	</product>
+
+	<product id = "12">
+		<name>Coca-Cola </name>
+		<price>2.00</price>
+		<weight>1.25L</weight>
+		<description>Bring on the BBQs, skate park meetups, and backyard activities with Coca-Cola!</description>
+	</product>
+
+	<product id = "13">
+		<name>Gain Wash</name>
+		<price>7.50</price>
+		<weight>2.95L</weight>
+		<description>Gain Wash Aroma Boost original is guaranteed to clean your clothes and leave a long lasting freshness to them. Now, 33% larger.</description>
+	</product>
+
+	<product id = "14">
+		<name>Tide Ultra</name>
+		<price>9.25</price>
+		<weight>4.08L</weight>
+		<description>Tide Ultra Stain Release digs deep into the stains and removes all traces and leaves your clothes cleaner than when you bought them.</description>
+	</product>
+
+	<product id = "15">
+		<name>Persil Pro-Clean</name>
+		<price>6.40</price>
+		<weight>4.44L</weight>
+		<description>Persil Pro-Clean is an excellent stain fighter that does a thorough deep clean, as well as has boosted stain removal capabilities.</description>
+	</product>
+
+	<product id = "16">
+		<name>Oxi-Clean</name>
+		<price>15.50</price>
+		<weight>4.00L</weight>
+		<description>This Oxi-Clean variety pack includes three different detergents for all your different cleaning needs: Free & Clear, Refreshing Lavender & Lily, and Sparkling Fresh.</description>
+	</product>
+
+	<product id = "17">
+		<name>Snickers</name>
+		<price>1.50</price>
+		<weight>2.07oz</weight>
+		<description>When you’re looking for a treat that really satisfies, look no further than Snickers. Packed with peanuts, nougat, caramel and milk chocolate, it's delicious! Whether simply unwrapped and enjoyed or incorporated into your favourite dessert recipes, Snickers handles your hunger so that you can handle, well... anything.</description>
+	</product>
+
+	<product id = "18">
+		<name>Tv Bar</name>
+		<price>1.00</price>
+		<weight>2.15oz</weight>
+		<description>Tropical coconut & crunchy rice puffs in smooth white chocolate.</description>
+	</product>
+
+	<product id = "19">
+		<name>Pringles</name>
+		<price>2.00</price>
+		<weight>500g</weight>
+		<description>Enjoy the classic flavour of Pringles Original Grab & Go Chips, Original crunchy flavour, Convenient and portable, Re-sealable container to lock in freshness.</description>
+	</product>
+
+	<product id = "20">
+		<name>Maltesers</name>
+		<price>2.50</price>
+		<weight>300g</weight>
+		<description>With a crunchy, light center and covered in rich milk chocolate, every piece of MALTESERS Malt Ball Candy is one part fun and one part delicious. MALTESERS Candies contain no artificial colors, flavours or preservatives. MALTESERS Candy melts in your mouth and satisfies your playful side. This chocolatey candy comes in compact-sized balls that you'll love to eat piece by piece!</description>
+	</product>
+
+	<product id = "21">
+		<name>Happy Dad Hard Seltzer</name>
+		<price>2.00</price>
+		<weight>355ml</weight>
+		<description>Quench your thirst with this delicious hard seltzer which comes in a variety of fruity flavors. Contains 5% alcohol. (355ml/Can)</description>
+	</product>
+
+	<product id = "22">
+		<name>Heineken Beer</name>
+		<price>4.00</price>
+		<weight>330ml</weight>
+		<description>Take on the summer with this dutch brewed beer. Contains 5.3% alcohol. (330ml/Bottle)</description>
+	</product>
+
+	<product id = "23">
+		<name>Barefoot Red Wine</name>
+		<price>10.00</price>
+		<weight>750ml</weight>
+		<description>Relax and antioxidize with some delicious sweet red wine. Contains 14.5% alcohol. (750ml/Bottle)</description>
+	</product>
+
+	<product id = "24">
+		<name>Castello del Poggio Moscato</name>
+		<price>15.00</price>
+		<weight>800ml</weight>
+		<description>Have a little taste of Italy with some delicious Castello del Poggio Moscato. Contains 5% alcohol. (750ml/Bottle)</description>
+	</product>
+
+	</productDescription>
