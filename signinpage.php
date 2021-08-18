@@ -60,13 +60,42 @@
   </div>
 </nav>
 
+<?php 
 
+$host="localhost";
+$user="root";
+$password="";
+$db="loginform";
+
+mysql_connect($host,$user,$password);
+mysql_select_db($db);
+
+if(isset($_POST['username'])){
+    
+    $uname=$_POST['username'];
+    $password=$_POST['password'];
+    
+    $sql="select * from loginform where user='".$uname."'AND Pass='".$password."' limit 1";
+    
+    $result=mysql_query($sql);
+    
+    if(mysql_num_rows($result)==1){
+        echo " You Have Successfully Logged in";
+        exit();
+    }
+    else{
+        echo " You Have Entered Incorrect Password";
+        exit();
+    }
+        
+}
+?>
 
 
 <!-- main section -->
 <main>
 		<div class="middle">
-			<h1 class="topspacing">xSign In To Your Account</h1>
+			<h1 class="topspacing">Sign In To Your Account</h1>
 			<img src="avatar.png" class="middle"><br>
 			<form>
 				<input class="spacing" type="text" name="email" placeholder="Email" required><br>
