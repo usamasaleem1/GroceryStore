@@ -56,16 +56,4 @@ function adjustAmount(){
 }
 
 
-
-var carts = document.querySelectorAll('#addToCartButton');
-var cart = document.getElementById('addToCartButton');
-
-cart.addEventListener("click", function(){  prompt("added to cart"); 	});
-
-
- for(var i = 0 ;  i < carts.length; i++){
-
- 	carts[i].addEventListener("click", function(){  prompt("added to cart"); 	});
- 
- } 
  
