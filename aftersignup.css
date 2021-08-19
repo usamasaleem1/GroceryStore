@@ -1,0 +1,63 @@
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+    height: 100%
+  }
+  
+  .bgimg {
+    /* Background image */
+    background-image: url('https://i.imgur.com/YQhc3Tc.jpeg');
+    /* Full-screen */
+    height: 100%;
+    /* Center the background image */
+    background-position: center;
+    /* Scale and zoom in the image */
+    background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+    position: relative;
+    /* Add a white text color to all elements inside the .bgimg container */
+    color: rgb(255, 255, 255);
+    /* Add a font */
+    font-family: Helvetica, sans-serif;
+    text-shadow: 0.1px 0.1px 2px #000000;
+    /* Set the font-size to 25 pixels */
+    font-size: 30px;
+  }
+  
+  /* Position text in the top-left corner */
+  .topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+  }
+  
+  .topmiddle {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  
+  /* Position text in the bottom-left corner */
+  .bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+  }
+  
+  /* Position text in the middle */
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the <hr> element */
+  hr {
+    margin: auto;
+    width: 40%;
+    color: white;
+  }
