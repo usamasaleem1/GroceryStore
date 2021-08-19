@@ -73,7 +73,7 @@
 				<input class = "spacing" type="submit" value="Login"> <br>
 				<input type="checkbox" name="remember"> Remember me
 			</form>
-			<a href="signuppage.php">xxDon't have an account? Sign up for one now!</a><br>
+			<a href="signuppage.php">Don't have an account? Sign up for one now!</a><br>
 		</div>
 
 
