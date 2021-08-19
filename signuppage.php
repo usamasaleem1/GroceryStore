@@ -92,7 +92,7 @@
 					<input class="spacing" type="text" name="postal" placeholder="Postal Code" required><br>
 				</div>
 				
-				<div>
+				<!-- <div>
 					<label class="spacing">Province</label>
 					<select>
 						<option value="alberta">Alberta</option>
@@ -109,7 +109,7 @@
 						<option value="saskatchewan">Saskatchewan</option>
 						<option value="yukon">Yukon</option>
 					</select>
-				</div>
+				</div> -->
 				
 			
 				

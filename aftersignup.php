@@ -11,10 +11,6 @@
     <p>
       <?php
 //connecting to db	  
-// $sid = "(DESCRIPTION
-//                 =(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)
-//                 (HOST=DoppleGanger)(PORT=1521)))(CONNECT_DATA=(SID=FAIZANN)))";
-//                 $con = oci_connect("scott", "1234", $sid);
 $host = 'remotemysql.com:3306';
 $db = 'HTADFpjYkD';
 $user = 'HTADFpjYkD';
@@ -29,14 +25,6 @@ if ($conn-> connect_errno) {
 if ($conn)
 {
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		
-	  // collect value of input field
-	//  $name = $_POST["name"];
-	//  $password = $_POST["password"];
-	 // $q="insert into emp values( 8214,'Ali', 'MANAGER' , 8213,TO_DATE('2004/12/31', 'yyyy/mm/dd'),2310,219,40)";
-	 //echo $q;
-	 //$query_id = oci_parse($con, $q); 		
-	 //$r = oci_execute($query_id); 
 	$firstname = (int)$_POST['firstname'];	
 	$email = $_POST['email'];
 	$password = $_POST['password'];
@@ -49,18 +37,11 @@ if ($conn)
 	
 	 $query_id = oci_parse($conn, $q2); 		
 	 $r = oci_execute($query_id);
-
-		//if($r){
-			
-			//echo "Inserted!";
-		//}
 			
 		}
 	}
 else{
-	
 	echo "could not connect";
-	
 }
 ?>
     </p>
