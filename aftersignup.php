@@ -65,7 +65,7 @@ else{
 	echo "could not connect";
 }
 
-echo "step4";
+echo " step4";
 ?>
 
 
