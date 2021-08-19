@@ -1,6 +1,4 @@
-<?php 
-echo "test";
-?>
+
 
 <!DOCTYPE html>
 <html>
