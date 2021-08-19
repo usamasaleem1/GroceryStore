@@ -20,7 +20,7 @@ echo "test1";
 				}
 			else
 				{
-					echo 'Invalid Username and Password Combination';
+					header('location:signinpageError.php');
 				}
 		}
   ?>
