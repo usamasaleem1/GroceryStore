@@ -13,23 +13,31 @@ if(! $conn ) {
 
 if ($conn)
 {
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$firstname = $_POST['firstname'];	
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-	$address = $_POST['address'];
-	$postal = $_POST['postal'];
 
-
-$sql = "INSERT INTO register (firstname, email, password, address, postal)
-VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
-
-
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        // email and password sent from form 
+        
+        $email = mysqli_real_escape_string($db,$_POST['email']);
+        $password = mysqli_real_escape_string($db,$_POST['password']); 
+        
+        $sql = "SELECT id FROM register WHERE email = '$email' and passcode = '$password'";
+        $result = mysqli_query($db,$sql);
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        $active = $row['active'];
+        
+        $count = mysqli_num_rows($result);
+        
+        // If result matched $email and $password, table row must be 1 row
+          
+        if($count == 1) {
+           session_register("email");
+           $_SESSION['login_user'] = $email;
+           
+           header("location: welcome.php");
+        }else {
+           $error = "Your Login Name or Password is invalid";
+        }
+     }
 
 
 $conn->close();
