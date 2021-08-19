@@ -15,7 +15,7 @@ echo "test1";
 			if ($num_row > 0) 
 				{			
 					$_SESSION['email']=$row['email'];
-					header('location:home.php');
+					header('location:home.html');
 					
 				}
 			else
