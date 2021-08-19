@@ -48,7 +48,7 @@ if ($conn)
 	$password = $_POST['password'];
 	$address = $_POST['address'];
 	$postal = $_POST['postal'];
-echo "Test";
+echo "step1";
 
 //$query = "insert into member values ('" . $_POST["name"] . "' where employee_id = ". $_POST["idz"];
 // $query = "INSERT INTO 'HTADFpjYkD' 'register' ('firstname', 'email', 'password', 'address', 'postal') VALUES ('$firstname', '$email', '$password', '$address', '$postal'); ";
@@ -60,12 +60,15 @@ echo "Test";
 $sql = "INSERT INTO register (firstname, email, password, address, postal)
 VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
 
+echo "step2";
+
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+echo "step3";
 $conn->close();
 			
 		}
@@ -74,7 +77,7 @@ else{
 	echo "could not connect";
 }
 
-
+echo "step4";
 ?>
 
 
