@@ -42,30 +42,30 @@ mysqli_close($conn);
 //     trigger_error('Database connection failed: ' . $conn->connect_error); 
 //     }
 
-// if ($conn)
-// {
-// 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-// 	$firstname = $_POST['firstname'];	
-// 	$email = $_POST['email'];
-// 	$password = $_POST['password'];
-// 	$address = $_POST['address'];
-// 	$postal = $_POST['postal'];
+if ($conn)
+{
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$firstname = $_POST['firstname'];	
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$address = $_POST['address'];
+	$postal = $_POST['postal'];
 
-// //$query = "insert into member values ('" . $_POST["name"] . "' where employee_id = ". $_POST["idz"];
-// $query = "
+//$query = "insert into member values ('" . $_POST["name"] . "' where employee_id = ". $_POST["idz"];
+$query = "
 
-// INSERT INTO 'HTADFpjYkD' 'register' ('firstname', 'email',
-// 'password', 'address', 'postal') VALUES ('$firstname', '$email', '$password', '$address', '$postal'); ";
+INSERT INTO 'HTADFpjYkD' 'register' ('firstname', 'email',
+'password', 'address', 'postal') VALUES ('$firstname', '$email', '$password', '$address', '$postal'); ";
 
-// mysql_query($query);
+mysql_query($query);
 
-// echo "Thanks for getting in touch.";
+echo "Thanks for getting in touch.";
 			
-// 		}
-// 	}
-// else{
-// 	echo "could not connect";
-// }
+		}
+	}
+else{
+	echo "could not connect";
+}
 
 
 ?>
