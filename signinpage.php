@@ -92,7 +92,7 @@ if(isset($_POST['username'])){
 <!-- main section -->
 <main>
 		<div class="middle">
-			<h1 class="topspacing">Sign In To Your Account</h1>
+			<h1 class="topspacing">tSign In To Your Account</h1>
 			<img src="avatar.png" class="middle"><br>
 			<form method="POST" action="#">
 				<input class="spacing" type="text" name="email" placeholder="Email" required><br>
