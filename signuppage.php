@@ -68,9 +68,9 @@
 <main>
 
 		<div class="middle">
-			<h1 class="topspacing">xSign Up For An Account!</h1>
+			<h1 class="topspacing">testSign Up For An Account!</h1>
 			<a href="signinpage.html"><p class="topspacing">Already have an account? Sign in here!</p></a>
-			<form action="aftersignup.php" method="post">
+			<form action="https://concordiagrocery.herokuapp.com/signuppage.php" method="post">
 				<h5>Select an avatar</h5>
 				<img class="spacing" src="avatar.png">
 				<input type="radio" name="test">

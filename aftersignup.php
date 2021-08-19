@@ -15,7 +15,6 @@
 //                 =(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)
 //                 (HOST=DoppleGanger)(PORT=1521)))(CONNECT_DATA=(SID=FAIZANN)))";
 //                 $con = oci_connect("scott", "1234", $sid);
-
 $host = 'remotemysql.com';
 $db = 'HTADFpjYkD';
 $user = 'HTADFpjYkD';
