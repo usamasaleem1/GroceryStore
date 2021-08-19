@@ -5,9 +5,9 @@ $dbuser = 'HTADFpjYkD';
 $dbpass = 'Ng7fU9bD9m';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
 
-if(! $conn ) {
-   die('Could not connect: ' . mysqli_error());
-}
+// if(! $conn ) {
+//    die('Could not connect: ' . mysqli_error());
+// }
 
 if(isset($_POST["submit"]))
 {
