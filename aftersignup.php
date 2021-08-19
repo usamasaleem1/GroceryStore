@@ -48,15 +48,25 @@ if ($conn)
 	$password = $_POST['password'];
 	$address = $_POST['address'];
 	$postal = $_POST['postal'];
-//$query = "insert into member values ('" . $_POST["name"] . "' where employee_id = ". $_POST["idz"];
-$query = "
 
-INSERT INTO 'HTADFpjYkD' 'register' ('firstname', 'email',
-'password', 'address', 'postal') VALUES ('$firstname', '$email', '$password', '$address', '$postal'); ";
-echo 'step3';
-mysql_query($query);
-echo 'step4';
-echo "Thanks for getting in touch.";
+
+//$query = "insert into member values ('" . $_POST["name"] . "' where employee_id = ". $_POST["idz"];
+// $query = "INSERT INTO 'HTADFpjYkD' 'register' ('firstname', 'email', 'password', 'address', 'postal') VALUES ('$firstname', '$email', '$password', '$address', '$postal'); ";
+// echo 'step3';
+// mysql_query($query);
+// echo 'step4';
+// echo "Thanks for getting in touch.";
+
+$sql = "INSERT INTO register (firstname, email, password, address, postal)
+VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 			
 		}
 	}
