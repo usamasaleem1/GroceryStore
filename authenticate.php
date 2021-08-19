@@ -5,38 +5,38 @@ $dbuser = 'HTADFpjYkD';
 $dbpass = 'Ng7fU9bD9m';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
 
-// if(! $conn ) {
-//    die('Could not connect: ' . mysqli_error());
-// }
-
-if(isset($_POST["submit"]))
-{
-if(empty($_POST["email"]) || empty($_POST["password"]))
-{
-$error = "Both fields are required.";
-}else
-{
-// Define $email and $password
-$email=$_POST['email'];
-$password=$_POST['password'];
-
-$sql="SELECT id FROM register WHERE email='$email' and password='$password'";
-$result=mysqli_query($db,$sql);
-$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-
-
-if(mysqli_num_rows($result) == 1)
-{
-    echo "login success"
-$_SESSION['username'] = $login_user; // Initializing Session
-header("location: home.html"); // Redirecting To Other Page
-}else
-{
-    echo "error";
-$error = "Incorrect username or password.";
+if(! $conn ) {
+   die('Could not connect: ' . mysqli_error());
 }
 
-}
+
+
+if ($conn)
+{
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$firstname = $_POST['firstname'];	
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$address = $_POST['address'];
+	$postal = $_POST['postal'];
+
+
+$sql = "INSERT INTO register (firstname, email, password, address, postal)
+VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
+
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+
+$conn->close();
+			
+		}
+	}
+else{
+	echo "could not connect";
+}
 ?>
