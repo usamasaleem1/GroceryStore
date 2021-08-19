@@ -1,4 +1,30 @@
+<?php
 
+$dbhost = 'remotemysql.com:3306';
+$dbuser = 'HTADFpjYkD';
+$dbpass = 'Ng7fU9bD9m';
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
+
+if(isset($_POST['username'])){
+    
+    $username=$_POST['username'];
+    $password=$_POST['password'];
+    
+    $sql="select * from loginform where user='".$username."'AND Pass='".$password."' limit 1";
+    
+    $result=mysql_query($sql);
+    
+    if(mysql_num_rows($result)==1){
+        echo " You Have Successfully Logged in";
+        exit();
+    }
+    else{
+        echo " You Have Entered Incorrect Password";
+        exit();
+    }
+        
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -68,14 +94,14 @@
 		<div class="middle">
 			<h1 class="topspacing">Sign In To Your Account</h1>
 			<img src="avatar.png" class="middle"><br>
-			<form>
+			<form method="POST" action="#">
 				<input class="spacing" type="text" name="email" placeholder="Email" required><br>
 				<input class="spacing" type="password" name="password" placeholder="Password" required><br>
 				<a class="spacing" href="forgotpassword.html">Forgot Password?</a><br>
 				<input class = "spacing" type="submit" value="Login"> <br>
 				<input type="checkbox" name="remember"> Remember me
 			</form>
-			<a href="signuppage.html">Don't have an account? Sign up for one now!</a><br>
+			<a href="signuppage.php">Don't have an account? Sign up for one now!</a><br>
 		</div>
 
 
