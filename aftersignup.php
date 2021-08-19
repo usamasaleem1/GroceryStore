@@ -18,7 +18,7 @@
 $dbhost = 'remotemysql.com:3306';
 $dbuser = 'HTADFpjYkD';
 $dbpass = 'Ng7fU9bD9m';
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
 
 if(! $conn ) {
    die('Could not connect: ' . mysqli_error());
