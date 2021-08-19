@@ -4,21 +4,15 @@ $dbuser = 'HTADFpjYkD';
 $dbpass = 'Ng7fU9bD9m';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
    
-
-if ($conn)
-{
-   $user_check = $_SESSION['login_user'];
-   
-   $ses_sql = mysqli_query($conn,"select password from admin where password = '$user_check' ");
-   
-   $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
-   
-   $login_session = $row['password'];
-   
-   if(!isset($_SESSION['login_user'])){
-      header("location:login.php");
-      die();
-    }
+//Start session
+session_start();
+//Check whether the session variable SESS_MEMBER_ID is present or not
+if (!isset($_SESSION['email']) || (trim($_SESSION['email']) == '')) {
+    header("location: index.php");
+    exit();
 }
+$session_id=$_SESSION['email'];
+
+
 
 ?>

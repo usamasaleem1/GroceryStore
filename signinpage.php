@@ -70,7 +70,7 @@
 				<input class="spacing" type="text" name="email" placeholder="Email" required><br>
 				<input class="spacing" type="password" name="password" placeholder="Password" required><br>
 				<a class="spacing" href="forgotpassword.html">Forgot Password?</a><br>
-				<input class = "spacing" type="submit" value="Login"> <br>
+				<input class="spacing" type="submit" name="submit" value="Login"> <br>
 				<input type="checkbox" name="remember"> Remember me
 			</form>
 			<a href="signuppage.php">Don't have an account? Sign up for one now!</a><br>
