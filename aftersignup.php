@@ -11,7 +11,7 @@
     <p>
 
 
-    
+
 
       <?php
 
@@ -25,10 +25,6 @@ if(! $conn ) {
 }
 echo 'Connected successfully';
 mysqli_close($conn);
-
-
-
-
 
 
 
@@ -52,7 +48,7 @@ if ($conn)
 	$password = $_POST['password'];
 	$address = $_POST['address'];
 	$postal = $_POST['postal'];
-
+    echo 'step2';
 //$query = "insert into member values ('" . $_POST["name"] . "' where employee_id = ". $_POST["idz"];
 $query = "
 
