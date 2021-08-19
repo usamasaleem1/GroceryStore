@@ -5,12 +5,12 @@ $dbuser = 'HTADFpjYkD';
 $dbpass = 'Ng7fU9bD9m';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
 
-if(isset($_POST['username'])){
+if(isset($_POST['email'])){
     
-    $username=$_POST['username'];
+    $email=$_POST['username'];
     $password=$_POST['password'];
     
-    $sql="select * from register where user='".$username."'AND Pass='".$password."' limit 1";
+    $sql="select * from register where email='".$email."'AND password='".$password."' limit 1";
     
     $result=mysql_query($sql);
     
@@ -92,7 +92,7 @@ if(isset($_POST['username'])){
 <!-- main section -->
 <main>
 		<div class="middle">
-			<h1 class="topspacing">tSign In To Your Account</h1>
+			<h1 class="topspacing">Sign In To Your Account</h1>
 			<img src="avatar.png" class="middle"><br>
 			<form method="POST" action="#">
 				<input class="spacing" type="text" name="email" placeholder="Email" required><br>
