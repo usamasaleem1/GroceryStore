@@ -9,30 +9,34 @@ if(! $conn ) {
    die('Could not connect: ' . mysqli_error());
 }
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // username and password sent from form 
-    
-    $myusername = mysqli_real_escape_string($db,$_POST['email']);
-    $password = mysqli_real_escape_string($db,$_POST['password']); 
-    
-    $sql = "SELECT id FROM register WHERE email = '$email' and password = '$password'";
-    $result = mysqli_query($db,$sql);
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $active = $row['active'];
-    
-    $count = mysqli_num_rows($result);
-    
-    // If result matched $email and $password, table row must be 1 row
-      
-    if($count == 1) {
-       session_register("email");
-       $_SESSION['login_user'] = $email;
-       
-       header("location: welcome.php");
-    }else {
-       $error = "Your Login Name or Password is invalid";
-    }
- }
+if(isset($_POST["submit"]))
+{
+if(empty($_POST["email"]) || empty($_POST["password"]))
+{
+$error = "Both fields are required.";
+}else
+{
+// Define $email and $password
+$email=$_POST['email'];
+$password=$_POST['password'];
 
+$sql="SELECT id FROM register WHERE email='$email' and password='$password'";
+$result=mysqli_query($db,$sql);
+$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+
+if(mysqli_num_rows($result) == 1)
+{
+    echo "login success"
+$_SESSION['username'] = $login_user; // Initializing Session
+header("location: home.html"); // Redirecting To Other Page
+}else
+{
+    echo "error";
+$error = "Incorrect username or password.";
+}
+
+}
+}
 
 ?>
