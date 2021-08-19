@@ -74,9 +74,8 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
 if(! $conn ) {
    die('Could not connect: ' . mysqli_error());
 }
-echo 'Connected successfully';
 
-echo "step0";
+
 
 if ($conn)
 {
@@ -87,12 +86,10 @@ if ($conn)
 	$address = $_POST['address'];
 	$postal = $_POST['postal'];
 
-echo "step1";
 
 $sql = "INSERT INTO register (firstname, email, password, address, postal)
 VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
 
-echo "step2";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -100,7 +97,6 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-echo "step3";
 
 $conn->close();
 			
@@ -110,7 +106,6 @@ else{
 	echo "could not connect";
 }
 
-echo " step4";
 ?>
 
  <!-- footer -->
