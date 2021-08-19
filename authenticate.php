@@ -17,7 +17,7 @@ if ( !isset($_POST['email'], $_POST['password']) ) {
 
 
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-if ($stmt = $con->prepare('SELECT id, password FROM register WHERE email = ?')) {
+if ($stmt = $conn->prepare('SELECT id, password FROM register WHERE email = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
 	$stmt->bind_param('s', $_POST['email']);
 	$stmt->execute();
