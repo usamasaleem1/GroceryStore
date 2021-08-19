@@ -56,7 +56,7 @@
 	<form class="form-inline my-2 my-lg-0">
 	  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="background-color: #343A40;">
 	  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	  <a class="btn btn-outline-primary ml-1" href="#">Sign in</a>
+	  <a class="btn btn-outline-primary ml-1" href="signinpage.php">Sign in</a>
 	</form>
   </div>
 </nav>
@@ -68,8 +68,8 @@
 <main>
 
 		<div class="middle">
-			<h1 class="topspacing">ddSign Up For An Account!</h1>
-			<a href="signinpage.html"><p class="topspacing">Already have an account? Sign in here!</p></a>
+			<h1 class="topspacing">Sign Up For An Account!</h1>
+			<a href="signinpage.php"><p class="topspacing">Already have an account? Sign in here!</p></a>
 			<form action="aftersignup.php" method="post">
 				<h5>Select an avatar</h5>
 				<img class="spacing" src="avatar.png">
