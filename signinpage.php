@@ -64,7 +64,7 @@
 <!-- main section -->
 <main>
 		<div class="middle">
-			<h1 class="topspacing">xSign In To Your Account</h1>
+			<h1 class="topspacing">Sign In To Your Account</h1>
 			<img src="avatar.png" class="middle"><br>
 			<form action="authenticate.php" method="post">
 				<input class="spacing" type="text" name="email" placeholder="Email" required><br>

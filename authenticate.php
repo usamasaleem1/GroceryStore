@@ -5,8 +5,8 @@
 echo "test1";
 	if (isset($_POST['submit']))
 		{
-			$username = mysqli_real_escape_string($conn, $_POST['user']);
-			$password = mysqli_real_escape_string($conn, $_POST['pass']);
+			$email = mysqli_real_escape_string($conn, $_POST['email']);
+			$password = mysqli_real_escape_string($conn, $_POST['password']);
 			
 			$query 		= mysqli_query($conn, "SELECT * FROM register WHERE password='$password' and email='$email'");
 			$row		= mysqli_fetch_array($query);
