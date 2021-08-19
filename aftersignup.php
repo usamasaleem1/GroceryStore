@@ -44,15 +44,23 @@ VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
 
 echo "step2";
 
-if(mysqli_query($conn, $sql)){
-    echo "Records inserted successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
 }
- 
-// Close connection
+
 echo "step3";
-mysqli_close($conn);
+
+$conn->close();
+			
+		}
+	}
+else{
+	echo "could not connect";
+}
+
+echo " step4";
 ?>
 
 
