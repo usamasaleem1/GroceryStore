@@ -70,7 +70,7 @@
 		<div class="middle">
 			<h1 class="topspacing">Sign Up For An Account!</h1>
 			<a href="signinpage.html"><p class="topspacing">Already have an account? Sign in here!</p></a>
-			<form>
+			<form action="aftersignup.php" method="post">
 				<h5>Select an avatar</h5>
 				<img class="spacing" src="avatar.png">
 				<input type="radio" name="test">
