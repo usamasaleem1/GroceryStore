@@ -55,7 +55,7 @@ INSERT INTO 'HTADFpjYkD' 'register' ('firstname', 'email',
 'password', 'address', 'postal') VALUES ('$firstname', '$email', '$password', '$address', '$postal'); ";
 echo 'step3';
 mysql_query($query);
-
+echo 'step4';
 echo "Thanks for getting in touch.";
 			
 		}
