@@ -48,13 +48,12 @@ if ($conn)
 	$password = $_POST['password'];
 	$address = $_POST['address'];
 	$postal = $_POST['postal'];
-    echo 'step2';
 //$query = "insert into member values ('" . $_POST["name"] . "' where employee_id = ". $_POST["idz"];
 $query = "
 
 INSERT INTO 'HTADFpjYkD' 'register' ('firstname', 'email',
 'password', 'address', 'postal') VALUES ('$firstname', '$email', '$password', '$address', '$postal'); ";
-
+echo 'step3';
 mysql_query($query);
 
 echo "Thanks for getting in touch.";
