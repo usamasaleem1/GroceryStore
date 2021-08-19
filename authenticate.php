@@ -1,7 +1,8 @@
 <?php session_start(); ?>
 <?php include('dbcon.php'); ?>
-echo "test1";
+
 <?php
+echo "test1";
 	if (isset($_POST['submit']))
 		{
 			$username = mysqli_real_escape_string($conn, $_POST['user']);
