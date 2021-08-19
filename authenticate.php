@@ -14,7 +14,7 @@ echo "test1";
 			echo "got here";
 			if ($num_row > 0) 
 				{			
-					$_SESSION['user_id']=$row['user_id'];
+					$_SESSION['email']=$row['email'];
 					header('location:home.php');
 					
 				}
