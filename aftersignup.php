@@ -21,12 +21,12 @@ $user = 'HTADFpjYkD';
 $pass = 'Ng7fU9bD9m'
 $charset = 'utf8mb4';
 
-$con = new mysqli($host,$user,$pass,$db); 
-if ($con-> connect_errno) { 
-    trigger_error('Database connection failed: ' . $con->connect_error); 
+$conn = new mysqli($host,$user,$pass,$db); 
+if ($conn-> connect_errno) { 
+    trigger_error('Database connection failed: ' . $conn->connect_error); 
     }
 
-if ($con)
+if ($conn)
 {
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
@@ -47,7 +47,7 @@ if ($con)
 	$q2="INSERT INTO member(firstname,email,password,address,postal)	values ('$firstname',,'$email','$password','$address','$postal')";
 	echo $q2;
 	
-	 $query_id = oci_parse($con, $q2); 		
+	 $query_id = oci_parse($conn, $q2); 		
 	 $r = oci_execute($query_id);
 
 		//if($r){
