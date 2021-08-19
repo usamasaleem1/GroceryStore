@@ -41,11 +41,7 @@ INSERT INTO `HTADFpjYkD` `register` (`firstname`, `email`,
 
 mysql_query($query);
 
-echo "
-
-Thanks for getting in touch.
-
-";
+echo "Thanks for getting in touch.";
 			
 		}
 	}

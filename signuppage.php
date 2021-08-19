@@ -68,7 +68,7 @@
 <main>
 
 		<div class="middle">
-			<h1 class="topspacing">zSign Up For An Account!</h1>
+			<h1 class="topspacing">xSign Up For An Account!</h1>
 			<a href="signinpage.html"><p class="topspacing">Already have an account? Sign in here!</p></a>
 			<form action="signuppage.php" method="post">
 				<h5>Select an avatar</h5>
