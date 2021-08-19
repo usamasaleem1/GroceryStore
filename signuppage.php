@@ -1,6 +1,3 @@
-<?php
-require_once('config.php');
-?>
 
 <!DOCTYPE html>
 <html>
@@ -117,7 +114,7 @@ require_once('config.php');
 			
 				
 				<div>
-					<input class="spacing" type="submit" value="Create Account">
+					<input class="spacing" type="submit" name="save" value="Create Account">
 					<input class="spacing" type="reset" value="Reset">
 				</div>
 				
