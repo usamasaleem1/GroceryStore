@@ -38,7 +38,7 @@ if ($conn)
 
 echo "step1";
 
-$sql = "INSERT INTO 'HTADFpjYkD' (firstname, email, password, address, postal)
+$sql = "INSERT INTO register (firstname, email, password, address, postal)
 VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
 
 echo "step2";
