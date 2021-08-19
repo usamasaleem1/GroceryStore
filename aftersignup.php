@@ -11,9 +11,6 @@
     <p>
 
 
-
-
-
       <?php
 // //connecting to db	  
 // $host = 'remotemysql.com:3306';
