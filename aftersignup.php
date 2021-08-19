@@ -26,19 +26,7 @@ if(! $conn ) {
 echo 'Connected successfully';
 mysqli_close($conn);
 
-
-
-// //connecting to db	  
-// $host = 'remotemysql.com:3306';
-// $db = 'HTADFpjYkD';
-// $user = 'HTADFpjYkD';
-// $pass = 'Ng7fU9bD9m'
-// $charset = 'utf8mb4';
-
-// $conn = new mysqli($host,$user,$pass,$db); 
-// if ($conn-> connect_errno) { 
-//     trigger_error('Database connection failed: ' . $conn->connect_error); 
-//     }
+echo "step0";
 
 if ($conn)
 {
