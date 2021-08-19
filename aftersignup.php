@@ -15,11 +15,16 @@
 //                 =(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)
 //                 (HOST=DoppleGanger)(PORT=1521)))(CONNECT_DATA=(SID=FAIZANN)))";
 //                 $con = oci_connect("scott", "1234", $sid);
-$host = 'remotemysql.com';
+$host = 'remotemysql.com:3306';
 $db = 'HTADFpjYkD';
 $user = 'HTADFpjYkD';
 $pass = 'Ng7fU9bD9m'
 $charset = 'utf8mb4';
+
+$con = new mysqli($host,$user,$pass,$db); 
+if ($con-> connect_errno) { 
+    trigger_error('Database connection failed: ' . $con->connect_error); 
+    }
 
 if ($con)
 {
