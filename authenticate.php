@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php include('dbcon.php'); ?>
-
+echo "test1";
 <?php
 	if (isset($_POST['submit']))
 		{
