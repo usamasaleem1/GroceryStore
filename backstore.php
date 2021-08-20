@@ -1,14 +1,14 @@
 <?php 
 include ('index.php');
-// include('dbcon.php'); 
-// $_SESSION['email']=$row['email'];
-// if ($password == "admin" && $email == "admin"){
-//     header('location:backstore.php');
-// } else {
-//     header('location:home.html');
-// }
+include('dbcon.php'); 
+$_SESSION['email']=$row['email'];
+if ($password == "admin" && $email == "admin"){
+    header('location:backstore.php');
+} else {
+    header('location:home.html');
+}
 
-// $session_id=$_SESSION['email'];
+$session_id=$_SESSION['email'];
 
 
 ?>
