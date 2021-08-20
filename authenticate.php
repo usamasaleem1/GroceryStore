@@ -12,7 +12,8 @@
 			$num_row 	= mysqli_num_rows($query);
 			
 			if ($num_row > 0) 
-				{			
+				{		
+					$_SESSION['loggedin'] = true;	
 					$_SESSION['email']=$row['email'];
 					if ($password == "admin" && $email == "admin"){
 						$_SESSION['permission'] = 'admin';
@@ -25,6 +26,7 @@
 				}
 			else
 				{
+					$_SESSION['loggedin'] = false;
 					header('location:signinpageError.php');
 				}
 		}
