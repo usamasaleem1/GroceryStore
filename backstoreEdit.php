@@ -1,15 +1,3 @@
-<?php 
-include ('index.php');
-include('dbcon.php'); 
-include('authenticate.php'); 
-include('session.php'); 
-
-// //Start session
-session_start();
-verifyAdmin();
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,26 +28,26 @@ verifyAdmin();
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	<ul class="navbar-nav mr-auto mx-auto">
 	  <li class="nav-item active">
-		<a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
+		<a class="nav-link" href="home.php">Home <span class="sr-only"></span></a>
 	  </li>
 	  <li class="nav-item active">
-		<a class="nav-link" href="AllProducts.html">All Products</a>
+		<a class="nav-link" href="AllProducts.php">All Products</a>
 	  </li>
 	  <li class="nav-item dropdown active">
 		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		  Aisles
 		</a>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		  <a class="dropdown-item" href="meataisle.html">Meat</a>
-		  <a id="disabled" class="dropdown-item" href="dairy.html">Dairy</a>  
-		  <a id="disabled" class="dropdown-item" href="beveragesaisle.html">Beverages</a>
-		  <a id="disabled" class="dropdown-item" href="detergents.html">Detergents</a>
-		<a id="disabled" class="dropdown-item" href="snacks.html">Snacks</a>
-		  <a id="disabled" class="dropdown-item" href="alcohol.html">Alcohol</a>
+		  <a class="dropdown-item" href="meataisle.php">Meat</a>
+		  <a id="disabled" class="dropdown-item" href="dairy.php">Dairy</a>  
+		  <a id="disabled" class="dropdown-item" href="beveragesaisle.php">Beverages</a>
+		  <a id="disabled" class="dropdown-item" href="detergents.php">Detergents</a>
+		<a id="disabled" class="dropdown-item" href="snacks.php">Snacks</a>
+		  <a id="disabled" class="dropdown-item" href="alcohol.php">Alcohol</a>
     </div>
 	  </li>
 	  <li class="nav-item active">
-		<a class="nav-link disabled" href="contact.html">Contact Us</a>
+		<a class="nav-link disabled" href="contact.php">Contact Us</a>
 	  </li>
 	</ul>
 	<br>
@@ -121,7 +109,7 @@ verifyAdmin();
         </div>
     </div>
 
-    <a href="backstore.html">
+    <a href="backstore.php">
         <button type="button" class="btn btn-primary">Save</button>
     </a>
 

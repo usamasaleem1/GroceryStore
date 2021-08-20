@@ -27,26 +27,26 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	<ul class="navbar-nav mr-auto mx-auto">
 	  <li class="nav-item active">
-		<a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
+		<a class="nav-link" href="home.php">Home <span class="sr-only"></span></a>
 	  </li>
 	  <li class="nav-item active">
-		<a class="nav-link" href="AllProducts.html">All Products</a>
+		<a class="nav-link" href="AllProducts.php">All Products</a>
 	  </li>
 	  <li class="nav-item dropdown active">
 		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		  Aisles
 		</a>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		  <a class="dropdown-item" href="meataisle.html">Meat</a>
-		  <a id="disabled" class="dropdown-item" href="dairy.html">Dairy</a>  
-		  <a id="disabled" class="dropdown-item" href="beveragesaisle.html">Beverages</a>
-		  <a id="disabled" class="dropdown-item" href="detergents.html">Detergents</a>
-		  <a id="disabled" class="dropdown-item" href="snacks.html">Snacks</a>
-		  <a id="disabled" class="dropdown-item" href="alcohol.html">Alcohol</a>
+		  <a class="dropdown-item" href="meataisle.php">Meat</a>
+		  <a id="disabled" class="dropdown-item" href="dairy.php">Dairy</a>  
+		  <a id="disabled" class="dropdown-item" href="beveragesaisle.php">Beverages</a>
+		  <a id="disabled" class="dropdown-item" href="detergents.php">Detergents</a>
+		  <a id="disabled" class="dropdown-item" href="snacks.php">Snacks</a>
+		  <a id="disabled" class="dropdown-item" href="alcohol.php">Alcohol</a>
       </div>
 	  </li>
 	  <li class="nav-item active">
-		<a class="nav-link disabled" href="contact.html">Contact Us</a>
+		<a class="nav-link disabled" href="contact.php">Contact Us</a>
 	  </li>
 	</ul>
 	<br>
@@ -66,7 +66,7 @@
       <nav class="my-2 my-md-0 mr-md-3">
         
       </nav>
-      <a class="btn btn-outline-primary" href="cart.html">Go To Cart <img src="trolley.png" width="30px" height="30px"> </a>
+      <a class="btn btn-outline-primary" href="cart.php">Go To Cart <img src="trolley.png" width="30px" height="30px"> </a>
     </div>
 
 
@@ -82,7 +82,7 @@
 	<main>
 		<div class="row">
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="meataisle.html">
+        <a href="meataisle.php">
           <img class="img-thumbnail mb-3" src="meat.jpg" alt="Album screenshot" width="960" height="600">
           <h5 class="mb-1">Meat Section</h5>
         </a>
@@ -91,7 +91,7 @@
   
     
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="dairy.html">
+        <a href="dairy.php">
           <img class="img-thumbnail mb-3" src="dairy.jpg" alt="Pricing screenshot" width="960" height="600">
           <h5 class="mb-1">Dairy Section</h5>
         </a>
@@ -100,7 +100,7 @@
   
     
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="beveragesaisle.html">
+        <a href="beveragesaisle.php">
           <img class="img-thumbnail mb-3" src="beverages.jpg" alt="Checkout screenshot" width="960" height="600">
           <h5 class="mb-1">Beverages</h5>
         </a>
@@ -109,7 +109,7 @@
   
     
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="detergents.html">
+        <a href="detergents.php">
           <img class="img-thumbnail mb-3" src="detergents.jpg" alt="Product screenshot" width="960" height="600">
           <h5 class="mb-1">Detergents</h5>
         </a>
@@ -117,7 +117,7 @@
 
 
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="snacks.html">
+        <a href="snacks.php">
           <img class="img-thumbnail mb-3" src="snacks.jpg" alt="Product screenshot" width="960" height="600">
           <h5 class="mb-1">Snacks</h5>
         </a>
@@ -125,7 +125,7 @@
 
 
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="alcohol.html">
+        <a href="alcohol.php">
           <img class="img-thumbnail mb-3" src="bottles.png" alt="Product screenshot" width="960" height="600">
           <h5 class="mb-1">Alcohol</h5>
         </a>
@@ -145,25 +145,25 @@
           <div class="col-6 col-md">
             <h5>Contacts</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="contact.html">Manager</a></li>
-              <li><a class="text-muted" href="contact.html">Supervisor</a></li>
-              <li><a class="text-muted" href="contact.html">Our Team</a></li>
+              <li><a class="text-muted" href="contact.php">Manager</a></li>
+              <li><a class="text-muted" href="contact.php">Supervisor</a></li>
+              <li><a class="text-muted" href="contact.php">Our Team</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
             <h5>Careers</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="careers.html">Meat Section</a></li>
-              <li><a class="text-muted" href="careers.html">Delivery</a></li>
+              <li><a class="text-muted" href="careers.php">Meat Section</a></li>
+              <li><a class="text-muted" href="careers.php">Delivery</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
             <h5>About</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="contact.html">Team</a></li>
+              <li><a class="text-muted" href="contact.php">Team</a></li>
               <li><a class="text-muted" href="https://www.google.com/maps/place/11011+Bd+Maurice-Duplessis,+Montr%C3%A9al,+QC+H1C+1V3/@45.6660703,-73.5345729,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc8e1759aa6762d:0x80db5bbbc6e3d671!8m2!3d45.6660703!4d-73.5323842" target="_blank">Location</a></li>
-              <li><a class="text-muted" href="terms.html">Privacy</a></li>
-              <li><a class="text-muted" href="terms.html">Terms</a></li>
+              <li><a class="text-muted" href="terms.php">Privacy</a></li>
+              <li><a class="text-muted" href="terms.php">Terms</a></li>
             </ul>
           </div>
         </div>
