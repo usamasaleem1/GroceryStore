@@ -2,7 +2,7 @@
     if ($password == "admin" && $email == "admin"){
         header('location:backstore.php');
     } else {
-        header('location:home.html');
+        header('location:contact.html');
     }
     exit();
 $session_id=$_SESSION['email'];
