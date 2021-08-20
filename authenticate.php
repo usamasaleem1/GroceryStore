@@ -17,7 +17,7 @@
 					if ($password == "admin" && $email == "admin"){
 						header('location:backstore.php');
 					} else {
-						header('location:home.html');
+						header('location:contact.html');
 					}
 					
 					
