@@ -4,11 +4,18 @@ include('dbcon.php');
 include('authenticate.php'); 
 include('session.php'); 
 
-if ($password == "admin" && $email == "admin"){
-    header('location:backstore.php');
-} else {
-    header('location:home.html');
+//Start session
+session_start();
+//Check whether the session variable SESS_MEMBER_ID is present or not
+if (!isset($_SESSION['email']) || (trim($_SESSION['email']) == '')) {
+    if ($password == "admin" && $email == "admin"){
+        header('location:backstore.php');
+    } else {
+        header('location:home.html');
+    }
+    exit();
 }
+$session_id=$_SESSION['email'];
 
 ?>
 
