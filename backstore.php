@@ -1,10 +1,11 @@
 <?php include('dbcon.php'); 
-    if ($password == "admin" && $email == "admin"){
-        header('location:backstore.php');
-    } else {
-        header('location:contact.html');
-    }
-    exit();
+$_SESSION['email']=$row['email'];
+if ($password == "admin" && $email == "admin"){
+    header('location:backstore.php');
+} else {
+    header('location:home.html');
+}
+
 $session_id=$_SESSION['email'];
 ?>
 
