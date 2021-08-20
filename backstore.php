@@ -20,7 +20,7 @@ if ($password == "admin" && $email == "admin"){
 } else {
     header('location:home.html');
 }
-exit();
+
 $session_id=$_SESSION['email'];
 
 ?>
