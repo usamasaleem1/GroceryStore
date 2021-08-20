@@ -1,5 +1,5 @@
-<?php include('dbcon.php'); ?> 
 <?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,7 +66,7 @@
 		<a class="btn btn-outline-primary ml-1" href="logout.php">Logout</a>
 	  }
 	  ?>
-	  <a class="btn btn-outline-primary ml-1" href="signinpage.php">Sign in</a>
+	  <!-- <a class="btn btn-outline-primary ml-1" href="signinpage.php">Sign in</a> -->
 	</form>
   </div>
 </nav>
