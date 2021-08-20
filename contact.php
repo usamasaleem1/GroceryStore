@@ -59,7 +59,11 @@ session_start();
 	<form class="form-inline my-2 my-lg-0">
 	  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="background-color: #343A40;">
 	  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	  <a class="btn btn-outline-primary ml-1" href="signinpage.php">Sign in</a>
+	        <?php if(isset($_SESSION['loggedin'])){ ?>
+        <a class="btn btn-outline-primary ml-1" href="logout.php">Log Out</a>
+    <?php }else{ ?>
+        <a class="btn btn-outline-primary ml-1" href="signinpage.php">Sign in</a>
+    <?php } ?>
 	</form>
   </div>
 </nav>
