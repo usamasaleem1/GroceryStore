@@ -2,7 +2,6 @@
 <?php include('dbcon.php'); ?>
 
 <?php
-echo "test1";
 	if (isset($_POST['submit']))
 		{
 			$email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -11,11 +10,16 @@ echo "test1";
 			$query 		= mysqli_query($conn, "SELECT * FROM register WHERE password='$password' and email='$email'");
 			$row		= mysqli_fetch_array($query);
 			$num_row 	= mysqli_num_rows($query);
-			echo "got here";
+			
 			if ($num_row > 0) 
 				{			
 					$_SESSION['email']=$row['email'];
-					header('location:home.html');
+					if ($password = "admin" && $email = "admin"){
+						header('location:backstore.html');
+					} else {
+						header('location:home.html');
+					}
+					
 					
 				}
 			else
