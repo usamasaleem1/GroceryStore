@@ -20,20 +20,20 @@
 					} else {
 						header('location:home.html');
 					}
-
-			function verifyAdmin() {
-				if(!isset($_SESSION['permission']) || $_SESSION['permission'] != 'admin'){
-				header('location:home.html');
-			}
-			else {
-				header("location:backstore.php");
-				}
-			}
 					
 				}
 			else
 				{
 					header('location:signinpageError.php');
 				}
+		}
+
+		function verifyAdmin() {
+			if(!isset($_SESSION['permission']) || $_SESSION['permission'] != 'admin'){
+			header('location:home.html');
+		}
+		else {
+			header("location:backstore.php");
+			}
 		}
   ?>
