@@ -1,3 +1,5 @@
+<?php ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +59,6 @@
 	  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="background-color: #343A40;">
 	  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 		<a class="btn btn-outline-primary ml-1" href="signinpage.php">Sign in</a>
-	  <!-- <a class="btn btn-outline-primary ml-1" href="signinpage.php">Sign in</a> -->
 	</form>
   </div>
 </nav>
