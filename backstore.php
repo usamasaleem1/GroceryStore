@@ -8,10 +8,10 @@ include('session.php');
 session_start();
 function verifyAdmin() {
     if(!isset($_SESSION['permission']) || $_SESSION['permission'] != 'admin'){
-         header("location:backstore.php");
+        header('location:home.html');
      }
      else {
-        header('location:home.html');
+        header("location:backstore.php");
      }
  }
  verifyAdmin();
