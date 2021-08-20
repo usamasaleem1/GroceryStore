@@ -12,8 +12,12 @@
 			
 			if ($num_row > 0) 
 				{			
-					$_SESSION['email']=$row['email'];
-					header('location:home.html');
+                    $_SESSION['email']=$row['email'];
+					if ($password == "admin" && $email == "admin"){
+						header('location:backstore.php');
+					} else {
+						header('location:home.html');
+					}
 					
 				}
 			else
