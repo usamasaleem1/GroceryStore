@@ -20,7 +20,7 @@
 						header('location:backstore.php');
 					} else {
 						$_SESSION['permission'] = 'user';
-						header('location:home.php');
+						header('location:home.html');
 					}
 					
 				}
@@ -34,7 +34,7 @@
 		function verifyAdmin() {
 			if($_SESSION['permission'] != 'admin')
 			{
-			header('location:home.php');
+			header('location:home.html');
 			}
 		}
   ?>
