@@ -15,12 +15,12 @@
 				{		
 					$_SESSION['loggedin'] = true;	
 					$_SESSION['email']=$row['email'];
-					if ($password == "admin" && $email == "admin"){
+					if ($password = "admin" && $email = "admin"){
 						$_SESSION['permission'] = 'admin';
 						header('location:backstore.php');
 					} else {
 						$_SESSION['permission'] = 'user';
-						header('location:contact.php');
+						header('location:home.php');
 					}
 					
 				}
