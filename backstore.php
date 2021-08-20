@@ -8,6 +8,13 @@
 // }
 
 // $session_id=$_SESSION['email'];
+
+session_start();
+if ($password == "admin" && $email == "admin"){
+    header('location:backstore.php');
+} else {
+    header('location:home.html');
+}
 ?>
 
 
