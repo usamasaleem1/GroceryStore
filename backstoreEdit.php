@@ -8,6 +8,9 @@ include('session.php');
 session_start();
 verifyAdmin();
 ?>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>

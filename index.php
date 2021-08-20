@@ -2,6 +2,9 @@
 header('location:home.php');
 ?>
 
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
    <head>
