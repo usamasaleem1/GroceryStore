@@ -8,7 +8,11 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
 session_start();
 //Check whether the session variable SESS_MEMBER_ID is present or not
 if (!isset($_SESSION['email']) || (trim($_SESSION['email']) == '')) {
-    header("location: index.php");
+    if ($password = "admin" && $email = "admin"){
+        header('location:backstore.php');
+    } else {
+        header('location:home.html');
+    }
     exit();
 }
 $session_id=$_SESSION['email'];
