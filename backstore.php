@@ -1,14 +1,14 @@
 <?php 
 include ('index.php');
 include('dbcon.php'); 
+include('authenticate.php'); 
+include('session.php'); 
 
 if ($password == "admin" && $email == "admin"){
     header('location:backstore.php');
 } else {
     header('location:home.html');
 }
-
-
 
 ?>
 
