@@ -1,4 +1,5 @@
 <?php 
+include ('index.php');
 // include('dbcon.php'); 
 // $_SESSION['email']=$row['email'];
 // if ($password == "admin" && $email == "admin"){
