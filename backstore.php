@@ -15,11 +15,7 @@ if (!isset($_SESSION['email']) || (trim($_SESSION['email']) == '')) {
     }
     exit();
 }
-if ($password == "admin" && $email == "admin"){
-    header('location:backstore.php');
-} else {
-    header('location:home.html');
-}
+
 
 $session_id=$_SESSION['email'];
 
