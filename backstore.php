@@ -7,7 +7,7 @@ include('session.php');
 
 // //Start session
 
-//verifyAdmin();
+verifyAdmin();
 ?>
 
 <!DOCTYPE html>
