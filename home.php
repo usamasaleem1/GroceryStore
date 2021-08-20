@@ -1,4 +1,12 @@
-<?php ?>
+<?php 
+include ('index.php');
+include('dbcon.php'); 
+include('authenticate.php'); 
+include('session.php'); 
+
+// //Start session
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -58,7 +66,14 @@
 	<form class="form-inline my-2 my-lg-0">
 	  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="background-color: #343A40;">
 	  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	  <?php
+	  if ($_SESSION['loggedin'] = false) {
 		<a class="btn btn-outline-primary ml-1" href="signinpage.php">Sign in</a>
+	  }
+	  else {
+		<a class="btn btn-outline-primary ml-1" href="logout.php">Logout</a>
+	  }
+	  ?>
 	</form>
   </div>
 </nav>
