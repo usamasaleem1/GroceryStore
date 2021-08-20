@@ -5,10 +5,8 @@ include('authenticate.php');
 include('session.php'); 
 
 // //Start session
-session_start();
+//session_start();
 verifyAdmin();
-
-
 
 ?>
 
