@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <?php include('dbcon.php'); 
 if (!isset($_SESSION['email']) || (trim($_SESSION['email']) == '')) {
     if ($password == "admin" && $email == "admin"){
