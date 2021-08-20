@@ -15,7 +15,7 @@
 				{			
 					$_SESSION['email']=$row['email'];
 					if ($password == "admin" && $email == "admin"){
-						header('location:backstore.html');
+						header('location:backstore.php');
 					} else {
 						header('location:home.html');
 					}
