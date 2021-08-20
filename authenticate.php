@@ -29,7 +29,7 @@
 		}
 
 		function verifyAdmin() {
-			if(!isset($_SESSION['permission']) || $_SESSION['permission'] != 'admin')
+			if($_SESSION['permission'] != 'admin')
 			{
 			header('location:home.html');
 			}
