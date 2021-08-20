@@ -6,8 +6,14 @@ include('authenticate.php');
 include('session.php'); 
 
 // //Start session
+if($_SESSION['permission'] == 'admin')
+{
+header('location:backstore.php');
+}
+else {
+header('location:home.php');
+}
 
-verifyAdmin();
 ?>
 
 <!DOCTYPE html>
