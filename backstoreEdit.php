@@ -1,3 +1,12 @@
+<?php 
+include ('index.php');
+include('dbcon.php'); 
+include('authenticate.php'); 
+include('session.php'); 
+
+// //Start session
+session_start();
+verifyAdmin();
 <!DOCTYPE html>
 <html>
 <head>
