@@ -10,8 +10,6 @@ verifyAdmin();
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
