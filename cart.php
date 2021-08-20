@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php include('dbcon.php'); ?>
-
+<?php print_r($_SESSION['cart']) ?>
 <?php 
 
 $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'HTADFpjYkD');
