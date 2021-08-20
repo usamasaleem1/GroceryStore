@@ -17,7 +17,7 @@
 					$_SESSION['email']=$row['email'];
 					if ($password == "admin" && $email == "admin"){
 						$_SESSION['permission'] = 'admin';
-						verifyAdmin();
+						header('location:backstore.php');
 					} else {
 						$_SESSION['permission'] = 'user';
 						header('location:home.php');
@@ -31,15 +31,3 @@
 				}
 		}
   ?>
-
-  <?php
-  		function verifyAdmin() {
-			if($_SESSION['permission'] == 'admin')
-			{
-			header('location:backstore.php');
-			}
-			else {
-			header('location:home.php');
-			}
-		}
-?>
