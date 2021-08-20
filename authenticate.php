@@ -32,9 +32,12 @@
 		}
 
 		function verifyAdmin() {
-			if($_SESSION['permission'] != 'admin')
+			if($_SESSION['permission'] == 'admin')
 			{
-			header('location:home.php');
+			header('location:backstore.php');
 			}
+			else {
+				header('location:home.php');
+				}
 		}
   ?>
