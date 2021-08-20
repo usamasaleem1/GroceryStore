@@ -1,3 +1,7 @@
+<?php
+header('location:home.php');
+?>
+
 <!DOCTYPE html>
 <html>
    <head>
