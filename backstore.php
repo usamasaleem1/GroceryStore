@@ -5,18 +5,10 @@ include('authenticate.php');
 include('session.php'); 
 
 // //Start session
-// session_start();
-// function verifyAdmin() {
-//     if(!isset($_SESSION['permission']) || $_SESSION['permission'] != 'admin'){
-//         header('location:home.html');
-//      }
-//      else {
-//         header("location:backstore.php");
-//      }
-//  }
-//  verifyAdmin();
+session_start();
+verifyAdmin();
 
-// //$session_id=$_SESSION['email'];
+
 
 ?>
 

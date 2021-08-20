@@ -15,6 +15,7 @@ if (!isset($_SESSION['email']) || (trim($_SESSION['email']) == '')) {
     }
     exit();
 }
+
 $session_id=$_SESSION['email'];
 
 
