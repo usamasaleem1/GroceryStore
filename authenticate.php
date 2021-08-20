@@ -18,6 +18,7 @@
 						$_SESSION['permission'] = 'admin';
 						header('location:backstore.php');
 					} else {
+						$_SESSION['permission'] = 'user';
 						header('location:home.html');
 					}
 					
