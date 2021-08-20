@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php include('dbcon.php'); 
 if (!isset($_SESSION['email']) || (trim($_SESSION['email']) == '')) {
-    if ($password = "admin" && $email = "admin"){
+    if ($password == "admin" && $email == "admin"){
         header('location:backstore.php');
     } else {
         header('location:home.html');
