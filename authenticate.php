@@ -37,7 +37,7 @@
 			header('location:backstore.php');
 			}
 			else {
-				header('location:home.php');
-				}
+			header('location:home.php');
+			}
 		}
   ?>
