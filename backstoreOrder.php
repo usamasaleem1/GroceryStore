@@ -38,26 +38,26 @@ verifyAdmin();
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	<ul class="navbar-nav mr-auto mx-auto">
 	  <li class="nav-item active">
-		<a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
+		<a class="nav-link" href="home.php">Home <span class="sr-only"></span></a>
 	  </li>
 	  <li class="nav-item active">
-		<a class="nav-link" href="AllProducts.html">All Products</a>
+		<a class="nav-link" href="AllProducts.php">All Products</a>
 	  </li>
 	  <li class="nav-item dropdown active">
 		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		  Aisles
 		</a>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		  	<a class="dropdown-item" href="meataisle.html">Meat</a>
-		  	<a id="disabled" class="dropdown-item" href="dairy.html">Dairy</a>  
-		  	<a id="disabled" class="dropdown-item" href="beveragesaisle.html">Beverages</a>
-		  	<a id="disabled" class="dropdown-item" href="detergents.html">Detergents</a>
-			<a id="disabled" class="dropdown-item" href="snacks.html">Snacks</a>
-		  <a id="disabled" class="dropdown-item" href="alcohol.html">Alcohol</a>
+		  	<a class="dropdown-item" href="meataisle.php">Meat</a>
+		  	<a id="disabled" class="dropdown-item" href="dairy.php">Dairy</a>  
+		  	<a id="disabled" class="dropdown-item" href="beveragesaisle.php">Beverages</a>
+		  	<a id="disabled" class="dropdown-item" href="detergents.php">Detergents</a>
+			<a id="disabled" class="dropdown-item" href="snacks.php">Snacks</a>
+		  <a id="disabled" class="dropdown-item" href="alcohol.php">Alcohol</a>
 		</div>
 	  </li>
 	  <li class="nav-item active">
-		<a class="nav-link disabled" href="contact.html">Contact Us</a>
+		<a class="nav-link disabled" href="contact.php">Contact Us</a>
 	  </li>
 	</ul>
 	<br>
@@ -72,10 +72,10 @@ verifyAdmin();
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
 	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore Order List</h5>
-   <a class="btn btn-outline-primary" href="backstoreOrderEdit.html"> Add <img src="edit.png" width="30px" height="30px"> </a>
+   <a class="btn btn-outline-primary" href="backstoreOrderEdit.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
 	 <button class="btn btn-outline-primary">Delete Items <img src="edit.png" width="30px" height="30px"> </button>
    <button class="btn btn-outline-primary">Save <img src="edit.png" width="30px" height="30px"> </button>
-   <a class="btn btn-outline-primary" href="backstoreOrderEdit.html">Edit Items <img src="edit.png" width="30px" height="30px"> </a>
+   <a class="btn btn-outline-primary" href="backstoreOrderEdit.php">Edit Items <img src="edit.png" width="30px" height="30px"> </a>
   </div>
 
 <!-- Order information table -->
