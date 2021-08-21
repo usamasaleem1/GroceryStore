@@ -9,7 +9,7 @@ $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'H
 if (isset($_POST['add'])) {
   if (isset($_SESSION['cart'])) {
     $item_array_id = array_column($_SESSION['cart'], "product_id");
-    if (in_array($_GET['id'], $item_array_id)) {
+    if (!in_array($_GET['id'] ==  $item_array_id)) {
       $count = count($_SESSION['cart']);
       $item_array = array(
         "product_id" => $_GET['id'],
