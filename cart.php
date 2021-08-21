@@ -47,7 +47,7 @@ if (isset($_GET['action'])) {
     }
   }
 
-  }
+}
 
 ?>
 
@@ -158,7 +158,7 @@ if (isset($_GET['action'])) {
  <section>
 
 
-<!------------------------------------ testing cart functionality---------------------------------- -->
+  <!------------------------------------ testing cart functionality---------------------------------- -->
   <div class="row">
     <div class="col-lg-8">
       <div class="mb-3">
@@ -166,8 +166,8 @@ if (isset($_GET['action'])) {
 
           <?php
           
-         // $query = "SELECT * FROM products ORDER BY id ASC";
-         // $result = mysqli_query($connect, $query);
+          $query = "SELECT * FROM products ORDER BY id ASC";
+          $result = mysqli_query($connect, $query);
           ?>
           
           <h3 class="title2">Shopping Cart Details </h3>
@@ -220,120 +220,120 @@ if (isset($_GET['action'])) {
   </div>
 
 
-<!-- ------------------------------------------------------------ -->
+  <!-- ------------------------------------------------------------ -->
 
 
   <!--Grid row-->
   <div class="row ml-4">
 
-        <div class="col-lg-4">
+    <div class="col-lg-4">
 
-          <!-- Card -->
-          <div class="mb-3">
-            <div class="pt-4">
+      <!-- Card -->
+      <div class="mb-3">
+        <div class="pt-4">
 
-              <h5 class="mb-3">The total amount of</h5>
+          <h5 class="mb-3">The total amount of</h5>
 
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                  amount
-                  <span id="amount">$22.74</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                  GST
-                  <span id="gst">$2.25</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                  QST
-                  <span id="qst">$1.14</span>
-                </li>
-
-
-                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                  <div>
-                    <strong>The total amount of</strong>
-                    <strong>
-                      <p class="mb-0">(including VAT)</p>
-                    </strong>
-                  </div>
-                  <span><strong id="totalAmount">$26.151</strong></span>
-                </li>
-              </ul>
-
-              <button type="button" class="btn btn-primary btn-block">go to checkout</button>
-
-              <a href="groceryshop.php">
-                <button type="button" class="btn btn-secondary btn-block mt-1">Continue Shopping</button>
-              </a>
-
-            </div>
-          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+              amount
+              <span id="amount">$22.74</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              GST
+              <span id="gst">$2.25</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              QST
+              <span id="qst">$1.14</span>
+            </li>
 
 
+            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+              <div>
+                <strong>The total amount of</strong>
+                <strong>
+                  <p class="mb-0">(including VAT)</p>
+                </strong>
+              </div>
+              <span><strong id="totalAmount">$26.151</strong></span>
+            </li>
+          </ul>
 
+          <button type="button" class="btn btn-primary btn-block">go to checkout</button>
+
+          <a href="groceryshop.php">
+            <button type="button" class="btn btn-secondary btn-block mt-1">Continue Shopping</button>
+          </a>
 
         </div>
-        <!--Grid column-->
-
       </div>
-      <!-- Grid row -->
-
-    </section>
-    <!--Section: Block Content-->
-
-
-  </main>
-
-  
 
 
 
 
-
-
-
-  <!--special offer  -->
-  <main>
-    <div class="jumbotron">
-      <h2>Special Offer!</h2>
-      <p class="lead">Free Delivery for orders over $150</p>
     </div>
-  </main>  
+    <!--Grid column-->
+
+  </div>
+  <!-- Grid row -->
+
+</section>
+<!--Section: Block Content-->
 
 
-  <!-- footer -->
-  <footer class="pt-4 my-md-5 pt-md-5 border-top">
-    <div class="row">
-      <div class="col-12 col-md">
-        <p></p>
-        <small class="d-block mb-3 text-muted"></small>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Contacts</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="contact.php">Manager</a></li>
-          <li><a class="text-muted" href="contact.php">Supervisor</a></li>
-          <li><a class="text-muted" href="contact.php">Our Team</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Careers</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="careers.php">Meat Section</a></li>
-          <li><a class="text-muted" href="careers.php">Delivery</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="contact.php">Team</a></li>
-          <li><a class="text-muted" href="https://www.google.com/maps/place/11011+Bd+Maurice-Duplessis,+Montr%C3%A9al,+QC+H1C+1V3/@45.6660703,-73.5345729,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc8e1759aa6762d:0x80db5bbbc6e3d671!8m2!3d45.6660703!4d-73.5323842" target="_blank">Location</a></li>
-          <li><a class="text-muted" href="terms.php">Privacy</a></li>
-          <li><a class="text-muted" href="terms.php">Terms</a></li>
-        </ul>
-      </div>
+</main>
+
+
+
+
+
+
+
+
+
+<!--special offer  -->
+<main>
+  <div class="jumbotron">
+    <h2>Special Offer!</h2>
+    <p class="lead">Free Delivery for orders over $150</p>
+  </div>
+</main>  
+
+
+<!-- footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+  <div class="row">
+    <div class="col-12 col-md">
+      <p></p>
+      <small class="d-block mb-3 text-muted"></small>
     </div>
-  </footer>
+    <div class="col-6 col-md">
+      <h5>Contacts</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="contact.php">Manager</a></li>
+        <li><a class="text-muted" href="contact.php">Supervisor</a></li>
+        <li><a class="text-muted" href="contact.php">Our Team</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Careers</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="careers.php">Meat Section</a></li>
+        <li><a class="text-muted" href="careers.php">Delivery</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="contact.php">Team</a></li>
+        <li><a class="text-muted" href="https://www.google.com/maps/place/11011+Bd+Maurice-Duplessis,+Montr%C3%A9al,+QC+H1C+1V3/@45.6660703,-73.5345729,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc8e1759aa6762d:0x80db5bbbc6e3d671!8m2!3d45.6660703!4d-73.5323842" target="_blank">Location</a></li>
+        <li><a class="text-muted" href="terms.php">Privacy</a></li>
+        <li><a class="text-muted" href="terms.php">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
 
 </body>
