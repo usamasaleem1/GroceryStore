@@ -21,21 +21,21 @@ if (isset($_POST['add'])) {
       $_SESSION['cart']["count"] = $item_array;
       echo '<script>window.location="cart.php" </script>';
     }
-    // else{
-    //   echo '<script>alert("product is already added to cart")</script>';
-    //   echo '<script>window.location="cart.php" </script>';
-    // }
+    else{
+      echo '<script>alert("product is already added to cart")</script>';
+      echo '<script>window.location="cart.php" </script>';
+    }
 
   }
-  // else{
-  //   $item_array = array(
-  //     "product_id" => $_GET['id'],
-  //     "item_name" => $_POST['hidden_name'],
-  //     "product_price" => $_POST["hidden_price"],
-  //     "item_quantity" => $_POST['quantity']
-  //   );
-  //   $_SESSION['cart'][0] = $item_array;
-  // }
+  else{
+    $item_array = array(
+      "product_id" => $_GET['id'],
+      "item_name" => $_POST['hidden_name'],
+      "product_price" => $_POST["hidden_price"],
+      "item_quantity" => $_POST['quantity']
+    );
+    $_SESSION['cart'][0] = $item_array;
+  }
 }
 
 if (isset($_GET['action'])) {
