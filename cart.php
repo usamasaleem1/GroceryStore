@@ -26,15 +26,16 @@ if (isset($_POST['add'])) {
     //   echo '<script>window.location="cart.php" </script>';
     // }
 
-  }else{
-    $item_array = array(
-      "product_id" => $_GET['id'],
-      "item_name" => $_POST['hidden_name'],
-      "product_price" => $_POST["hidden_price"],
-      "item_quantity" => $_POST['quantity']
-    );
-    $_SESSION['cart'][0] = $item_array;
   }
+  // else{
+  //   $item_array = array(
+  //     "product_id" => $_GET['id'],
+  //     "item_name" => $_POST['hidden_name'],
+  //     "product_price" => $_POST["hidden_price"],
+  //     "item_quantity" => $_POST['quantity']
+  //   );
+  //   $_SESSION['cart'][0] = $item_array;
+  // }
 }
 
 if (isset($_GET['action'])) {
