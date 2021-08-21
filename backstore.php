@@ -92,17 +92,16 @@ header('location:home.php');
 		<table class="table table-hover text-center">
 			<thead>
 			<tr>
-				<th scope="col"><input type="checkbox" aria-label="Checkbox for following text input"></th>
 				<th scope="col"></th>
 				<th scope="col">Product</th>
 				<th scope="col">Type</th>
 				<th scope="col">Inventory</th>
 				<th scope="col">Price</th>
+				<th scope="col"></th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="leanbeef.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Extra Lean Beef</td>
 				<td class="align-middle text-center">Meat</td>
@@ -110,7 +109,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$12.20/kg</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="pork.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Pork Ribs</td>
 				<td class="align-middle text-center">Meat</td>
@@ -118,7 +116,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$10.50/kg</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="chicken.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Chicken Breast</td>
 				<td class="align-middle text-center">Meat</td>
@@ -126,7 +123,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$16.75/kg</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="steak.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Steak</td>
 				<td class="align-middle text-center">Meat</td>
@@ -134,7 +130,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$15.00/kg</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="milk.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Milk</td>
 				<td class="align-middle text-center">Dairy</td>
@@ -142,7 +137,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$4.40</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="yogurt.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Yogurt</td>
 				<td class="align-middle text-center">Dairy</td>
@@ -150,7 +144,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$5.99</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="choco.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Chocolate Milk</td>
 				<td class="align-middle text-center">Dairy</td>
@@ -158,7 +151,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$2.25</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="ParmesanCheese.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Parmesan Cheese</td>
 				<td class="align-middle text-center">Dairy</td>
@@ -166,7 +158,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$24.50/kg</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="san.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Sanpellegrino (Lemonade)</td>
 				<td class="align-middle text-center">Beverages</td>
@@ -174,7 +165,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$1.50</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="san2.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Sanpellegrino (Pomengranate)</td>
 				<td class="align-middle text-center">Beverages</td>
@@ -182,7 +172,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$1.50</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="mtndew.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Mountain Dew</td>
 				<td class="align-middle text-center">Beverages</td>
@@ -190,7 +179,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$2.00</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="coke.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Coca-Cola</td>
 				<td class="align-middle text-center">Beverages</td>
@@ -198,7 +186,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$2.00</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="gain.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Gain Wash</td>
 				<td class="align-middle text-center">Detergent</td>
@@ -206,7 +193,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$16.00</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="tide.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Tide Ultra</td>
 				<td class="align-middle text-center">Detergent</td>
@@ -214,7 +200,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$12.00</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="persil.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Persil Pro-Clean</td>
 				<td class="align-middle text-center">Detergent</td>
@@ -222,7 +207,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$12.75</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="oxy.png" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Oxy-clean Variety Pack</td>
 				<td class="align-middle text-center">Detergent</td>
@@ -230,7 +214,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$16.75</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="snickers.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Snickers Bar</td>
 				<td class="align-middle text-center">Snacks</td>
@@ -238,7 +221,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$1.15</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="tv_bar.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">TV Bar</td>
 				<td class="align-middle text-center">Snacks</td>
@@ -246,7 +228,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$1.00</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="pringles.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Pringles</td>
 				<td class="align-middle text-center">Snacks</td>
@@ -254,7 +235,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$2.00</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="maltesers.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Maltesers</td>
 				<td class="align-middle text-center">Snacks</td>
@@ -262,7 +242,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$2.50</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="seltzer.png" alt="Album screenshot" width="100" style="object-fit: contain; height: 100px;"></td>
 				<td class="align-middle text-center">Happy Dad</td>
 				<td class="align-middle text-center">Alcohol</td>
@@ -270,7 +249,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$2.00</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="beer.png" alt="Album screenshot" width="100" style="object-fit: contain; height: 100px;"></td>
 				<td class="align-middle text-center">Heineken</td>
 				<td class="align-middle text-center">Alcohol</td>
@@ -278,7 +256,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$4.00</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="wine.png" alt="Album screenshot" width="100" style="object-fit: contain; height: 100px;"></td>
 				<td class="align-middle text-center">Barefoot</td>
 				<td class="align-middle text-center">Alcohol</td>
@@ -286,7 +263,6 @@ header('location:home.php');
 				<td class="align-middle text-center">$10.00</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="moscato.png" alt="Album screenshot" width="100" style="object-fit: contain; height: 100px;"></td>
 				<td class="align-middle text-center">Castello del Poggio Moscato</td>
 				<td class="align-middle text-center">Alcohol</td>
