@@ -166,8 +166,8 @@ if (isset($_GET['action'])) {
 
           <?php
           
-          $query = "SELECT * FROM products ORDER BY id ASC";
-          $result = mysqli_query($connect, $query);
+         // $query = "SELECT * FROM products ORDER BY id ASC";
+         // $result = mysqli_query($connect, $query);
           ?>
           
           <h3 class="title2">Shopping Cart Details </h3>
