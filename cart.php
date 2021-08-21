@@ -19,7 +19,7 @@ if (isset($_POST['add'])) {
         "item_quantity" => $_POST['quantity']
 
       );
-      $_SESSION['cart']["count"] = $item_array;
+      $_SESSION['cart'][$count] = $item_array;
       $count++;
       echo '<script>window.location="cart.php" </script>';
     }
