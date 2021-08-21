@@ -20,10 +20,11 @@ if (isset($_POST['add'])) {
       );
       $_SESSION['cart']["count"] = $item_array;
       echo '<script>window.location="cart.php" </script>';
-    }else{
-      echo '<script>alert("product is already added to cart")</script>';
-      echo '<script>window.location="cart.php" </script>';
     }
+    // else{
+    //   echo '<script>alert("product is already added to cart")</script>';
+    //   echo '<script>window.location="cart.php" </script>';
+    // }
 
   }else{
     $item_array = array(
