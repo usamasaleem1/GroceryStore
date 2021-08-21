@@ -11,7 +11,7 @@ if (isset($_POST['add'])) {
     $item_array_id = array_column($_SESSION['cart'], "product_id");
     if (!in_array($_GET['id'], $item_array_id)) {
       // $count = count($_SESSION['cart']);
-      $count = 24;
+      $count = 0;
       $item_array = array(
         "product_id" => $_GET['id'],
         "item_name" => $_POST['hidden_name'],
@@ -20,6 +20,7 @@ if (isset($_POST['add'])) {
 
       );
       $_SESSION['cart']["count"] = $item_array;
+      $count++;
       echo '<script>window.location="cart.php" </script>';
     }
     else{
