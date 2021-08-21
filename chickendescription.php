@@ -145,14 +145,14 @@ $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'H
 
   					?>
 
-  					<form method="post" action="cart.php?action=add&id=4">
+  					<form method="post" action="cart.php?action=add&id=<?php echo $row["id"]; ?>">
   						<div class="form-group mt-4">
   							<label for="exampleInputPassword1">Quantity</label>
   							<input id="cartCount" onchange="updateCartPrice()" type="number" style="width: 100px;" class="form-control" value="1" id="cart" placeholder="Quantity" name="quantity">
   						</div>
 
-  						<input type="hidden" name="hidden_name" value="Chicken" >
-  						<input type="hidden" name="hidden_price" value="16.75">
+  						<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" >
+  						<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
   						<button id="addToCartButton" type="submit" class="btn btn-primary" name="add">Add To Cart</button>
   					</form>
   					<?php
