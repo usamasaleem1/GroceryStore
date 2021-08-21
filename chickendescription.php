@@ -189,14 +189,14 @@ if (isset($_GET['action'])) {
 
   					?>
 
-  					<form method="post" action="cart.php?action=add&id=<?php echo $row["id"]; ?>">
+  					<form method="post" action="cart.php?action=add&id=3">
   						<div class="form-group mt-4">
   							<label for="exampleInputPassword1">Quantity</label>
   							<input id="cartCount" onchange="updateCartPrice()" type="number" style="width: 100px;" class="form-control" value="1" id="cart" placeholder="Quantity" name="quantity">
   						</div>
 
-  						<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" >
-  						<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
+  						<input type="hidden" name="hidden_name" value="Chicken" >
+  						<input type="hidden" name="hidden_price" value="16.75">
   						<button id="addToCartButton" type="submit" class="btn btn-primary" name="add">Add To Cart</button>
   					</form>
   					<?php
