@@ -35,6 +35,8 @@ if (isset($_POST['add'])) {
       "item_quantity" => $_POST['quantity']
     );
     $_SESSION['cart'][0] = $item_array;
+    $_SESSION['cart'][1] = $item_array;
+    $_SESSION['cart'][2] = $item_array;
   }
 }
 
