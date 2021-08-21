@@ -97,7 +97,7 @@ header('location:home.php');
 				<th scope="col">Type</th>
 				<th scope="col">Inventory</th>
 				<th scope="col">Price</th>
-				<th scope="col"></th>
+				<th scope="col">Edit/Delete</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -107,6 +107,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Meat</td>
 				<td class="align-middle text-center">10 in stock</td>
 				<td class="align-middle text-center">$12.20/kg</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="pork.jpg" alt="Album screenshot" width="100"></td>
