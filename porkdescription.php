@@ -140,7 +140,7 @@ $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'H
   			if (mysqli_num_rows($result) > 0)
   			 {
   				
-  				( $row = mysqli_fetch_array($result) ); 
+  				while( $row = mysqli_fetch_array($result) ); 
   				{
 
   					?>
