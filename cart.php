@@ -10,7 +10,8 @@ if (isset($_POST['add'])) {
   if (isset($_SESSION['cart'])) {
     $item_array_id = array_column($_SESSION['cart'], "product_id");
     if (!in_array($_GET['id'], $item_array_id)) {
-      $count = count($_SESSION['cart']);
+      // $count = count($_SESSION['cart']);
+      $count = 24;
       $item_array = array(
         "product_id" => $_GET['id'],
         "item_name" => $_POST['hidden_name'],
@@ -35,8 +36,6 @@ if (isset($_POST['add'])) {
       "item_quantity" => $_POST['quantity']
     );
     $_SESSION['cart'][0] = $item_array;
-    $_SESSION['cart'][1] = $item_array;
-    $_SESSION['cart'][2] = $item_array;
   }
 }
 
