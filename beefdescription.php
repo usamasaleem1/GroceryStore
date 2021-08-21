@@ -1,5 +1,7 @@
 <?php session_start(); ?>
-<?php include('dbcon.php'); ?>
+<?php 
+// include('dbcon.php'); 
+?>
 <?php 
 
 $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'HTADFpjYkD');

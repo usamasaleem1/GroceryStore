@@ -1,5 +1,7 @@
 <?php session_start(); ?>
-<?php include('dbcon.php'); ?>
+<?php 
+// include('dbcon.php'); 
+?>
 
 <?php print_r($_SESSION['cart']) ?>
 <?php 
