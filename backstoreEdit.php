@@ -150,7 +150,7 @@ header('location:home.php');
 <?php
 if(isset($_POST["save"]))
 {
-	mysqli_query($conn, "insert into products values(NULL,'$_POST(name)','$_POST(price)','$_POST(description)')")
+	mysqli_query($conn,"insert into products values('$_POST(name)','$_POST(price)','$_POST(description)')")
 }
 
 ?>
