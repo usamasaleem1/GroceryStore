@@ -264,9 +264,9 @@ if (isset($_GET['action'])) {
             </li>
           </ul>
 
-          <button type="button" class="btn btn-primary btn-block">go to checkout</button>
+          <button type="button" class="btn btn-primary btn-block">Checkout</button>
 
-          <a href="groceryshop.php">
+          <a href="AllProducts.php">
             <button type="button" class="btn btn-secondary btn-block mt-1">Continue Shopping</button>
           </a>
         </div>
