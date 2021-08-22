@@ -105,7 +105,7 @@ header('location:home.php');
 			<?php 
 				$query = mysqli_query($conn, "SELECT * FROM products");
 
-				while($row = mysql_fetch_array($query))
+				while($row = mysqli_fetch_array($query))
 				{
 					print_r($row['name']);
 				}
