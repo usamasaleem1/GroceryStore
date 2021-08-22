@@ -6,7 +6,7 @@ if(isset($_POST["save"]))
 {
 	$id = $_POST[];
 
-	$name = $_POST["product"];
+	$name = $_POST["name"];
 	$type = $_POST["type"];
 	$price = $_POST["price"];
 	$count = $_POST["count"];

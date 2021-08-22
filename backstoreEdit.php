@@ -116,7 +116,7 @@ header('location:home.php');
     <div class="form-group row">
         <label for="colFormLabel" class="col-sm-2 col-form-label">Product Name</label>
         <div class="col-md-7">
-          <input  class="form-control" id="colFormLabel" placeholder="Product Name" name="product">
+          <input  class="form-control" id="colFormLabel" placeholder="Product Name" name="name">
         </div>
     </div>
 
