@@ -244,11 +244,11 @@ if (isset($_GET['action'])) {
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
               GST
-              <span id="gst"><?php echo "$".$gst?></span>
+              <span id="gst"><?php echo "$".(round($gst, 2))?></span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
               QST
-              <span id="qst"><?php echo "$".$qst?></span>
+              <span id="qst"><?php echo "$".(round($qst, 2))?></span>
             </li>
 
 
