@@ -120,24 +120,24 @@ header('location:home.php');
         </div>
     </div>
 
-    <div class="form-row">
+    <!-- <div class="form-row">
         <div class="form-group col-md-2">
             <label for="colFormLabel" class="col-form-label">Type</label>
             <input  class="form-control" id="colFormLabel" placeholder="Type" name="type">
-        </div>
+        </div> -->
         <div class="form-group col-md-2">
             <label for="colFormLabel" class="col-form-label">Price</label>
             <input  class="form-control" id="colFormLabel" placeholder="Price" name="price">
         </div>
-        <div class="form-group col-md-2">
+       <!--  <div class="form-group col-md-2">
             <label for="colFormLabel" class="col-form-label">Stock count</label>
             <input class="form-control" id="colFormLabel" placeholder="Stock count" name="count">
-        </div>
+        </div>-->
 
     </div>
 
     <div class="custom-file col-md-2">
-        <label for="customFile" class="col-form-label">Stock count</label>
+        <!-- <label for="customFile" class="col-form-label">Stock count</label> -->
         <label class="custom-file-label" for="customFile">Image file</label>
         <input type="file" class="custom-file-input" id="customFile">
     </div>
