@@ -107,7 +107,7 @@ header('location:home.php');
 
 				while($row = mysql_fetch_array($query))
 				{
-					echo $row['name']." ";
+					print_r($row['name']);
 				}
 			?>
 			<tr>
