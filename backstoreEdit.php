@@ -125,6 +125,12 @@ header('location:home.php');
 		
 			</div>
 		
+			<div class='custom-file col-md-2'>
+				<label for='customFile' class='col-form-label'>Stock count</label>
+				<label class='custom-file-label' for='customFile'>Image file</label>
+				<input type='file' class='custom-file-input' id='customFile'>
+			</div>
+		
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
 				<div class='col-md-7'>
