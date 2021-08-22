@@ -1,4 +1,5 @@
 <?php 
+$conn = mysqli_connect('HTADFpjYkD')
 session_start();
 //include ('index.php');
 include('dbcon.php'); 
@@ -10,7 +11,33 @@ if($_SESSION['permission'] != 'admin')
 header('location:home.php');
 }
 
+if(isset($_POST["save"]))
+{
+	$id = $_POST[];
+
+	$name = $_POST["product"];
+	$type = $_POST["type"];
+	$price = $_POST["price"];
+	$count = $_POST["count"];
+	$description = $_POST["description"];
+
+	$query = "UPDATE products SET name='$name', price='$price', description='$description' WHERE id='$id'";
+	$query_run = mysqli_query($conn, $query);
+
+
+	if($query_run)
+	{
+		$_SESSION['status'] = "Updated Successfully";
+		header("Location: backstore.php")
+	}
+	else{
+		$_SESSION['status'] = "Not Updated";
+		header("Location: backstore.php")
+	}
+}
+
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,50 +112,73 @@ header('location:home.php');
 <!-- main section -->
 <br>
 <main class="m-5">
-    <h1>Add Product</h1>
+
+<?php 
+                    if(isset($_SESSION['status']))
+                    {
+                        ?>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php
+                        unset($_SESSION['status']);
+                    }
+                ?>
+
+
+    <h1>Edit Product</h1>
+
+	<form action="backstoreEdit.php" method="POST">
+
+	<div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">ID</label>
+        <div class="col-md-7">
+          <input  class="form-control" id="colFormLabel" placeholder="ID" name="id">
+        </div>
+    </div>
+
     <div class="form-group row">
         <label for="colFormLabel" class="col-sm-2 col-form-label">Product Name</label>
         <div class="col-md-7">
-          <input  class="form-control" id="colFormLabel" placeholder="Product Name">
+          <input  class="form-control" id="colFormLabel" placeholder="Product Name" name="product">
         </div>
     </div>
+
     <div class="form-row">
         <div class="form-group col-md-2">
-            <label for="inputState" class="col-form-label">Type</label>
-            <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>Meat</option>
-                <option>Dairy</option>
-                <option>Beverages</option>
-                <option>Detergents</option>
-                <option>Snacks</option>
-            </select>
+            <label for="colFormLabel" class="col-form-label">Type</label>
+            <input  class="form-control" id="colFormLabel" placeholder="Type" name="type">
         </div>
         <div class="form-group col-md-2">
             <label for="colFormLabel" class="col-form-label">Price</label>
-            <input  class="form-control" id="colFormLabel" placeholder="Price">
+            <input  class="form-control" id="colFormLabel" placeholder="Price" name="price">
         </div>
         <div class="form-group col-md-2">
             <label for="colFormLabel" class="col-form-label">Stock count</label>
-            <input class="form-control" id="colFormLabel" placeholder="Stock count">
+            <input class="form-control" id="colFormLabel" placeholder="Stock count" name="count">
         </div>
 
     </div>
+
     <div class="custom-file col-md-2">
         <label for="customFile" class="col-form-label">Stock count</label>
         <label class="custom-file-label" for="customFile">Image file</label>
         <input type="file" class="custom-file-input" id="customFile">
-      </div>
+    </div>
+
     <div class="form-group row">
         <label for="colFormLabel" class="col-sm-2 col-form-label">Description</label>
         <div class="col-md-7">
-            <textarea  class="form-control" id="colFormLabel" placeholder="Description"></textarea>
+            <textarea  class="form-control" id="colFormLabel" placeholder="Description" name="description"></textarea>
         </div>
     </div>
 
     <a href="backstore.php">
-        <button type="button" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary" name="save">Save</button>
     </a>
+
+	</form>
 
 </body>
 </html>
