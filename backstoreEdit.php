@@ -151,6 +151,8 @@ header('location:home.php');
 if(isset($_POST["insert"]))
 {
 	//mysqli_query($conn, "insert into products values(NULL,'$_POST[name]','$_POST[price]','$_POST[description]','$_POST[customFile]')")
+	$sql = 'SELECT name, price, description, customFile FROM products';
+	$result = mysqli_query($conn, $sql);
 	echo 'test';
 }
 
