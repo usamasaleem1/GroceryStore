@@ -160,7 +160,7 @@ header('location:home.php');
 
 	mysql_select_db("HTADFpjYkD",$conn);
 
-	$sql = "INSERT INTO test (name,price,description) VALUES ('$_POST[name]','$_POST[price]','$_POST[decription]')";
+	$sql = "INSERT INTO test (name,price,description) VALUES ('$_POST[name]','$_POST[price]','$_POST[description]')";
 
 	mysql_query($sql,$conn);
 
