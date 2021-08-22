@@ -92,7 +92,7 @@ header('location:home.php');
 
     <h1>Edit Product</h1>
 
-	<form action="" method="post">
+	<form action="backstoreEdit.php" method="post">
 
 	<div class="form-group row">
         <label for="colFormLabel" class="col-sm-2 col-form-label">ID</label>
@@ -150,14 +150,15 @@ header('location:home.php');
 <?php
 if(isset($_POST["save"]))
 {
+	
+	mysql_select_db("HTADFpjYkD",$conn);
+
+	$sql = "INSERT INTO products (name,price,image,description) VALUES ('$_POST[name]','$_POST[price]','$_POST[customFile]','$_POST[decription]')";
+
+	mysql_query($sql,$conn);
+	
 	//mysqli_query($conn, "insert into products values(NULL,'$_POST[name]','$_POST[price]','$_POST[description]','$_POST[customFile]')")
-	$sql = 'SELECT name, price, description, customFile FROM products';
-	$result = mysqli_query($conn, $sql);
-	$products = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-	print_r($pizzas);
-
-	echo 'test';
+	//echo 'test';
 }
 
 ?>
