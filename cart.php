@@ -192,6 +192,9 @@ if (isset($_GET['action'])) {
                     <td> <?php echo $value["item_name"]; ?> </td>
                     <td> <?php echo $value["item_quantity"]; ?> </td>
                     <td>$ <?php echo $value["product_price"]; ?> </td>
+                    <?php 
+                    double TotalPrice = $value["product_price"]; 
+                    ?>
                     <td>$ <?php echo number_format( $value["item_quantity"] * $value["product_price"], 2 ); ?></td>
                     <td><a href="cart.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                   </tr>
@@ -238,7 +241,7 @@ if (isset($_GET['action'])) {
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
               amount
-              <span id="amount">$22.74</span>
+              <span id="amount">TotalPrice</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
               GST
@@ -257,7 +260,7 @@ if (isset($_GET['action'])) {
                   <p class="mb-0">(including VAT)</p>
                 </strong>
               </div>
-              <span><strong id="totalAmount">$26.151</strong></span>
+              <span><strong id="totalAmount">TotalPrice</strong></span>
             </li>
           </ul>
 
