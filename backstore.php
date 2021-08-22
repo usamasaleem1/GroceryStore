@@ -104,11 +104,19 @@ header('location:home.php');
 
 			<?php 
 				$query = mysqli_query($conn, "SELECT * FROM products");
-				$row = mysql_fetch_array($query);
-
-				while($row = mysql_fetch_array($result))
+				foreach($query as &$value)
 				{
-					echo $row['name']." ";
+					<tr>
+					<td class="align-middle text-center"><img class="img-fluid" src="leanbeef.jpg" alt="Album screenshot" width="100"></td>
+					<td class="align-middle text-center">Extra Lean Beef</td>
+					<td class="align-middle text-center">Meat</td>
+					<td class="align-middle text-center">10 in stock</td>
+					<td class="align-middle text-center">$12.20/kg</td>
+					<td class="align-middle text-center">
+						<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+						<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete <img src="edit.png" width="30px" height="30px"> </a>
+					</td>
+					</tr>
 				}
 			?>
 			<tr>
