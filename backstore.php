@@ -102,7 +102,14 @@ header('location:home.php');
 			</thead>
 			<tbody>
 
+			<?php 
+				$query = mysqli_query($conn, "SELECT * FROM products");
 
+				while($row = mysql_fetch_array($query))
+				{
+					echo $row['name']." ";
+				}
+			?>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="leanbeef.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Extra Lean Beef</td>
