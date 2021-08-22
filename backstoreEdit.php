@@ -148,7 +148,8 @@ header('location:home.php');
 <?php
 	if(isset($_POST["save"]))
 {
-	
+	$conn = mysql_connect("HTADFpjYkD");
+
 	mysql_select_db("HTADFpjYkD",$conn);
 
 	$sql = "INSERT INTO products (name,price,description) VALUES ('$_POST[name]','$_POST[price]','$_POST[decription]')";
