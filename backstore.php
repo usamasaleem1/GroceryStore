@@ -119,9 +119,8 @@ header('location:home.php');
 							<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete <img src="edit.png" width="30px" height="30px"> </a>
 						</td>
 					</tr>
-					"
+					";
 
-					print_r($row['name']);
 				}
 			?>
 			
