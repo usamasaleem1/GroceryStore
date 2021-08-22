@@ -260,7 +260,7 @@ if (isset($_GET['action'])) {
                 </strong>
               </div>
               <?php $priceAfterTax = ($total + $qst + $gst);?>
-              <span><strong id="totalAmount"><?php echo "$".$priceAfterTax ?> </strong></span>
+              <span><strong id="totalAmount"><?php echo "$".(round($priceAfterTax, 2)) ?> </strong></span>
             </li>
           </ul>
 
