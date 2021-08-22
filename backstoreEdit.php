@@ -136,9 +136,9 @@ header('location:home.php');
         </div>
     </div>
 
-    <a href="backstore.php">
+    <!-- <a href="backstore.php">-->
         <button type="submit" class="btn btn-primary" name="submit">Save</button>
-    </a>
+    <!-- </a> -->
 
 	</form>
 
