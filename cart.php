@@ -178,7 +178,7 @@ if (isset($_GET['action'])) {
                 <th width="30%">Product Name</th>
                 <th width="10%">Quantity</th>
                 <th width="13%">Price Details</th>
-                <th width="10%">Total Price</th>
+                <th width="10%">Item Total</th>
                 <th width="17%">Remove Item</th>
               </tr>
 
@@ -198,6 +198,8 @@ if (isset($_GET['action'])) {
                   <?php 
                   $total = $total + ($value["item_quantity"] * $value["product_price"]);
                 }
+                $gst = $total * 0.05;
+                $qst = $total * 0.0975;
                 ?>
                 <tr>
                   <td colspan="3" align="right">Total</td>
@@ -233,40 +235,40 @@ if (isset($_GET['action'])) {
       <div class="mb-3">
         <div class="pt-4">
 
-          <h5 class="mb-3">The total amount of</h5>
+          <h5 class="mb-3">Total Price</h5>
 
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-              amount
-              <span id="amount">$22.74</span>
+              Total excluding tax: 
+              <span id="amount"><?php echo "$".(round($total, 2))?></span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-              GST
-              <span id="gst">$2.25</span>
+              GST (5%)
+              <span id="gst"><?php echo "$".(round($gst, 2))?></span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-              QST
-              <span id="qst">$1.14</span>
+              QST (9.975%)
+              <span id="qst"><?php echo "$".(round($qst, 2))?></span>
             </li>
 
 
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
               <div>
-                <strong>The total amount of</strong>
+                <strong>Total Amount</strong>
                 <strong>
-                  <p class="mb-0">(including VAT)</p>
+                  <p class="mb-0">(including tax)</p>
                 </strong>
               </div>
-              <span><strong id="totalAmount">$26.151</strong></span>
+              <?php $priceAfterTax = ($total + $qst + $gst);?>
+              <span><strong id="totalAmount"><?php echo "$".(round($priceAfterTax, 2)) ?> </strong></span>
             </li>
           </ul>
 
-          <button type="button" class="btn btn-primary btn-block">go to checkout</button>
+          <button type="button" class="btn btn-primary btn-block">Checkout</button>
 
-          <a href="groceryshop.php">
+          <a href="AllProducts.php">
             <button type="button" class="btn btn-secondary btn-block mt-1">Continue Shopping</button>
           </a>
-
         </div>
       </div>
 
