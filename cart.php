@@ -369,6 +369,11 @@ if (isset($_GET['action'])) {
     qst.innerText = '$' + (parseFloat( amountExcludingTax.innerText.substring(1) ) * 0.09975).toFixed(2) ;
     totalWithTax.innerText = '$' + (gt + (parseFloat( amountExcludingTax.innerText.substring(1) ) * 0.05) + ((parseFloat( amountExcludingTax.innerText.substring(1) ) * 0.09975) )).toFixed(2);
   }
+  if (amountExcludingTax.innerText == "") {
+    amountExcludingTax.innerText = '$0.00';
+    gst.innerText = "$0.00";
+    qst.innerText = "$0.00";
+  }
 
   subTotal();
 
