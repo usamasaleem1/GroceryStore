@@ -240,15 +240,15 @@ if (isset($_GET['action'])) {
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
               Total excluding tax: 
-              <span id="amount"><?php printf("$".("%.2f", $total));?></span>
+              <span id="amount"><?php echo "$".(round($total, 2))?></span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
               GST
-              <span id="gst"><?php printf("$".("%.2f", $gst));?></span>
+              <span id="gst"><?php echo "$".(round($gst, 2))?></span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
               QST
-              <span id="qst"><?php printf("$".("%.2f", $qst))?></span>
+              <span id="qst"><?php echo "$".(round($qst, 2))?></span>
             </li>
 
 
@@ -259,7 +259,8 @@ if (isset($_GET['action'])) {
                   <p class="mb-0">(including VAT)</p>
                 </strong>
               </div>
-              <span><strong id="totalAmount">test1</strong></span>
+              <?php $priceAfterTax = ($total + $qst + $gst);?>
+              <span><strong id="totalAmount"><?php echo "$".$priceAfterTax ?> </strong></span>
             </li>
           </ul>
 
