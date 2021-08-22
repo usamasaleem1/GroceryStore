@@ -153,7 +153,7 @@ if(isset($_POST["save"]))
 	
 	mysql_select_db("HTADFpjYkD",$conn);
 
-	$sql = "INSERT INTO products (name,price,image,description) VALUES ('$_POST[name]','$_POST[price]','$_POST[customFile]','$_POST[decription]')";
+	$sql = "INSERT INTO products (name,price,description) VALUES ('$_POST[name]','$_POST[price]','$_POST[decription]')";
 
 	mysql_query($sql,$conn);
 	
