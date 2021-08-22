@@ -113,12 +113,15 @@ header('location:home.php');
 				</td>
 			</tr>
 			<tr>
-				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="pork.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Pork Ribs</td>
 				<td class="align-middle text-center">Meat</td>
 				<td class="align-middle text-center">12 in stock</td>
 				<td class="align-middle text-center">$10.50/kg</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="chicken.jpg" alt="Album screenshot" width="100"></td>
@@ -126,6 +129,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Meat</td>
 				<td class="align-middle text-center">5 in stock</td>
 				<td class="align-middle text-center">$16.75/kg</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="steak.jpg" alt="Album screenshot" width="100"></td>
@@ -133,6 +140,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Meat</td>
 				<td class="align-middle text-center">6 in stock</td>
 				<td class="align-middle text-center">$15.00/kg</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="milk.png" alt="Album screenshot" width="100"></td>
@@ -140,6 +151,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Dairy</td>
 				<td class="align-middle text-center">13 in stock</td>
 				<td class="align-middle text-center">$4.40</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="yogurt.png" alt="Album screenshot" width="100"></td>
@@ -147,6 +162,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Dairy</td>
 				<td class="align-middle text-center">12 in stock</td>
 				<td class="align-middle text-center">$5.99</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="choco.png" alt="Album screenshot" width="100"></td>
@@ -154,6 +173,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Dairy</td>
 				<td class="align-middle text-center">14 in stock</td>
 				<td class="align-middle text-center">$2.25</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="ParmesanCheese.png" alt="Album screenshot" width="100"></td>
@@ -161,6 +184,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Dairy</td>
 				<td class="align-middle text-center">4 in stock</td>
 				<td class="align-middle text-center">$24.50/kg</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="san.png" alt="Album screenshot" width="100"></td>
@@ -168,6 +195,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Beverages</td>
 				<td class="align-middle text-center">15 in stock</td>
 				<td class="align-middle text-center">$1.50</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="san2.png" alt="Album screenshot" width="100"></td>
@@ -175,6 +206,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Beverages</td>
 				<td class="align-middle text-center">21 in stock</td>
 				<td class="align-middle text-center">$1.50</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="mtndew.png" alt="Album screenshot" width="100"></td>
@@ -182,6 +217,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Beverages</td>
 				<td class="align-middle text-center">23 in stock</td>
 				<td class="align-middle text-center">$2.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="coke.png" alt="Album screenshot" width="100"></td>
@@ -189,6 +228,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Beverages</td>
 				<td class="align-middle text-center">24 in stock</td>
 				<td class="align-middle text-center">$2.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="gain.png" alt="Album screenshot" width="100"></td>
@@ -196,6 +239,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Detergent</td>
 				<td class="align-middle text-center">11 in stock</td>
 				<td class="align-middle text-center">$16.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="tide.png" alt="Album screenshot" width="100"></td>
@@ -203,6 +250,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Detergent</td>
 				<td class="align-middle text-center">15 in stock</td>
 				<td class="align-middle text-center">$12.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="persil.png" alt="Album screenshot" width="100"></td>
@@ -210,6 +261,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Detergent</td>
 				<td class="align-middle text-center">12 in stock</td>
 				<td class="align-middle text-center">$12.75</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="oxy.png" alt="Album screenshot" width="100"></td>
@@ -217,6 +272,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Detergent</td>
 				<td class="align-middle text-center">14 in stock</td>
 				<td class="align-middle text-center">$16.75</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="snickers.jpg" alt="Album screenshot" width="100"></td>
@@ -224,6 +283,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Snacks</td>
 				<td class="align-middle text-center">15 in stock</td>
 				<td class="align-middle text-center">$1.15</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="tv_bar.jpg" alt="Album screenshot" width="100"></td>
@@ -231,6 +294,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Snacks</td>
 				<td class="align-middle text-center">5 in stock</td>
 				<td class="align-middle text-center">$1.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="pringles.jpg" alt="Album screenshot" width="100"></td>
@@ -238,6 +305,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Snacks</td>
 				<td class="align-middle text-center">52 in stock</td>
 				<td class="align-middle text-center">$2.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="maltesers.jpg" alt="Album screenshot" width="100"></td>
@@ -245,6 +316,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Snacks</td>
 				<td class="align-middle text-center">12 in stock</td>
 				<td class="align-middle text-center">$2.50</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="seltzer.png" alt="Album screenshot" width="100" style="object-fit: contain; height: 100px;"></td>
@@ -252,6 +327,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Alcohol</td>
 				<td class="align-middle text-center">4 in stock</td>
 				<td class="align-middle text-center">$2.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="beer.png" alt="Album screenshot" width="100" style="object-fit: contain; height: 100px;"></td>
@@ -259,6 +338,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Alcohol</td>
 				<td class="align-middle text-center">15 in stock</td>
 				<td class="align-middle text-center">$4.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="wine.png" alt="Album screenshot" width="100" style="object-fit: contain; height: 100px;"></td>
@@ -266,6 +349,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Alcohol</td>
 				<td class="align-middle text-center">8 in stock</td>
 				<td class="align-middle text-center">$10.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			<tr>
 				<td class="align-middle text-center"><img class="img-fluid" src="moscato.png" alt="Album screenshot" width="100" style="object-fit: contain; height: 100px;"></td>
@@ -273,6 +360,10 @@ header('location:home.php');
 				<td class="align-middle text-center">Alcohol</td>
 				<td class="align-middle text-center">10 in stock</td>
 				<td class="align-middle text-center">$15.00</td>
+				<td class="align-middle text-center">
+					<a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
+					<a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a>
+				</td>
 			</tr>
 			</tbody>
 		</table>
