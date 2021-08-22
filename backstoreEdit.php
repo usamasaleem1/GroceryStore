@@ -112,15 +112,15 @@ header('location:home.php');
 			<div class='form-row'>
 				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Type</label>
-					<input  class='form-control' id='colFormLabel' placeholder='Type' name='type'>
+					<input  class='form-control' id='colFormLabel' value='" . $row['aisle'] . "' name='type'>
 				</div> 
 				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Price</label>
-					<input  class='form-control' id='colFormLabel' placeholder='Price' name='price'>
+					<input  class='form-control' id='colFormLabel' value='" . $row['price'] . "' name='price'>
 				</div>
 					<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Stock count</label>
-					<input class='form-control' id='colFormLabel' placeholder='Stock count' name='count'>
+					<input class='form-control' id='colFormLabel' value='" . $row['stock'] . "' name='count'>
 				</div>
 		
 			</div>
@@ -134,7 +134,7 @@ header('location:home.php');
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
 				<div class='col-md-7'>
-					<textarea  class='form-control' id='colFormLabel' placeholder='Description' name='description'></textarea>
+					<textarea  class='form-control' id='colFormLabel' value='" . $row['description'] . "' name='description'></textarea>
 				</div>
 			</div>
 		
