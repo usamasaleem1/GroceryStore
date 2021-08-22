@@ -92,7 +92,58 @@ header('location:home.php');
 	<?php
 		if (isset($_GET['productId'])) 
 		{
-			echo $_GET['productId'];
+			$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$_GET['productId']'");
+			$row = mysqli_fetch_array($query);
+
+			echo "
+
+			<h1>Edit Product</h1>
+
+			<form action='backstoreEdit.php' method='post'>
+		
+			<div class='form-group row'>
+				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
+				<div class='col-md-7'>
+				  <input  class='form-control' id='colFormLabel' value='" . $row['name'] . "' name='name'>
+				</div>
+			</div>
+		
+			<div class='form-row'>
+				<div class='form-group col-md-2'>
+					<label for='colFormLabel' class='col-form-label'>Type</label>
+					<input  class='form-control' id='colFormLabel' placeholder='Type' name='type'>
+				</div> 
+				<div class='form-group col-md-2'>
+					<label for='colFormLabel' class='col-form-label'>Price</label>
+					<input  class='form-control' id='colFormLabel' placeholder='Price' name='price'>
+				</div>
+					<div class='form-group col-md-2'>
+					<label for='colFormLabel' class='col-form-label'>Stock count</label>
+					<input class='form-control' id='colFormLabel' placeholder='Stock count' name='count'>
+				</div>
+		
+			</div>
+		
+			<div class='custom-file col-md-2'>
+				<label for='customFile' class='col-form-label'>Stock count</label>
+				<label class='custom-file-label' for='customFile'>Image file</label>
+				<input type='file' class='custom-file-input' id='customFile'>
+			</div>
+		
+			<div class='form-group row'>
+				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
+				<div class='col-md-7'>
+					<textarea  class='form-control' id='colFormLabel' placeholder='Description' name='description'></textarea>
+				</div>
+			</div>
+		
+			
+		
+			<a href='backstore.php'>
+				<button type='submit' class='btn btn-primary' name='save'>Save</button>
+			</a>
+			
+			";
 		} 
 		else 
 		{
@@ -100,58 +151,7 @@ header('location:home.php');
 		}
 	?>
 
-    <h1>Edit Product</h1>
 
-	<form action="backstoreEdit.php" method="post">
-
-	<div class="form-group row">
-        <label for="colFormLabel" class="col-sm-2 col-form-label">ID</label>
-        <div class="col-md-7">
-          <input  class="form-control" id="colFormLabel" placeholder="ID" name="id">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label for="colFormLabel" class="col-sm-2 col-form-label">Product Name</label>
-        <div class="col-md-7">
-          <input  class="form-control" id="colFormLabel" placeholder="Product Name" name="name">
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-group col-md-2">
-            <label for="colFormLabel" class="col-form-label">Type</label>
-            <input  class="form-control" id="colFormLabel" placeholder="Type" name="type">
-        </div> 
-        <div class="form-group col-md-2">
-            <label for="colFormLabel" class="col-form-label">Price</label>
-            <input  class="form-control" id="colFormLabel" placeholder="Price" name="price">
-        </div>
-            <div class="form-group col-md-2">
-            <label for="colFormLabel" class="col-form-label">Stock count</label>
-            <input class="form-control" id="colFormLabel" placeholder="Stock count" name="count">
-        </div>
-
-    </div>
-
-    <div class="custom-file col-md-2">
-        <label for="customFile" class="col-form-label">Stock count</label>
-        <label class="custom-file-label" for="customFile">Image file</label>
-        <input type="file" class="custom-file-input" id="customFile">
-    </div>
-
-    <div class="form-group row">
-        <label for="colFormLabel" class="col-sm-2 col-form-label">Description</label>
-        <div class="col-md-7">
-            <textarea  class="form-control" id="colFormLabel" placeholder="Description" name="description"></textarea>
-        </div>
-    </div>
-
-	
-
-    <a href="backstore.php">
-        <button type="submit" class="btn btn-primary" name="save">Save</button>
-    </a>
 
 	</form>
 
