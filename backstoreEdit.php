@@ -145,10 +145,8 @@ header('location:home.php');
 
 	</form>
 
-</body>
-
 <?php
-if(isset($_POST["save"]))
+	if(isset($_POST["save"]))
 {
 	
 	mysql_select_db("HTADFpjYkD",$conn);
@@ -156,11 +154,18 @@ if(isset($_POST["save"]))
 	$sql = "INSERT INTO products (name,price,description) VALUES ('$_POST[name]','$_POST[price]','$_POST[decription]')";
 
 	mysql_query($sql,$conn);
+
+	mysql_close($conn);
 	
 	//mysqli_query($conn, "insert into products values(NULL,'$_POST[name]','$_POST[price]','$_POST[description]','$_POST[customFile]')")
 	//echo 'test';
 }
 
 ?>
+
+
+</body>
+
+
 
 </html>
