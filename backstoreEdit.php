@@ -157,7 +157,7 @@ header('location:home.php');
 	if(isset($_POST["submit"]))
 {
 	
-	mysqli_query($conn,"insert into test values('$_POST[testname]','$_POST[testprice]','$_POST[testdescription]')");
+	mysqli_query($conn,"insert into test(name,price,description) values('$_POST[testname]','$_POST[testprice]','$_POST[testdescription]')");
 	
 	/*$conn = mysql_connect("HTADFpjYkD");
 
