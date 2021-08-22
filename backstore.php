@@ -113,6 +113,7 @@ header('location:home.php');
 				</td>
 			</tr>
 			<tr>
+				<th class="align-middle text-center" scope="col"><input type="checkbox" class="align-middle" aria-label="Checkbox for following text input"></th>
 				<td class="align-middle text-center"><img class="img-fluid" src="pork.jpg" alt="Album screenshot" width="100"></td>
 				<td class="align-middle text-center">Pork Ribs</td>
 				<td class="align-middle text-center">Meat</td>
