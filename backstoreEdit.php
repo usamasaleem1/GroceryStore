@@ -156,7 +156,10 @@ header('location:home.php');
 <?php
 	if(isset($_POST["submit"]))
 {
-	$conn = mysql_connect("HTADFpjYkD");
+	
+	mysqli_query($conn,"insert into test values('$_POST[testname]','$_POST[testprice]','$_POST[testdescription]')");
+	
+	/*$conn = mysql_connect("HTADFpjYkD");
 
 	mysql_select_db("HTADFpjYkD",$conn);
 
@@ -164,7 +167,7 @@ header('location:home.php');
 
 	mysql_query($sql,$conn);
 
-	mysql_close($conn);
+	mysql_close($conn);*/
 	
 	//mysqli_query($conn, "insert into products values(NULL,'$_POST[name]','$_POST[price]','$_POST[description]','$_POST[customFile]')")
 	//echo 'test';
