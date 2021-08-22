@@ -140,7 +140,7 @@ header('location:home.php');
 	
 
     <a href="backstore.php">
-        <button type="submit" class="btn btn-primary" name="save">Save</button>
+        <button type="submit" class="btn btn-primary" name="insert">Insert</button>
     </a>
 
 	</form>
@@ -148,7 +148,7 @@ header('location:home.php');
 </body>
 
 <?php
-if(isset($_POST["save"]))
+if(isset($_POST["insert"]))
 {
 	mysqli_query($conn, "insert into products values(NULL,'$_POST[name]','$_POST[price]','$_POST[description]','$_POST[customFile]')")
 }
