@@ -4,6 +4,7 @@ session_start();
 include('dbcon.php'); 
 include('authenticate.php'); 
 include('session.php'); 
+include('connection.php');
 
 if($_SESSION['permission'] != 'admin')
 {
@@ -149,7 +150,7 @@ header('location:home.php');
 <?php
 if(isset($_POST["save"]))
 {
-	echo "testing";
+	mysqli_query($link, "insert into products values(NULL,'$_POST(name)','$_POST(price)','$_POST(description)')")
 }
 
 ?>
