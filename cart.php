@@ -190,9 +190,14 @@ if (isset($_GET['action'])) {
 
                   <tr>
                     <td> <?php echo $value["item_name"]; ?> </td>
-                    <td> <?php echo $value["item_quantity"]; ?> </td>
-                    <td>$ <?php echo $value["product_price"]; ?> </td>
-                    <td>$ <?php echo number_format( $value["item_quantity"] * $value["product_price"], 2 ); ?></td>
+                    
+                    <td> <input class="iquantity" min="0" value="<?php echo $value["item_quantity"]; ?>" name="quantity" type="number" id="qty1" onchange='subTotal();'></td>
+
+
+                    <td>$ <?php echo $value["product_price"]; ?><input type="hidden" class="iprice" value="<?php echo $value["product_price"]; ?>" > </td>
+
+                    <td class="itotal">$ <script>itotal[0]</script> </td>
+
                     <td><a href="cart.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                   </tr>
                   <?php 
@@ -203,7 +208,7 @@ if (isset($_GET['action'])) {
                 ?>
                 <tr>
                   <td colspan="3" align="right">Total</td>
-                  <th align="right">$ <?php echo number_format($total,2); ?></th>
+                  <th align="right" id="gtotal">$ <?php echo number_format($total,2); ?></th>
                   <td></td>
                 </tr>
                 <?php 
@@ -337,6 +342,29 @@ if (isset($_GET['action'])) {
     </div>
   </div>
 </footer>
+
+
+<script>
+
+  var gt = 0;
+  var iprice = document.getElementsByClassName('iprice');
+  var iquantity = document.getElementsByClassName('iquantity');
+  var itotal = document.getElementsByClassName('itotal');
+  var gtotal = document.getElementById('gtotal');
+  
+  function subTotal(){
+    gt = 0;
+    for(i = 0; i < iprice.length; i++){
+      itotal[i].innerText = '$' + (iprice[i].value * iquantity[i].value).toFixed(2);
+      gt = gt + (iprice[i].value * iquantity[i].value);
+
+    }
+    gtotal.innerText = '$' + gt.toFixed(2);
+  }
+
+  subTotal();
+
+</script>
 
 
 </body>
