@@ -149,11 +149,12 @@ header('location:home.php');
 	Topic: <input type="text" name="name"><br />
 	Name: <input type="text" name="price"><br />
 	Attendance: <input type="text" name="description"><br />
+	<input type="submit" name="submit">
 		
 	</form>
 
 <?php
-	if(isset($_POST["save"]))
+	if(isset($_POST["submit"]))
 {
 	$conn = mysql_connect("HTADFpjYkD");
 
