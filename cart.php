@@ -256,7 +256,7 @@ if (isset($_GET['action'])) {
               <div>
                 <strong>Total Amount</strong>
                 <strong>
-                  <p class="mb-0">(including VAT)</p>
+                  <p class="mb-0">(including tax)</p>
                 </strong>
               </div>
               <?php $priceAfterTax = ($total + $qst + $gst);?>
