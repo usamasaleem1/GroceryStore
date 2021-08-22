@@ -196,7 +196,7 @@ if (isset($_GET['action'])) {
                     <td><a href="cart.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                   </tr>
                   <?php 
-                  double PriceBeforeTax = 0;
+                  //double PriceBeforeTax = 0;
                   $total = $total + ($value["item_quantity"] * $value["product_price"]);
                   //PriceBeforeTax = $total;
                 }
