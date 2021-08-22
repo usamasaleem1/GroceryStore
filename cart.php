@@ -259,7 +259,7 @@ if (isset($_GET['action'])) {
                   <p class="mb-0">(including VAT)</p>
                 </strong>
               </div>
-              <span><strong id="totalAmount">test1</strong></span>
+              <span><strong id="totalAmount">test12</strong></span>
             </li>
           </ul>
 
