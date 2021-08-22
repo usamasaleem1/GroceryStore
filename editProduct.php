@@ -1,12 +1,16 @@
 <?php
 session_start();
+
+
 $conn = mysqli_connect('HTADFpjYkD')
 
 if(!$conn){
 	echo 'Connection error: ' . mysqli_connect_error();
 }
 
-if(isset($_POST["save"]))
+
+
+if(isset($_POST["submit"]))
 {
 	$id = $_POST[];
 

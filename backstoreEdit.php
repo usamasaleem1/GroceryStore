@@ -88,19 +88,6 @@ header('location:home.php');
 <br>
 <main class="m-5">
 
-<?php 
-                    if(isset($_SESSION['status']))
-                    {
-                        ?>
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        <?php
-                        unset($_SESSION['status']);
-                    }
-                ?>
-
 
     <h1>Edit Product</h1>
 
@@ -120,24 +107,24 @@ header('location:home.php');
         </div>
     </div>
 
-    <!-- <div class="form-row">
+    <div class="form-row">
         <div class="form-group col-md-2">
             <label for="colFormLabel" class="col-form-label">Type</label>
             <input  class="form-control" id="colFormLabel" placeholder="Type" name="type">
-        </div> -->
+        </div> 
         <div class="form-group col-md-2">
             <label for="colFormLabel" class="col-form-label">Price</label>
             <input  class="form-control" id="colFormLabel" placeholder="Price" name="price">
         </div>
-       <!--  <div class="form-group col-md-2">
+            <div class="form-group col-md-2">
             <label for="colFormLabel" class="col-form-label">Stock count</label>
             <input class="form-control" id="colFormLabel" placeholder="Stock count" name="count">
-        </div>-->
+        </div>
 
     </div>
 
     <div class="custom-file col-md-2">
-        <!-- <label for="customFile" class="col-form-label">Stock count</label> -->
+        <label for="customFile" class="col-form-label">Stock count</label>
         <label class="custom-file-label" for="customFile">Image file</label>
         <input type="file" class="custom-file-input" id="customFile">
     </div>
@@ -150,10 +137,19 @@ header('location:home.php');
     </div>
 
     <a href="backstore.php">
-        <button type="submit" class="btn btn-primary" name="save">Save</button>
+        <button type="submit" class="btn btn-primary" name="submit">Save</button>
     </a>
 
 	</form>
 
 </body>
+
+<?php
+if(isset($_POST["submit"]))
+{
+	echo "testing";
+}
+
+?>
+
 </html>
