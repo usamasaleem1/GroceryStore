@@ -178,7 +178,7 @@ if (isset($_GET['action'])) {
                 <th width="30%">Product Name</th>
                 <th width="10%">Quantity</th>
                 <th width="13%">Price Details</th>
-                <th width="10%">Total Price</th>
+                <th width="10%">Item Total</th>
                 <th width="17%">Remove Item</th>
               </tr>
 
