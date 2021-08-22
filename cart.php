@@ -245,15 +245,15 @@ if (isset($_GET['action'])) {
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
               Total excluding tax: 
-              <span id="amount"><?php echo "$".(round($total, 2))?></span>
+              <span id="amountextx"> </span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
               GST (5%)
-              <span id="gst"><?php echo "$".(round($gst, 2))?></span>
+              <span id="gst"></span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
               QST (9.975%)
-              <span id="qst"><?php echo "$".(round($qst, 2))?></span>
+              <span id="qst"></span>
             </li>
 
 
@@ -264,8 +264,8 @@ if (isset($_GET['action'])) {
                   <p class="mb-0">(including tax)</p>
                 </strong>
               </div>
-              <?php $priceAfterTax = ($total + $qst + $gst);?>
-              <span><strong id="totalAmount"><?php echo "$".(round($priceAfterTax, 2)) ?> </strong></span>
+              
+              <span><strong id="totalAmount"></strong></span>
             </li>
           </ul>
 
@@ -351,6 +351,10 @@ if (isset($_GET['action'])) {
   var iquantity = document.getElementsByClassName('iquantity');
   var itotal = document.getElementsByClassName('itotal');
   var gtotal = document.getElementById('gtotal');
+  var amountExcludingTax = document.getElementById('amountextx');
+  var gst = document.getElementById('gst');
+  var qst = document.getElementById('qst');
+  var totalWithTax = document.getElementById('totalAmount');
   
   function subTotal(){
     gt = 0;
@@ -360,6 +364,10 @@ if (isset($_GET['action'])) {
 
     }
     gtotal.innerText = '$' + gt.toFixed(2);
+    amountExcludingTax.innerText = gtotal.innerText;
+    gst.innerText = '$' + (parseFloat( amountExcludingTax.innerText.substring(1) ) * 0.05).toFixed(2) ; 
+    qst.innerText = '$' + (parseFloat( amountExcludingTax.innerText.substring(1) ) * 0.09975).toFixed(2) ;
+    totalWithTax.innerText = '$' + (gt + (parseFloat( amountExcludingTax.innerText.substring(1) ) * 0.05) + ((parseFloat( amountExcludingTax.innerText.substring(1) ) * 0.09975) )).toFixed(2);
   }
 
   subTotal();
