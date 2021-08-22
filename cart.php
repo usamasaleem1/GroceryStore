@@ -240,7 +240,7 @@ if (isset($_GET['action'])) {
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
               amount
-              <span id="amount"><?php echo $total?></span>
+              <span id="amount"><?php echo "$".$total?></span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
               GST
