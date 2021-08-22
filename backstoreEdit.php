@@ -140,7 +140,7 @@ header('location:home.php');
 	
 
     <a href="backstore.php">
-        <button type="submit" class="btn btn-primary" name="insert">Insert</button>
+        <button type="submit" class="btn btn-primary" name="save">Save</button>
     </a>
 
 	</form>
@@ -148,11 +148,15 @@ header('location:home.php');
 </body>
 
 <?php
-if(isset($_POST["insert"]))
+if(isset($_POST["save"]))
 {
 	//mysqli_query($conn, "insert into products values(NULL,'$_POST[name]','$_POST[price]','$_POST[description]','$_POST[customFile]')")
 	$sql = 'SELECT name, price, description, customFile FROM products';
 	$result = mysqli_query($conn, $sql);
+	$products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	print_r($pizzas);
+
 	echo 'test';
 }
 
