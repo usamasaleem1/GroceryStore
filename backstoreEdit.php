@@ -139,10 +139,17 @@ header('location:home.php');
 
 	
 
-    
+    <a href="backstore.php">
         <button type="submit" class="btn btn-primary" name="save">Save</button>
-    
+    </a>
 
+	</form>
+
+	<form action="backstoreEdit.php" method="post">
+	Topic: <input type="text" name="name"><br />
+	Name: <input type="text" name="price"><br />
+	Attendance: <input type="text" name="description"><br />
+		
 	</form>
 
 <?php
