@@ -92,7 +92,8 @@ header('location:home.php');
 	<?php
 		if (isset($_GET['productId'])) 
 		{
-			$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$_GET['productId']'");
+			$productId = $_GET['productId'];
+			$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$productId'");
 			$row = mysqli_fetch_array($query);
 
 			echo "
