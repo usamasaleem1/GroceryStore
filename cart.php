@@ -224,7 +224,7 @@ if (isset($_GET['action'])) {
 
 
   <!-- ------------------------------------------------------------ -->
-
+ 
 
   <!--Grid row-->
   <div class="row ml-4">
@@ -235,7 +235,7 @@ if (isset($_GET['action'])) {
       <div class="mb-3">
         <div class="pt-4">
 
-          <h5 class="mb-3">Total Price</h5>
+          <h5 class="mb-3"><?php echo $total?></h5>
 
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
@@ -268,7 +268,6 @@ if (isset($_GET['action'])) {
           <a href="groceryshop.php">
             <button type="button" class="btn btn-secondary btn-block mt-1">Continue Shopping</button>
           </a>
-
         </div>
       </div>
 
