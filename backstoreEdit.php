@@ -4,7 +4,7 @@ session_start();
 include('dbcon.php'); 
 include('authenticate.php'); 
 include('session.php'); 
-include('connection.php');
+
 
 if($_SESSION['permission'] != 'admin')
 {
