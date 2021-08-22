@@ -91,7 +91,7 @@ header('location:home.php');
 
     <h1>Edit Product</h1>
 
-	<form action="" method="POST">
+	<form action="" method="post">
 
 	<div class="form-group row">
         <label for="colFormLabel" class="col-sm-2 col-form-label">ID</label>
@@ -136,16 +136,16 @@ header('location:home.php');
         </div>
     </div>
 
-    <!-- <a href="backstore.php">-->
-        <button type="submit" class="btn btn-primary" name="submit">Save</button>
-    <!-- </a> -->
+	<button type="submit" class="btn btn-primary" name="save">Save</button>
+
+  
 
 	</form>
 
 </body>
 
 <?php
-if(isset($_POST["submit"]))
+if(isset($_POST["save"]))
 {
 	echo "testing";
 }
