@@ -91,7 +91,7 @@ header('location:home.php');
 
     <h1>Edit Product</h1>
 
-	<form action="editProduct.php" method="POST">
+	<form action="" method="POST">
 
 	<div class="form-group row">
         <label for="colFormLabel" class="col-sm-2 col-form-label">ID</label>
