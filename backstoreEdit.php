@@ -89,6 +89,16 @@ header('location:home.php');
 <br>
 <main class="m-5">
 
+	<?php
+		if (isset($_GET['productId'])) 
+		{
+			echo $_GET['productId'];
+		} 
+		else 
+		{
+			echo "No product selected!";
+		}
+	?>
 
     <h1>Edit Product</h1>
 
