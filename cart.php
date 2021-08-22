@@ -257,7 +257,7 @@ if (isset($_GET['action'])) {
                   <p class="mb-0">(including VAT)</p>
                 </strong>
               </div>
-              <span><strong id="totalAmount">$26.151</strong></span>
+              <span><strong id="totalAmount"><?php echo $value["product_price"]; ?> </td></strong></span>
             </li>
           </ul>
 
