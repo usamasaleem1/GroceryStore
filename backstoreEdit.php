@@ -146,9 +146,9 @@ header('location:home.php');
 	</form>
 
 	<form action="backstoreEdit.php" method="post">
-	Topic: <input type="text" name="name"><br />
-	Name: <input type="text" name="price"><br />
-	Attendance: <input type="text" name="description"><br />
+	Topic: <input type="text" name="testname"><br />
+	Name: <input type="text" name="testprice"><br />
+	Attendance: <input type="text" name="testdescription"><br />
 	<input type="submit" name="submit">
 		
 	</form>
@@ -160,7 +160,7 @@ header('location:home.php');
 
 	mysql_select_db("HTADFpjYkD",$conn);
 
-	$sql = "INSERT INTO test (name,price,description) VALUES ('$_POST[name]','$_POST[price]','$_POST[description]')";
+	$sql = "INSERT INTO test (name,price,description) VALUES ('$_POST[testname]','$_POST[testprice]','$_POST[testdescription]')";
 
 	mysql_query($sql,$conn);
 
