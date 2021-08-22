@@ -198,7 +198,7 @@ if (isset($_GET['action'])) {
                   <?php 
                   double PriceBeforeTax = 0;
                   $total = $total + ($value["item_quantity"] * $value["product_price"]);
-                  PriceBeforeTax = $total;
+                  //PriceBeforeTax = $total;
                 }
                 ?>
                 <tr>
