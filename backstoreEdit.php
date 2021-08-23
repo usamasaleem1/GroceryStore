@@ -90,6 +90,7 @@ header('location:home.php');
 <main class="m-5">
 
 	<?php
+
 		if (isset($_GET['productId'])) 
 		{
 			$productId = $_GET['productId'];
@@ -100,7 +101,7 @@ header('location:home.php');
 
 			<h1>Edit Product</h1>
 
-			<form action='backstoreEdit.php' method='post'>
+			<form action='backstoreEdit.php?productId='" . $row['id'] . " method='post'>
 		
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
@@ -146,9 +147,32 @@ header('location:home.php');
 			
 			";
 		} 
-		else 
+		else
 		{
 			echo "No product selected!";
+		}
+
+		if (isset($_POST['name']))
+		{
+			try 
+			{
+				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			  
+				$sql = "UPDATE products SET stock=$_POST['id'] and price=$_POST['price'] and description=$_POST['id'] and aisle=$_POST['type'] and name=$_POST['name'] WHERE id=$_POST['id']";
+			  
+				// Prepare statement
+				$stmt = $conn->prepare($sql);
+			  
+				// execute the query
+				$stmt->execute();
+			  
+				// echo a message to say the UPDATE succeeded
+				echo $stmt->rowCount() . " records UPDATED successfully";
+			  } 
+			  catch(PDOException $e) 
+			  {
+				echo $sql . "<br>" . $e->getMessage();
+			  }
 		}
 	?>
 
