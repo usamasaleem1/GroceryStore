@@ -154,16 +154,16 @@ header('location:home.php');
 
 		if (isset($_POST['name']))
 		{
-
-			  
-				// $sql = "UPDATE products SET stock=$_POST['id'], price=$_POST['price'], description=$_POST['id'], aisle=$_POST['type'], name=$_POST['name'] WHERE id=$_POST['id']";
-			  
-				// // Prepare statement
-				// $stmt = $conn->prepare($sql);
-			  
-				// // execute the query
-
-
+			$sql = "UPDATE products SET stock=$_POST['id'], price=$_POST['price'], description=$_POST['id'], aisle=$_POST['type'], name=$_POST['name'] WHERE id=$_POST['id']";
+			
+			if (mysqli_query($conn, $sql)) 
+			{
+				echo "Record updated successfully";
+			} 
+			else 
+			{
+				echo "Error updating record: " . mysqli_error($conn);
+			}
 		}
 	?>
 
