@@ -154,9 +154,7 @@ header('location:home.php');
 
 		if (isset($_POST['name']))
 		{
-			try 
-			{
-				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 			  
 				$sql = "UPDATE products SET stock=$_POST['id'], price=$_POST['price'], description=$_POST['id'], aisle=$_POST['type'], name=$_POST['name'] WHERE id=$_POST['id']";
 			  
@@ -164,15 +162,8 @@ header('location:home.php');
 				$stmt = $conn->prepare($sql);
 			  
 				// execute the query
-				$stmt->execute();
-			  
-				// echo a message to say the UPDATE succeeded
-				echo $stmt->rowCount() . " records UPDATED successfully";
-			} 
-			catch(PDOException $e) 
-			{
-				echo $sql . "<br>" . $e->getMessage();
-			}
+
+
 		}
 	?>
 
