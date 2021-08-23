@@ -154,7 +154,7 @@ header('location:home.php');
 
 		if (isset($_POST['name']))
 		{
-			$sql = "UPDATE products SET stock='$_POST['id']', price='$_POST['price']', description='$_POST['id']', aisle='$_POST['type']', name='$_POST['name']' WHERE id='$_POST['id']'";
+			$sql =""; //"UPDATE products SET stock='$_POST['id']', price='$_POST['price']', description='$_POST['id']', aisle='$_POST['type']', name='$_POST['name']' WHERE id='$_POST['id']'";
 			
 			if (mysqli_query($conn, $sql)) 
 			{
