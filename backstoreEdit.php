@@ -101,7 +101,7 @@ header('location:home.php');
 
 			<h1>Edit Product</h1>
 
-			<form action='backstoreEdit.php?productId='" . $row['id'] . " method='post'>
+			<form action='backstoreEdit.php?productId='" . $productId . " method='post'>
 		
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
@@ -154,7 +154,9 @@ header('location:home.php');
 
 		if (isset($_POST['name']))
 		{
-			$sql =""; //"UPDATE products SET stock='$_POST['id']', price='$_POST['price']', description='$_POST['id']', aisle='$_POST['type']', name='$_POST['name']' WHERE id='$_POST['id']'";
+			$name = $_POST['name'];
+			$id = $_POST['id'];
+			$sql = "UPDATE products SET name='$name' /*stock='$_POST['id']', price='$_POST['price']', description='$_POST['id']', aisle='$_POST['type']', name='$_POST['name']'*/ WHERE id='$id'";
 			
 			if (mysqli_query($conn, $sql)) 
 			{
