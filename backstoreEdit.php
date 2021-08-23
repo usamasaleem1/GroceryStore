@@ -156,12 +156,12 @@ header('location:home.php');
 		{
 
 			  
-				$sql = "UPDATE products SET stock=$_POST['id'], price=$_POST['price'], description=$_POST['id'], aisle=$_POST['type'], name=$_POST['name'] WHERE id=$_POST['id']";
+				// $sql = "UPDATE products SET stock=$_POST['id'], price=$_POST['price'], description=$_POST['id'], aisle=$_POST['type'], name=$_POST['name'] WHERE id=$_POST['id']";
 			  
-				// Prepare statement
-				$stmt = $conn->prepare($sql);
+				// // Prepare statement
+				// $stmt = $conn->prepare($sql);
 			  
-				// execute the query
+				// // execute the query
 
 
 		}
