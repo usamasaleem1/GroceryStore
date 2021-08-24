@@ -28,7 +28,7 @@ session_start();
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<?php if(isset($_SESSION['loggedin'])){ ?>
 				<img src="iconLoggedIn.png" class="navbar-brand" style="width: 30px;">
-				<a class="navbar-brand" href="#">Need to display user's name here</a>
+				<a class="navbar-brand" href="#"><?php echo $_SESSION["username"]; ?></a>
   			<?php }else{ ?>
 				<img src="trolley.png" class="navbar-brand" style="width: 40px;">
 				<a class="navbar-brand" href="#">Online Grocery Shopping</a>
