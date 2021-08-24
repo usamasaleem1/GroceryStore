@@ -134,12 +134,11 @@ header('location:home.php');
 					<label for='colFormLabel' class='col-form-label'>Aisle</label>
 					<input  class='form-control' id='colFormLabel' value='" . $row['aisle'] . "' name='aisle'>
 					<select id='colFormLabel' name='aisle'>
-						<option value='Meat' " if ($row['aisle'] == "Meat") { echo "selected='selected'"; } " >Meat</option>
-						<option value='Dairy' " if ($row['aisle'] == "Dairy") { echo "selected='selected'"; } " >Dairy</option>
-						<option value='Beverages' " if ($row['aisle'] == "Beverages") { echo "selected='selected'"; } " >Beverages</option>
-						<option value='Detergents' " if ($row['aisle'] == "Detergents") { echo "selected='selected'"; } " >Detergents</option>
-						<option value='Snacks' " if ($row['aisle'] == "Snacks") { echo "selected='selected'"; } " >Snacks</option>
-						<option value='Alcohol' " if ($row['aisle'] == "Alcohol") { echo "selected='selected'"; } " >Alcohol</option>
+						<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
+						<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
+						<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
+						<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
+						<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
 				 	</select>
 				</div> 
 				<div class='form-group col-md-2'>
