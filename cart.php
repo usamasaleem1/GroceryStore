@@ -107,7 +107,7 @@ if (isset($_GET['action'])) {
         <a class="nav-link" href="home.php">Home <span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="AllProducts.php>All Products</a>
+        <a class="nav-link" href="AllProducts.php">All Products</a>
       </li>
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -271,7 +271,7 @@ if (isset($_GET['action'])) {
 
           <button type="button" class="btn btn-primary btn-block">Checkout</button>
 
-          <a href="AllProducts.php>
+          <a href="AllProducts.php">
             <button type="button" class="btn btn-secondary btn-block mt-1">Continue Shopping</button>
           </a>
         </div>

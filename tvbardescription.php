@@ -65,7 +65,7 @@ $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'H
         ></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="AllProducts.php>All Products</a>
+        <a class="nav-link" href="AllProducts.php">All Products</a>
       </li>
       <li class="nav-item dropdown active">
         <a
