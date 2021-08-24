@@ -1,12 +1,19 @@
 <?php
 session_start();
 include('dbcon.php');
+
+$title = "No aisle selected!";
+if (isset($_GET['aisle'])) 
+{
+  $title = $_GET['aisle'];
+}
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Meat Section</title>
+	<title><?php echo $title ?> Aisle</title>
 	<link rel="icon" href="icon2.png">
 
 <!-- general -->
@@ -76,18 +83,6 @@ include('dbcon.php');
 </nav>
 
 
-<!-- section name -->
-<div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Meat & Poultry Section</h5>
-	 <a class="btn btn-outline-primary" href="cart.php">Go To Cart <img src="trolley.png" width="30px" height="30px"> </a>
-  </div>
-
-
-
-
-<!-- main body -->
-<main>
-		<div class="row">
 
 
 <?php 
@@ -96,6 +91,19 @@ include('dbcon.php');
     $aisle = $_GET['aisle'];
     $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
     $row = mysqli_fetch_array($query);
+
+    echo '
+    <!-- section name -->
+    <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">'. $aisle . '</h5>
+       <a class="btn btn-outline-primary" href="cart.php">Go To Cart <img src="trolley.png" width="30px" height="30px"> </a>
+      </div>
+
+    <!-- main body -->
+    <main>
+        <div class="row">
+        ';
+
     while($row = mysqli_fetch_array($query))
     {
       echo '
@@ -159,7 +167,5 @@ include('dbcon.php');
           </div>
         </div>
       </footer>
-
-
 </body>
 </html>
