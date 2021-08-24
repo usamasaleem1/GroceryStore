@@ -25,6 +25,11 @@ session_start();
 <!-- Nav bar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<img src="trolley.png" class="navbar-brand" style="width: 40px;">
+	<?php if(isset($_SESSION['loggedin'])){ ?>
+				<a class="navbar-brand" href="#"><?php echo $_GET "$name" ?>;</a>
+  			<?php }else{ ?>
+				<a class="navbar-brand" href="#">Online Grocery Shopping</a>
+  			<?php } ?>
 	<a class="navbar-brand" href="#">Online Grocery Shopping</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	<span class="navbar-toggler-icon"></span>
