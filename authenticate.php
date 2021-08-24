@@ -14,6 +14,7 @@
 			if ($num_row > 0) 
 				{		
 					$_SESSION['loggedin'] = true;	
+					$_SESSION['firstname'] = $firstname;
 					$_SESSION['email']=$row['email'];
 					if ($password == "admin" && $email == "admin"){
 						$_SESSION['permission'] = 'admin';
