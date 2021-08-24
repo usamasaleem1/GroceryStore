@@ -91,6 +91,25 @@ header('location:home.php');
 
 	<?php
 
+		if (isset($_POST['name']))
+		{
+			$name = $_POST['name'];
+			$aisle = $_POST['type'];
+			$description = $_POST['description'];
+			$price = $_POST['price'];
+			$stock = $_POST['count'];
+			$id = $_GET['productId'];
+			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock  WHERE id=$id";
+			
+			if (mysqli_query($conn, $sql)) 
+			{
+				echo "Record updated successfully";
+			} 
+			else 
+			{
+				echo "Error updating record: " . mysqli_error($conn);
+			}
+		}
 		if (isset($_GET['productId'])) 
 		{
 			$productId = $_GET['productId'];
@@ -151,26 +170,7 @@ header('location:home.php');
 		{
 			echo "No product selected!";
 		}
-
-		if (isset($_POST['name']))
-		{
-			$name = $_POST['name'];
-			$aisle = $_POST['type'];
-			$description = $_POST['description'];
-			$price = $_POST['price'];
-			$stock = $_POST['count'];
-			$id = $_GET['productId'];
-			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock  WHERE id=$id";
-			
-			if (mysqli_query($conn, $sql)) 
-			{
-				echo "Record updated successfully";
-			} 
-			else 
-			{
-				echo "Error updating record: " . mysqli_error($conn);
-			}
-		}
+		
 	?>
 
 
