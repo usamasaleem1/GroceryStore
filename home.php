@@ -6,11 +6,10 @@ session_start();
 ?>
 
 <?php include('dbcon.php'); 
+?>
 <?php if(isset($_SESSION['loggedin'])){ 
 	$_SESSION['user_name'] = $firstname;
 }
-?>
-
 ?>
 
 
