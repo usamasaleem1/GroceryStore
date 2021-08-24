@@ -2,7 +2,7 @@
 session_start();
 include('dbcon.php');
 
-$title = "No aisle selected!";
+$title = "Missing ";
 if (isset($_GET['aisle'])) 
 {    
   $aisle = $_GET['aisle'];
