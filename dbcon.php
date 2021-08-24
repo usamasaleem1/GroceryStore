@@ -5,7 +5,6 @@ $dbuser = 'HTADFpjYkD';
 $dbpass = 'wfJDJmJgdL';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
 
-$sql = "SELECT firstname FROM register";
 
 
 // Check connection
