@@ -132,7 +132,7 @@ header('location:home.php');
 			<div class='form-row'>
 				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Aisle</label>
-					<select id='colFormLabel' name='aisle'>
+					<select id='colFormLabel' name='aisle' class='form-select' aria-label='Default select example'>
 						<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
 						<option value='Dairy' " . (($row['aisle'] == "Dairy") ? "selected='selected'":'') . ">Dairy</option>
 						<option value='Beverages' " . (($row['aisle'] == "Beverages") ? "selected='selected'":'') . ">Beverages</option>
