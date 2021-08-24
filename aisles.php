@@ -115,6 +115,8 @@ session_start();
   }
     
   ?>
+
+</main>
  
     <main>
       <div class="jumbotron">
