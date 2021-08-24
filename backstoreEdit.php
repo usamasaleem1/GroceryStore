@@ -94,60 +94,12 @@ header('location:home.php');
 		if (isset($_POST['name']))
 		{
 			$name = $_POST['name'];
-			$aisle = $_POST['type'];
+			$aisle = $_POST['aisle'];
 			$description = $_POST['description'];
 			$price = $_POST['price'];
 			$stock = $_POST['count'];
 			$id = $_GET['productId'];
 			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock  WHERE id=$id";
-			
-			$target_dir = "";
-			$target_file = $target_dir . basename($_FILES["customFile"]["name"]);
-			$uploadOk = 1;
-			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-			
-			// Check if image file is a actual image or fake image
-			if(isset($_POST["save"])) {
-			  $check = getimagesize($_FILES["customFile"]["tmp_name"]);
-			  if($check !== false) {
-				echo "File is an image - " . $check["mime"] . ".";
-				$uploadOk = 1;
-			  } else {
-				echo "File is not an image.";
-				$uploadOk = 0;
-			  }
-			}
-			
-			// Check if file already exists
-			if (file_exists($target_file)) {
-			  echo "Sorry, file already exists.";
-			  $uploadOk = 0;
-			}
-			
-			// Check file size
-			if ($_FILES["customFile"]["size"] > 500000) {
-			  echo "Sorry, your file is too large.";
-			  $uploadOk = 0;
-			}
-			
-			// Allow certain file formats
-			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-			&& $imageFileType != "gif" ) {
-			  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-			  $uploadOk = 0;
-			}
-			
-			// Check if $uploadOk is set to 0 by an error
-			if ($uploadOk == 0) {
-			  echo "Sorry, your file was not uploaded.";
-			// if everything is ok, try to upload file
-			} else {
-			  if (move_uploaded_file($_FILES["customFile"]["tmp_name"], $target_file)) {
-				echo "The file ". htmlspecialchars( basename( $_FILES["customFile"]["name"])). " has been uploaded.";
-			  } else {
-				echo "Sorry, there was an error uploading your file.";
-			  }
-			}
 
 			if (mysqli_query($conn, $sql)) 
 			{
@@ -179,8 +131,16 @@ header('location:home.php');
 		
 			<div class='form-row'>
 				<div class='form-group col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Type</label>
-					<input  class='form-control' id='colFormLabel' value='" . $row['aisle'] . "' name='type'>
+					<label for='colFormLabel' class='col-form-label'>Aisle</label>
+					<input  class='form-control' id='colFormLabel' value='" . $row['aisle'] . "' name='aisle'>
+					<select id='colFormLabel' name='aisle'>
+						<option value='Meat' " if ($row['aisle'] == "Meat") { echo "selected='selected'"; } " >Meat</option>
+						<option value='Dairy' " if ($row['aisle'] == "Dairy") { echo "selected='selected'"; } " >Dairy</option>
+						<option value='Beverages' " if ($row['aisle'] == "Beverages") { echo "selected='selected'"; } " >Beverages</option>
+						<option value='Detergents' " if ($row['aisle'] == "Detergents") { echo "selected='selected'"; } " >Detergents</option>
+						<option value='Snacks' " if ($row['aisle'] == "Snacks") { echo "selected='selected'"; } " >Snacks</option>
+						<option value='Alcohol' " if ($row['aisle'] == "Alcohol") { echo "selected='selected'"; } " >Alcohol</option>
+				 	</select>
 				</div> 
 				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Price</label>

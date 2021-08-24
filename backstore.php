@@ -94,7 +94,7 @@ header('location:home.php');
 			<tr>
 				<th scope="col"></th>
 				<th scope="col">Product</th>
-				<th scope="col">Type</th>
+				<th scope="col">Aisle</th>
 				<th scope="col">Inventory</th>
 				<th scope="col">Price</th>
 				<th scope="col">Edit/Delete</th>
