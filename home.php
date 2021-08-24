@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <?php include('dbcon.php'); 
 include('authenticate.php');
 $result = mysqli_query($conn,"SELECT * FROM register");
