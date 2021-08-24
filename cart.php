@@ -107,19 +107,19 @@ if (isset($_GET['action'])) {
         <a class="nav-link" href="home.php">Home <span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="AllProducts.php">All Products</a>
+        <a class="nav-link" href="aisles.php?aisle=">All Products</a>
       </li>
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Aisles
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="meataisle.php">Meat</a>
-          <a id="disabled" class="dropdown-item" href="dairy.php">Dairy</a>  
-          <a id="disabled" class="dropdown-item" href="beveragesaisle.php">Beverages</a>
-          <a id="disabled" class="dropdown-item" href="detergents.php">Detergents</a>
-          <a id="disabled" class="dropdown-item" href="snacks.php">Snacks</a>
-          <a id="disabled" class="dropdown-item" href="alcohol.php">Alcohol</a>
+          <a class="dropdown-item" href="aisles.php?aisle=Meat">Meat</a>
+          <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Dairy">Dairy</a>  
+          <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Beverages">Beverages</a>
+          <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Detergents">Detergents</a>
+          <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Snacks">Snacks</a>
+          <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Alcohol">Alcohol</a>
         </div>
       </li>
       <li class="nav-item active">
@@ -271,7 +271,7 @@ if (isset($_GET['action'])) {
 
           <button type="button" class="btn btn-primary btn-block">Checkout</button>
 
-          <a href="AllProducts.php">
+          <a href="aisles.php?aisle=">
             <button type="button" class="btn btn-secondary btn-block mt-1">Continue Shopping</button>
           </a>
         </div>

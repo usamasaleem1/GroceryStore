@@ -33,19 +33,19 @@ session_start();
 		<a class="nav-link" href="home.php">Home <span class="sr-only"></span></a>
 	  </li>
 	  <li class="nav-item active">
-		<a class="nav-link" href="AllProducts.php">All Products</a>
+		<a class="nav-link" href="aisles.php?aisle=">All Products</a>
 	  </li>
 	  <li class="nav-item dropdown active">
 		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		  Aisles
 		</a>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		  <a class="dropdown-item" href="meataisle.php">Meat</a>
-		  <a id="disabled" class="dropdown-item" href="dairy.php">Dairy</a>  
-		  <a id="disabled" class="dropdown-item" href="beveragesaisle.php">Beverages</a>
-		  <a id="disabled" class="dropdown-item" href="detergents.php">Detergents</a>
-		  <a id="disabled" class="dropdown-item" href="snacks.php">Snacks</a>
-		  <a id="disabled" class="dropdown-item" href="alcohol.php">Alcohol</a>
+		  <a class="dropdown-item" href="aisles.php?aisle=Meat">Meat</a>
+		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Dairy">Dairy</a>  
+		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Beverages">Beverages</a>
+		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Detergents">Detergents</a>
+		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Snacks">Snacks</a>
+		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Alcohol">Alcohol</a>
       </div>
 	  </li>
 	  <li class="nav-item active">
@@ -89,7 +89,7 @@ session_start();
 	<main>
 		<div class="row">
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="meataisle.php">
+        <a href="aisles.php?aisle=Meat">
           <img class="img-thumbnail mb-3" src="meat.jpg" alt="Album screenshot" width="960" height="600">
           <h5 class="mb-1">Meat Section</h5>
         </a>
@@ -98,7 +98,7 @@ session_start();
   
     
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="dairy.php">
+        <a href="aisles.php?aisle=Dairy">
           <img class="img-thumbnail mb-3" src="dairy.jpg" alt="Pricing screenshot" width="960" height="600">
           <h5 class="mb-1">Dairy Section</h5>
         </a>
@@ -107,7 +107,7 @@ session_start();
   
     
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="beveragesaisle.php">
+        <a href="aisles.php?aisle=Beverages">
           <img class="img-thumbnail mb-3" src="beverages.jpg" alt="Checkout screenshot" width="960" height="600">
           <h5 class="mb-1">Beverages</h5>
         </a>
@@ -116,7 +116,7 @@ session_start();
   
     
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="detergents.php">
+        <a href="aisles.php?aisle=Detergents">
           <img class="img-thumbnail mb-3" src="detergents.jpg" alt="Product screenshot" width="960" height="600">
           <h5 class="mb-1">Detergents</h5>
         </a>
@@ -124,7 +124,7 @@ session_start();
 
 
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="snacks.php">
+        <a href="aisles.php?aisle=Snacks">
           <img class="img-thumbnail mb-3" src="snacks.jpg" alt="Product screenshot" width="960" height="600">
           <h5 class="mb-1">Snacks</h5>
         </a>
@@ -132,7 +132,7 @@ session_start();
 
 
       <div class="col-sm-6 col-md-4 col-xl-3 mb-3">
-        <a href="alcohol.php">
+        <a href="aisles.php?aisle=Alcohol">
           <img class="img-thumbnail mb-3" src="bottles.png" alt="Product screenshot" width="960" height="600">
           <h5 class="mb-1">Alcohol</h5>
         </a>

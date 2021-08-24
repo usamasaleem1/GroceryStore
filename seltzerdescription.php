@@ -66,7 +66,7 @@ $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'H
         ></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="AllProducts.php">All Products</a>
+        <a class="nav-link" href="aisles.php?aisle=">All Products</a>
       </li>
       <li class="nav-item dropdown active">
         <a
@@ -81,18 +81,18 @@ $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'H
         Aisles
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="meataisle.php">Meat</a>
-        <a id="disabled" class="dropdown-item" href="dairy.php">Dairy</a>
-        <a id="disabled" class="dropdown-item" href="beveragesaisle.php"
+        <a class="dropdown-item" href="aisles.php?aisle=Meat">Meat</a>
+        <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Dairy">Dairy</a>
+        <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Beverages"
         >Beverages</a
         >
-        <a id="disabled" class="dropdown-item" href="detergents.php"
+        <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Detergents"
         >Detergents</a
         >
-        <a id="disabled" class="dropdown-item" href="snacks.php"
+        <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Snacks"
         >Snacks</a
         >
-        <a id="disabled" class="dropdown-item" href="alcohol.php"
+        <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Alcohol"
         >Alcohol</a
         >
       </div>
