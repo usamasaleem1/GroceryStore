@@ -82,7 +82,7 @@ header('location:home.php');
 
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Edit Product</h5>
+	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Add Product</h5>
   </div>
 
 <!-- main section -->
@@ -100,7 +100,7 @@ header('location:home.php');
 			$stock = $_POST['count'];
 			$id = $_GET['productId'];
 			$image = $_POST['image'];
-			$sql = "INSERT INTO MyGuests (name, price, image, description, aisle, stock)
+			$sql = "INSERT INTO products (name, price, image, description, aisle, stock)
 			VALUES ('$name', '$price', '$image', '$description', '$aisle', '$stock')";
 
 			if (mysqli_query($conn, $sql)) 
@@ -115,9 +115,9 @@ header('location:home.php');
 
 			echo "
 
-			<h1>Edit Product</h1>
+			<h1>Add Product</h1>
 
-			<form action='backstoreAdd.php method='post' enctype='multipart/form-data'>
+			<form action='backstoreAdd.php' method='post'>
 		
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
