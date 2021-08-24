@@ -100,7 +100,7 @@ header('location:home.php');
 			$stock = $_POST['count'];
 			$id = $_GET['productId'];
 			$image = $_POST['image'];
-			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock, image=$image  WHERE id=$id";
+			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock, image='$image'  WHERE id=$id";
 
 			if (mysqli_query($conn, $sql)) 
 			{
