@@ -82,7 +82,7 @@ header('location:home.php');
 
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Add Product</h5>
+	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Edit Product</h5>
   </div>
 
 <!-- main section -->
@@ -151,10 +151,10 @@ header('location:home.php');
 					<input class='form-control' id='colFormLabel' value='" . $row['stock'] . "' name='count'>
 				</div>
 				<div class='custom-file col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Image name</label>
-					<p>New images must be uploaded to github with the same name.</p>
+					<label for='colFormLabel' class='col-form-label'>Image name**</label>
 					<input class='form-control' id='colFormLabel' value='" . $row['image'] . "' name='image'>
 				</div>
+				<p>** New images must be uploaded to github with the same name.</p>
 			</div>
 	
 			<div class='form-group row'>
