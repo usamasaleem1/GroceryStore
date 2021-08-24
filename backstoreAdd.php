@@ -98,10 +98,9 @@ header('location:home.php');
 			$description = $_POST['description'];
 			$price = $_POST['price'];
 			$stock = $_POST['count'];
-			$id = $_GET['productId'];
 			$image = $_POST['image'];
 			$sql = "INSERT INTO products (name, price, image, description, aisle, stock)
-			VALUES ('$name', '$price', '$image', '$description', '$aisle', '$stock')";
+			VALUES ('$name', $price, '$image', '$description', '$aisle', $stock)";
 
 			if (mysqli_query($conn, $sql)) 
 			{
