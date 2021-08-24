@@ -3,7 +3,7 @@
 <?php 
 
 $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'HTADFpjYkD');
-$name = "No product selected!"
+$name = "No product selected!";
 if (isset($_GET['productId'])) 
 {
 	$productId = $_GET['productId'];
