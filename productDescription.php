@@ -154,9 +154,7 @@ if (isset($_GET['productId']))
 						<input type="hidden" name="hidden_price" value="<?php echo $row['price']; ?>">
 						<button id="addToCartButton" type="submit" class="btn btn-primary" name="add">Add To Cart</button>
 					</form>
-					<?php
-				}
-				?>
+			
   
   
   
