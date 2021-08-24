@@ -104,7 +104,7 @@ if (isset($_GET['productId']))
 		<div class="row justify-content-center">
 			<div class="col-sm-6 col-md-6 col-xl-3 mb-3 pr-0">
   
-				<img class="img-thumbnail mb-3 pr-0" src="leanbeef.jpg" alt="Album screenshot" width="960" height="600">
+				<img class="img-thumbnail mb-3 pr-0" src="<?php echo $row['image']; ?>" alt="Album screenshot" width="960" height="600">
   
 			</div>
   
@@ -112,7 +112,7 @@ if (isset($_GET['productId']))
   
 			<div class="col-sm-6 col-md-6 col-xl-3 mb-3">
 				<h5 class="mb-4 pl-2" style="text-align: left;"><?php echo $row['name']; ?></h5>
-				<h5 class="mb-1 pl-2" id="price" style="text-align: left;">$12.20</h5>
+				<h5 class="mb-1 pl-2" id="price" style="text-align: left;">$<?php echo $row['price']; ?></h5>
 				<h6 class="mb-5 pl-2" style="text-align: left;">$5.54/lb</h6>
   
 				<!-- more description -->
@@ -129,7 +129,7 @@ if (isset($_GET['productId']))
 						</div>
 						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 							<div class="card-body">
-								Our loin ground beef is of AAA quality. We boast a 6% fat for the extra lean type.
+								<?php echo $row['description']; ?>
 							</div>
 						</div>
 					</div>
@@ -161,8 +161,8 @@ if (isset($_GET['productId']))
 							</div>
   
   
-							<input type="hidden" name="hidden_name" value="Extra Lean Beef" >
-							<input type="hidden" name="hidden_price" value="12.20">
+							<input type="hidden" name="hidden_name" value="<?php echo $row['name']; ?>" >
+							<input type="hidden" name="hidden_price" value="<?php echo $row['price']; ?>">
 							<button id="addToCartButton" type="submit" class="btn btn-primary" name="add">Add To Cart</button>
 						</form>
 						<?php
