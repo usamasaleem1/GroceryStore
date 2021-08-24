@@ -99,40 +99,8 @@ header('location:home.php');
 			$price = $_POST['price'];
 			$stock = $_POST['count'];
 			$id = $_GET['productId'];
-			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock  WHERE id=$id";
-
-
-			if(isset($_FILES['image']))
-			{
-				$errors= array();
-				$file_name = $_FILES['image']['name'];
-				$file_size =$_FILES['image']['size'];
-				$file_tmp =$_FILES['image']['tmp_name'];
-				$file_type=$_FILES['image']['type'];
-				$file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
-				
-				$extensions= array("jpeg","jpg","png");
-				
-				if(in_array($file_ext,$extensions)=== false)
-				{
-				   $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-				}
-				
-				if($file_size > 2097152)
-				{
-				   $errors[]='File size must be excately 2 MB';
-				}
-				
-				if(empty($errors)==true)
-				{
-				   move_uploaded_file($file_tmp, $file_name);
-				   echo "Success";
-				}
-				else
-				{
-				   print_r($errors);
-				}
-			}
+			$image = $_GET['image'];
+			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock, image=$image  WHERE id=$id";
 
 			if (mysqli_query($conn, $sql)) 
 			{
@@ -178,19 +146,18 @@ header('location:home.php');
 					<label for='colFormLabel' class='col-form-label'>Price</label>
 					<input  class='form-control' id='colFormLabel' value='" . $row['price'] . "' name='price'>
 				</div>
-					<div class='form-group col-md-2'>
+				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Stock count</label>
 					<input class='form-control' id='colFormLabel' value='" . $row['stock'] . "' name='count'>
 				</div>
-		
+				<div class='custom-file col-md-2'>
+					<label class='custom-file-label' for='customFile'>Image file</label>
+					<input type='file' name='image' class='custom-file-input' id='customFile'>
+					<p>New images must be uploaded to github with the same name.</p>
+					<input class='form-control' id='colFormLabel' value='" . $row['image'] . "' name='image'>
+				</div>
 			</div>
-		
-			<div class='custom-file col-md-2'>
-				<label for='customFile' class='col-form-label'>Stock count</label>
-				<label class='custom-file-label' for='customFile'>Image file</label>
-				<input type='file' name='image' class='custom-file-input' id='customFile'>
-			</div>
-		
+	
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
 				<div class='col-md-7'>
