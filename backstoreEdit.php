@@ -101,13 +101,61 @@ header('location:home.php');
 			$id = $_GET['productId'];
 			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock  WHERE id=$id";
 			
+			$target_dir = "";
+			$target_file = $target_dir . basename($_FILES["imageFile"]["name"]);
+			$uploadOk = 1;
+			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+			
+			// Check if image file is a actual image or fake image
+			if(isset($_POST["save"])) {
+			  $check = getimagesize($_FILES["imageFile"]["tmp_name"]);
+			  if($check !== false) {
+				echo "File is an image - " . $check["mime"] . ".";
+				$uploadOk = 1;
+			  } else {
+				echo "File is not an image.";
+				$uploadOk = 0;
+			  }
+			}
+			
+			// Check if file already exists
+			if (file_exists($target_file)) {
+			  echo "Sorry, file already exists.";
+			  $uploadOk = 0;
+			}
+			
+			// Check file size
+			if ($_FILES["imageFile"]["size"] > 500000) {
+			  echo "Sorry, your file is too large.";
+			  $uploadOk = 0;
+			}
+			
+			// Allow certain file formats
+			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+			&& $imageFileType != "gif" ) {
+			  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+			  $uploadOk = 0;
+			}
+			
+			// Check if $uploadOk is set to 0 by an error
+			if ($uploadOk == 0) {
+			  echo "Sorry, your file was not uploaded.";
+			// if everything is ok, try to upload file
+			} else {
+			  if (move_uploaded_file($_FILES["imageFile"]["tmp_name"], $target_file)) {
+				echo "The file ". htmlspecialchars( basename( $_FILES["imageFile"]["name"])). " has been uploaded.";
+			  } else {
+				echo "Sorry, there was an error uploading your file.";
+			  }
+			}
+
 			if (mysqli_query($conn, $sql)) 
 			{
-				echo "Record updated successfully";
+				echo "Product updated successfully";
 			} 
 			else 
 			{
-				echo "Error updating record: " . mysqli_error($conn);
+				echo "Error updating product: " . mysqli_error($conn);
 			}
 		}
 		if (isset($_GET['productId'])) 
@@ -148,7 +196,7 @@ header('location:home.php');
 			<div class='custom-file col-md-2'>
 				<label for='customFile' class='col-form-label'>Stock count</label>
 				<label class='custom-file-label' for='customFile'>Image file</label>
-				<input type='file' class='custom-file-input' id='customFile'>
+				<input type='file' name='imageFile' class='custom-file-input' id='customFile'>
 			</div>
 		
 			<div class='form-group row'>
@@ -184,28 +232,6 @@ header('location:home.php');
 	<input type="submit" name="submit">
 		
 	</form>
-
-<?php
-	if(isset($_POST["submit"]))
-{
-	
-	//mysqli_query($conn,"insert into test(name,price,description) values('$_POST[testname]','$_POST[testprice]','$_POST[testdescription]')");
-	
-	/*$conn = mysql_connect("HTADFpjYkD");
-
-	mysql_select_db("HTADFpjYkD",$conn);
-
-	$sql = "INSERT INTO test (name,price,description) VALUES ('$_POST[testname]','$_POST[testprice]','$_POST[testdescription]')";
-
-	mysql_query($sql,$conn);
-
-	mysql_close($conn);*/
-	
-	//mysqli_query($conn, "insert into products values(NULL,'$_POST[name]','$_POST[price]','$_POST[description]','$_POST[customFile]')")
-	//echo 'test';
-}
-
-?>
 
 
 </body>
