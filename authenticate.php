@@ -33,15 +33,8 @@
 					$_SESSION['loggedin'] = false;
 					header('location:signinpageError.php');
 				}
-
-
-				if ($num_row2 > 0) 
-				{		
-					$_SESSION['firstname'] = $firstname;
-				}
-			else
-				{
-				}
+			$firstname = $_SESSION['firstname'];
+		
 		}
 
 
