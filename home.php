@@ -6,16 +6,10 @@ session_start();
 ?>
 
 <?php include('dbcon.php'); 
-
-$connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'HTADFpjYkD');
-
-if (isset($_GET['firstname'])) 
-{
-	$firstname = $_GET['firstname'];
-	$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$firstname'");
-	$row = mysqli_fetch_array($query);
-	$name = $row['firstname'];
+<?php if(isset($_SESSION['loggedin'])){ 
+	$_SESSION['user_name'] = $firstname;
 }
+?>
 
 ?>
 
@@ -44,7 +38,7 @@ if (isset($_GET['firstname']))
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<?php if(isset($_SESSION['loggedin'])){ ?>
 				<img src="iconLoggedIn.png" class="navbar-brand" style="width: 30px;">
-				<a class="navbar-brand" href="#"><?php echo $firstname; ?></a>
+				<a class="navbar-brand" href="#"><?php echo "Welcome ".$_SESSION['user_name']; ?></a>
   			<?php }else{ ?>
 				<img src="trolley.png" class="navbar-brand" style="width: 40px;">
 				<a class="navbar-brand" href="#">Online Grocery Shopping</a>
