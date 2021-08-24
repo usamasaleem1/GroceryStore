@@ -26,7 +26,7 @@ if (isset($_GET['productId']))
 	<script type="text/javascript" src="cart.js"></script>
 
 	<meta charset="utf-8">
-	<title><?php echo $name ?></title>
+	<title><?php echo $name; ?></title>
 	<link rel="icon" href="icon2.png">
 
 </head>
