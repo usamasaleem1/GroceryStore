@@ -6,6 +6,7 @@
 		{
 			$email = mysqli_real_escape_string($conn, $_POST['email']);
 			$password = mysqli_real_escape_string($conn, $_POST['password']);
+			$firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
 			
 			$query 		= mysqli_query($conn, "SELECT * FROM register WHERE password='$password' and email='$email'");
 			$row		= mysqli_fetch_array($query);
