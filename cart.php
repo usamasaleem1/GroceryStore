@@ -273,8 +273,11 @@ if (isset($_GET['action'])) {
               <span><strong id="totalAmount"></strong></span>
             </li>
           </ul>
-
-          <button type="button" class="btn btn-primary btn-block">Checkout</button>
+          
+          <a href="aftercheckout.php">
+            <button type="button" class="btn btn-primary btn-block">Checkout</button>
+          </a>
+          
 
           <a href="AllProducts.php">
             <button type="button" class="btn btn-secondary btn-block mt-1">Continue Shopping</button>

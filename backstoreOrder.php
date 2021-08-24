@@ -1,4 +1,24 @@
 <?php 
+$dbhost = 'remotemysql.com:3306';
+$dbuser = 'HTADFpjYkD';
+$dbpass = 'wfJDJmJgdL';
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
+
+if(! $conn ) {
+   die('Could not connect: ' . mysqli_error());
+}
+
+
+if ($conn)
+{
+	if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $order_id = $_GET['order_id'];
+    $product_name = $_GET['product_name'];	
+    $query = "DELETE FROM orders_products WHERE order_id = '$order_id' AND product_name='$product_name'";
+    $conn->query($query);
+  }
+}
+
 session_start();
 //include ('index.php');
 include('dbcon.php'); 
@@ -7,7 +27,7 @@ include('session.php');
 
 if($_SESSION['permission'] != 'admin')
 {
-header('location:home.php');
+  header('location:home.php');
 }
 
 ?>
@@ -78,7 +98,6 @@ header('location:home.php');
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
 	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore Order List</h5>
    <a class="btn btn-outline-primary" href="backstoreOrderEdit.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
-	 <button class="btn btn-outline-primary">Delete Items <img src="edit.png" width="30px" height="30px"> </button>
    <button class="btn btn-outline-primary">Save <img src="edit.png" width="30px" height="30px"> </button>
    <a class="btn btn-outline-primary" href="backstoreOrderEdit.php">Edit Items <img src="edit.png" width="30px" height="30px"> </a>
   </div>
@@ -88,38 +107,36 @@ header('location:home.php');
     <thead>
       <tr>
         <th scope="col">Order ID</th>
-        <th scope="col">Order Date</th>
-        <th scope="col">Total</th>
-        <th scope="col">Ordered by</th>
+        <th scope="col">Products List</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Email</th>
         <th scope="col">Address</th>
-        <th scope="col">Order Status</th>
+        <th scope="col">Postal</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-        <td>Placeholder</td>
-      </tr>
+      <?php
+        $query = 
+        "SELECT o.order_id, op.product_name, op.product_price, op.product_quantity, r.firstname, r.email, r.address, r.postal 
+        FROM orders o 
+        JOIN register r ON o.register_id = r.id
+        JOIN orders_products op ON o.order_id = op.order_id;";
+        $result = $conn->query($query);
+        while ($row = $result->fetch_assoc()) {
+          $last_id = $row['order_id'];
+        ?>
+          <tr>
+            <th scope="row"><?php echo $row['order_id'] ?></th>
+            <td><?php echo $row['product_name'] . ' ' . '$' . $row['product_price']  .  ' ' . $row['product_quantity'] . 'x' ?></td>
+            <td><?php echo $row['firstname']?></td>
+            <td><?php echo $row['email']?></td>
+            <td><?php echo $row['address']?></td>
+            <td><?php echo $row['postal']?></td>
+            <td><a href="backstoreOrder.php?action=delete&order_id=<?php echo $row["order_id"]; ?>&product_name=<?php echo $row["product_name"]; ?>"><span class="text-danger">Delete</span></a></td>
+          </tr>
+        <?php 
+          } 
+        ?>
     </tbody>
   </table>
 

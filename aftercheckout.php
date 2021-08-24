@@ -1,25 +1,61 @@
-<?php include('dbcon.php'); ?>
 <?php
+
+$dbhost = 'remotemysql.com:3306';
+$dbuser = 'HTADFpjYkD';
+$dbpass = 'wfJDJmJgdL';
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
+
+if(! $conn ) {
+   die('Could not connect: ' . mysqli_error());
+}
+
 session_start();
+
+//get user info
+$email = $_SESSION['email'];
+$query = "SELECT id from register where email = '$email'";
+$result = $conn->query($query);
+$row = $result->fetch_assoc();
+$id = $row['id'];
+
+//insert order 
+$query = "INSERT INTO orders (register_id) VALUES ('$id')";
+$conn->query($query);
+$last_id = $conn->insert_id;
+
+//insert items
+if (!empty($_SESSION["cart"])) {
+	foreach ($_SESSION['cart'] as $key => $value) {
+		$item_name = $value["item_name"];
+		$product_price = $value["product_price"];
+		$item_quantity = $value["item_quantity"];
+		$query = "INSERT INTO orders_products (order_id, product_name, product_price, product_quantity) 
+		VALUES ('$last_id', '$item_name','$product_price','$item_quantity')";
+		$conn->query($query);
+	}
+}
+
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<title>Online Grocery</title>
+	<link rel="icon" href="trolley.png">
+	<link rel="stylesheet" href="aftersignup.css">
+	
+<!-- general -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="project.css">
-	<link rel="stylesheet" type="text/css" href="signinup.css">
-	
-	<meta charset="utf-8">
-	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="">
 	<link rel="icon" href="trolley.png">
-
 </head>
 <body>
-
 
 <!-- Nav bar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -43,12 +79,12 @@ session_start();
 		  Aisles
 		</a>
 		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		  <a class="dropdown-item" href="aisles.php?aisle=Meat">Meat</a>
-		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Dairy">Dairy</a>  
-		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Beverages">Beverages</a>
-		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Detergents">Detergents</a>
-		<a id="disabled" class="dropdown-item" href="aisles.php?aisle=Snacks">Snacks</a>
-		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Alcohol">Alcohol</a>
+		  <a class="dropdown-item" href="meataisle.php">Meat</a>
+		  <a id="disabled" class="dropdown-item" href="dairy.php">Dairy</a>  
+		  <a id="disabled" class="dropdown-item" href="beveragesaisle.php">Beverages</a>
+		  <a id="disabled" class="dropdown-item" href="detergents.php">Detergents</a>
+		<a id="disabled" class="dropdown-item" href="snacks.php">Snacks</a>
+		  <a id="disabled" class="dropdown-item" href="alcohol.php">Alcohol</a>
 		</div>
 	  </li>
 	  <li class="nav-item active">
@@ -59,56 +95,32 @@ session_start();
 	<form class="form-inline my-2 my-lg-0">
 	  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="background-color: #343A40;">
 	  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	  <a class="btn btn-outline-primary ml-1" href="#">Sign in</a>
+	        <?php if(isset($_SESSION['loggedin'])){ ?>
+        <a class="btn btn-outline-primary ml-1" href="logout.php">Log Out</a>
+    <?php }else{ ?>
+        <a class="btn btn-outline-primary ml-1" href="signinpage.php">Sign in</a>
+    <?php } ?>
 	</form>
   </div>
 </nav>
 
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-
-<!-- main section -->
-<main>
-
-	<div class="middle">
-		<h1 class="topspacing">Sign Up For An Account!</h1>
-		<a href="signinpage.php"><p class="topspacing">Already have an account? Sign in here!</p></a>
-		<form action="aftersignup.php" method="post">
-			<h5>Select an avatar</h5>
-			<img class="spacing" src="avatar.png">
-			<input type="radio" name="test">
-			<img class="spacing" src="avatar1.png">
-			<input type="radio" name="test">
-			<img class="spacing" src="avatar2.png">
-			<input type="radio" name="test"><br>
-			
-			<div class="boxalign">
-				<label for="firstname">Full Name</label>
-				<input class="spacing" type="text" name="firstname" placeholder="Fullname" required><br>
-				<label for="email">Email</label>
-				<input class="spacing" type="text" name="email" placeholder="Email" required><br>
-				<label for="password">Password</label>
-				<input class="spacing" type="password" name="password" placeholder="Password" required><br>
-				<label for="address">Address</label>
-				<input class="spacing" type="text" name="address" placeholder="Address" required><br>
-				<label for="postal">Postal Code</label>
-				<input class="spacing" type="text" name="postal" placeholder="Postal Code" required><br>
-			</div>
-			
-			<div>
-				<input class="spacing" type="submit" name="save" value="Create Account">
-				<input class="spacing" type="reset" value="Reset">
-			</div>
-
-		</form>
-	</div>
-
-
-
-</main>
+	<div class="bgimg">
+		<!-- <div class="topmiddle">
+		  <p><img src="trolley.png" style="width: 100px;"></p>
+		</div> -->
+		<div class="middle">
+		  <h1>Checkout complete.</h1>
+		</div>
+		<!-- <div class="bottomleft">
+		  <p>Some text</p>
+		</div> -->
+	  </div>
 
  <!-- footer -->
-   	<footer class="pt-4 my-md-5 pt-md-5 border-top">
+ <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
           <div class="col-12 col-md">
             <p></p>
@@ -141,8 +153,6 @@ session_start();
         </div>
       </footer>
 
-
-
-
 </body>
 </html>
+
