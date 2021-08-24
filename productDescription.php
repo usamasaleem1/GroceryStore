@@ -111,7 +111,7 @@ if (isset($_GET['productId']))
   
   
 			<div class="col-sm-6 col-md-6 col-xl-3 mb-3">
-				<h5 class="mb-4 pl-2" style="text-align: left;"><?php . $row['name'] . ?></h5>
+				<h5 class="mb-4 pl-2" style="text-align: left;"><?php echo $row['name']; ?></h5>
 				<h5 class="mb-1 pl-2" id="price" style="text-align: left;">$12.20</h5>
 				<h6 class="mb-5 pl-2" style="text-align: left;">$5.54/lb</h6>
   
