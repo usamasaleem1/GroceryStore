@@ -113,64 +113,68 @@ header('location:home.php');
 		}
 		if (isset($_GET['productId'])) 
 		{
+
 			$productId = $_GET['productId'];
 			$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$productId'");
 			$row = mysqli_fetch_array($query);
 
-			echo "
+			if(mysqli_num_rows($query) != 0)
+			{
+				echo "
 
-			<h1>Edit Product</h1>
+				<h1>Edit Product</h1>
 
-			<form action='backstoreEdit.php?productId=" . $productId . "' method='post' enctype='multipart/form-data'>
-		
-			<div class='form-group row'>
-				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
-				<div class='col-md-7'>
-				  <input  class='form-control' id='colFormLabel' value='" . $row['name'] . "' name='name'>
-				</div>
-			</div>
-		
-			<div class='form-row'>
-				<div class='form-group col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Aisle</label>
-					<select id='colFormLabel' name='aisle' class='form-control'>
-						<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
-						<option value='Dairy' " . (($row['aisle'] == "Dairy") ? "selected='selected'":'') . ">Dairy</option>
-						<option value='Beverages' " . (($row['aisle'] == "Beverages") ? "selected='selected'":'') . ">Beverages</option>
-						<option value='Detergents' " . (($row['aisle'] == "Detergents") ? "selected='selected'":'') . ">Detergents</option>
-						<option value='Snacks' " . (($row['aisle'] == "Snacks") ? "selected='selected'":'') . ">Snacks</option>
-						<option value='Alcohol' " . (($row['aisle'] == "Alcohol") ? "selected='selected'":'') . ">Alcohol</option>
-				 	</select>
-				</div> 
-				<div class='form-group col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Price</label>
-					<input  class='form-control' id='colFormLabel' value='" . $row['price'] . "' name='price'>
-				</div>
-				<div class='form-group col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Stock count</label>
-					<input class='form-control' id='colFormLabel' value='" . $row['stock'] . "' name='count'>
-				</div>
-				<div class='custom-file col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Image name**</label>
-					<input class='form-control' id='colFormLabel' value='" . $row['image'] . "' name='image'>
-				</div>
-				<p>** New images must be uploaded to github with the same name.</p>
-			</div>
-	
-			<div class='form-group row'>
-				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
-				<div class='col-md-7'>
-					<textarea  class='form-control' id='colFormLabel' value='" . $row['description'] . "' name='description'>" . $row['description'] . "</textarea>
-				</div>
-			</div>
-		
+				<form action='backstoreEdit.php?productId=" . $productId . "' method='post' enctype='multipart/form-data'>
 			
-		
-			<a href='backstore.php'>
-				<button type='submit' class='btn btn-primary' name='save'>Save</button>
-			</a>
+				<div class='form-group row'>
+					<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
+					<div class='col-md-7'>
+					<input  class='form-control' id='colFormLabel' value='" . $row['name'] . "' name='name'>
+					</div>
+				</div>
 			
-			";
+				<div class='form-row'>
+					<div class='form-group col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Aisle</label>
+						<select id='colFormLabel' name='aisle' class='form-control'>
+							<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
+							<option value='Dairy' " . (($row['aisle'] == "Dairy") ? "selected='selected'":'') . ">Dairy</option>
+							<option value='Beverages' " . (($row['aisle'] == "Beverages") ? "selected='selected'":'') . ">Beverages</option>
+							<option value='Detergents' " . (($row['aisle'] == "Detergents") ? "selected='selected'":'') . ">Detergents</option>
+							<option value='Snacks' " . (($row['aisle'] == "Snacks") ? "selected='selected'":'') . ">Snacks</option>
+							<option value='Alcohol' " . (($row['aisle'] == "Alcohol") ? "selected='selected'":'') . ">Alcohol</option>
+						</select>
+					</div> 
+					<div class='form-group col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Price</label>
+						<input  class='form-control' id='colFormLabel' value='" . $row['price'] . "' name='price'>
+					</div>
+					<div class='form-group col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Stock count</label>
+						<input class='form-control' id='colFormLabel' value='" . $row['stock'] . "' name='count'>
+					</div>
+					<div class='custom-file col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Image name**</label>
+						<input class='form-control' id='colFormLabel' value='" . $row['image'] . "' name='image'>
+					</div>
+					<p>** New images must be uploaded to github with the same name.</p>
+				</div>
+		
+				<div class='form-group row'>
+					<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
+					<div class='col-md-7'>
+						<textarea  class='form-control' id='colFormLabel' value='" . $row['description'] . "' name='description'>" . $row['description'] . "</textarea>
+					</div>
+				</div>
+			
+				
+			
+				<a href='backstore.php'>
+					<button type='submit' class='btn btn-primary' name='save'>Save</button>
+				</a>
+				
+				";
+			}
 		} 
 		else
 		{
