@@ -11,14 +11,13 @@
 			$row		= mysqli_fetch_array($query);
 			$num_row 	= mysqli_num_rows($query);
 
-			$query2 		= mysqli_query($conn, "SELECT * FROM register WHERE firstname='$firstname'");
+			$query2 	= mysqli_query($conn, "SELECT firstname FROM register WHERE firstname='$firstname'");
 			$row2		= mysqli_fetch_array($query);
 			$num_row2 	= mysqli_num_rows($query);
 			
 			if ($num_row > 0) 
 				{		
 					$_SESSION['loggedin'] = true;	
-					$_SESSION['firstname'] = $firstname;
 					$_SESSION['email']=$row['email'];
 					if ($password == "admin" && $email == "admin"){
 						$_SESSION['permission'] = 'admin';
