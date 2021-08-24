@@ -160,7 +160,7 @@ header('location:home.php');
 			$price = $_POST['price'];
 			$stock = $_POST['count'];
 			$id = $_GET['productId'];
-			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price='$price', stock='$stock',  WHERE id=$id";
+			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock,  WHERE id=$id";
 			
 			if (mysqli_query($conn, $sql)) 
 			{
