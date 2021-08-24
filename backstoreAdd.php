@@ -99,7 +99,7 @@ header('location:home.php');
 			$price = $_POST['price'];
 			$stock = $_POST['count'];
 			$id = $_GET['productId'];
-			$image = $_GET['image'];
+			$image = $_POST['image'];
 			$sql = "INSERT INTO MyGuests (name, price, image, description, aisle, stock)
 			VALUES ('$name', '$price', '$image', '$description', '$aisle', '$stock')";
 
