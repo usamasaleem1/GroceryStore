@@ -22,7 +22,7 @@
 				{		
 					$_SESSION['loggedin'] = true;	
 					$_SESSION['email']=$row['email'];
-					$firstname = "yoyoyo";
+					$_SESSION['firstname']=$row['firstname'];
 					if ($password == "admin" && $email == "admin"){
 						$_SESSION['permission'] = 'admin';
 						header('location:backstore.php');
