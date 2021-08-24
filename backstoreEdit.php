@@ -155,8 +155,12 @@ header('location:home.php');
 		if (isset($_POST['name']))
 		{
 			$name = $_POST['name'];
+			$aisle = $_POST['type'];
+			$description = $_POST['description'];
+			$price = $_POST['price'];
+			$stock = $_POST['count'];
 			$id = $_GET['productId'];
-			$sql = "UPDATE products SET name='$name' WHERE id='$id'";
+			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price='$price', stock='$stock',  WHERE id='$id'";
 			
 			if (mysqli_query($conn, $sql)) 
 			{
