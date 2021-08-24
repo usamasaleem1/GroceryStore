@@ -102,13 +102,13 @@ header('location:home.php');
 			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock  WHERE id=$id";
 			
 			$target_dir = "";
-			$target_file = $target_dir . basename($_FILES["imageFile"]["name"]);
+			$target_file = $target_dir . basename($_FILES["customFile"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 			
 			// Check if image file is a actual image or fake image
 			if(isset($_POST["save"])) {
-			  $check = getimagesize($_FILES["imageFile"]["tmp_name"]);
+			  $check = getimagesize($_FILES["customFile"]["tmp_name"]);
 			  if($check !== false) {
 				echo "File is an image - " . $check["mime"] . ".";
 				$uploadOk = 1;
@@ -125,7 +125,7 @@ header('location:home.php');
 			}
 			
 			// Check file size
-			if ($_FILES["imageFile"]["size"] > 500000) {
+			if ($_FILES["customFile"]["size"] > 500000) {
 			  echo "Sorry, your file is too large.";
 			  $uploadOk = 0;
 			}
@@ -142,8 +142,8 @@ header('location:home.php');
 			  echo "Sorry, your file was not uploaded.";
 			// if everything is ok, try to upload file
 			} else {
-			  if (move_uploaded_file($_FILES["imageFile"]["tmp_name"], $target_file)) {
-				echo "The file ". htmlspecialchars( basename( $_FILES["imageFile"]["name"])). " has been uploaded.";
+			  if (move_uploaded_file($_FILES["customFile"]["tmp_name"], $target_file)) {
+				echo "The file ". htmlspecialchars( basename( $_FILES["customFile"]["name"])). " has been uploaded.";
 			  } else {
 				echo "Sorry, there was an error uploading your file.";
 			  }
@@ -196,7 +196,7 @@ header('location:home.php');
 			<div class='custom-file col-md-2'>
 				<label for='customFile' class='col-form-label'>Stock count</label>
 				<label class='custom-file-label' for='customFile'>Image file</label>
-				<input type='file' name='imageFile' class='custom-file-input' id='customFile'>
+				<input type='file' name='customFile' class='custom-file-input' id='customFile'>
 			</div>
 		
 			<div class='form-group row'>
