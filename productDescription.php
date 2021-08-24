@@ -3,6 +3,14 @@
 <?php 
 
 $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'HTADFpjYkD');
+$name = "No product selected!"
+if (isset($_GET['productId'])) 
+{
+	$productId = $_GET['productId'];
+	$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$productId'");
+	$row = mysqli_fetch_array($query);
+	$name = $row['price'];
+}
 
 ?>
 
@@ -18,7 +26,7 @@ $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'H
 	<script type="text/javascript" src="cart.js"></script>
 
 	<meta charset="utf-8">
-	<title>Extra lean Beef</title>
+	<title><?php echo $name ?></title>
 	<link rel="icon" href="icon2.png">
 
 </head>
@@ -113,7 +121,6 @@ if (isset($_GET['productId']))
 			<div class="col-sm-6 col-md-6 col-xl-3 mb-3">
 				<h5 class="mb-4 pl-2" style="text-align: left;"><?php echo $row['name']; ?></h5>
 				<h5 class="mb-1 pl-2" id="price" style="text-align: left;">$<?php echo $row['price']; ?></h5>
-				<h6 class="mb-5 pl-2" style="text-align: left;">$5.54/lb</h6>
   
 				<!-- more description -->
   
