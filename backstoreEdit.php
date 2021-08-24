@@ -17,7 +17,7 @@ header('location:home.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -132,7 +132,7 @@ header('location:home.php');
 			<div class='form-row'>
 				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Aisle</label>
-					<select id='colFormLabel' name='aisle' class='form-select' aria-label='Default select example'>
+					<select id='colFormLabel' name='aisle' class='form-control'>
 						<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
 						<option value='Dairy' " . (($row['aisle'] == "Dairy") ? "selected='selected'":'') . ">Dairy</option>
 						<option value='Beverages' " . (($row['aisle'] == "Beverages") ? "selected='selected'":'') . ">Beverages</option>
@@ -140,18 +140,27 @@ header('location:home.php');
 						<option value='Snacks' " . (($row['aisle'] == "Snacks") ? "selected='selected'":'') . ">Snacks</option>
 						<option value='Alcohol' " . (($row['aisle'] == "Alcohol") ? "selected='selected'":'') . ">Alcohol</option>
 				 	</select>
+				</div> 
+				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Price</label>
 					<input  class='form-control' id='colFormLabel' value='" . $row['price'] . "' name='price'>
-
+				</div>
+					<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Stock count</label>
 					<input class='form-control' id='colFormLabel' value='" . $row['stock'] . "' name='count'>
+				</div>
 		
+			</div>
 		
-					<label for='customFile' class='col-form-label'>Stock count</label>
-					<label class='custom-file-label' for='customFile'>Image file</label>
-					<input type='file' name='customFile' class='custom-file-input' id='customFile'>
-			
-					<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
+			<div class='custom-file col-md-2'>
+				<label for='customFile' class='col-form-label'>Stock count</label>
+				<label class='custom-file-label' for='customFile'>Image file</label>
+				<input type='file' name='customFile' class='custom-file-input' id='customFile'>
+			</div>
+		
+			<div class='form-group row'>
+				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
+				<div class='col-md-7'>
 					<textarea  class='form-control' id='colFormLabel' value='" . $row['description'] . "' name='description'>" . $row['description'] . "</textarea>
 				</div>
 			</div>
