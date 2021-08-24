@@ -140,27 +140,18 @@ header('location:home.php');
 						<option value='Snacks' " . (($row['aisle'] == "Snacks") ? "selected='selected'":'') . ">Snacks</option>
 						<option value='Alcohol' " . (($row['aisle'] == "Alcohol") ? "selected='selected'":'') . ">Alcohol</option>
 				 	</select>
-				</div> 
-				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Price</label>
 					<input  class='form-control' id='colFormLabel' value='" . $row['price'] . "' name='price'>
-				</div>
-					<div class='form-group col-md-2'>
+
 					<label for='colFormLabel' class='col-form-label'>Stock count</label>
 					<input class='form-control' id='colFormLabel' value='" . $row['stock'] . "' name='count'>
-				</div>
 		
-			</div>
 		
-			<div class='custom-file col-md-2'>
-				<label for='customFile' class='col-form-label'>Stock count</label>
-				<label class='custom-file-label' for='customFile'>Image file</label>
-				<input type='file' name='customFile' class='custom-file-input' id='customFile'>
-			</div>
-		
-			<div class='form-group row'>
-				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
-				<div class='col-md-7'>
+					<label for='customFile' class='col-form-label'>Stock count</label>
+					<label class='custom-file-label' for='customFile'>Image file</label>
+					<input type='file' name='customFile' class='custom-file-input' id='customFile'>
+			
+					<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
 					<textarea  class='form-control' id='colFormLabel' value='" . $row['description'] . "' name='description'>" . $row['description'] . "</textarea>
 				</div>
 			</div>
