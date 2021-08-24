@@ -152,7 +152,6 @@ header('location:home.php');
 				</div>
 				<div class='custom-file col-md-2'>
 					<label class='custom-file-label' for='customFile'>Image file</label>
-					<input type='file' name='image' class='custom-file-input' id='customFile'>
 					<p>New images must be uploaded to github with the same name.</p>
 					<input class='form-control' id='colFormLabel' value='" . $row['image'] . "' name='image'>
 				</div>
