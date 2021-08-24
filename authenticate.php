@@ -12,8 +12,8 @@
 			$num_row 	= mysqli_num_rows($query);
 
 			$query2 	= mysqli_query($conn, "SELECT firstname FROM register WHERE firstname='$firstname'");
-			$row2		= mysqli_fetch_array($query);
-			$num_row2 	= mysqli_num_rows($query);
+			$row2		= mysqli_fetch_array($query2);
+			$num_row2 	= mysqli_num_rows($query2);
 			
 			if ($num_row > 0) 
 				{		
