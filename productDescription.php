@@ -143,37 +143,18 @@ if (isset($_GET['productId']))
   
 				</div>
   
-  
-  
-  
-				<!--Add to cart  -->
-				<?php
-  
-				$query = "SELECT * FROM products ORDER BY id ASC";
-				$result = mysqli_query($connect, $query);
-  
-  
-				if (mysqli_num_rows($result) > 0) {
-					
-					while( $row = mysqli_fetch_array($result) ); 
-					{
-  
-						?>
-  
-  
-						<form method="post" action="cart.php?action=add&id=<?php echo $row['id']; ?>">
-							<div class="form-group mt-4 product">
-								<label for="exampleInputPassword1">Quantity</label>
-								<input id="cartCount" onchange="updateCartPrice()" min="1" type="number" style="width: 100px;" class="form-control" value="1" id="cart" placeholder="Quantity" name="quantity">
-							</div>
-  
-  
-							<input type="hidden" name="hidden_name" value="<?php echo $row['name']; ?>" >
-							<input type="hidden" name="hidden_price" value="<?php echo $row['price']; ?>">
-							<button id="addToCartButton" type="submit" class="btn btn-primary" name="add">Add To Cart</button>
-						</form>
-						<?php
-					}
+					<form method="post" action="cart.php?action=add&id=<?php echo $row['id']; ?>">
+						<div class="form-group mt-4 product">
+							<label for="exampleInputPassword1">Quantity</label>
+							<input id="cartCount" onchange="updateCartPrice()" min="1" type="number" style="width: 100px;" class="form-control" value="1" id="cart" placeholder="Quantity" name="quantity">
+						</div>
+
+
+						<input type="hidden" name="hidden_name" value="<?php echo $row['name']; ?>" >
+						<input type="hidden" name="hidden_price" value="<?php echo $row['price']; ?>">
+						<button id="addToCartButton" type="submit" class="btn btn-primary" name="add">Add To Cart</button>
+					</form>
+					<?php
 				}
 				?>
   
