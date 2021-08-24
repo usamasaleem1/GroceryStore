@@ -93,7 +93,6 @@ include('dbcon.php');
 <?php 
   if (isset($_GET['aisle'])) 
   {
-    echo " <p>TESTSETSET</p> ";
     $aisle = $_GET['aisle'];
     $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
     $row = mysqli_fetch_array($query);
