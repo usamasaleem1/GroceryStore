@@ -3,18 +3,16 @@ session_start();
 ?>
 <?php include('dbcon.php'); 
 ?>
-<?php
-session_start();
-$sql = "SELECT firstname FROM register";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-	$name = $row["firstname"];
-	}
-  } else {
-	echo "0 results";
-  }
 
-?>
+<!-- // session_start();
+// $sql = "SELECT firstname FROM register";
+// $result = $conn->query($sql);
+// if ($result->num_rows > 0) {
+// 	$name = $row["firstname"];
+// 	}
+//   } else {
+// 	echo "0 results";
+//   } -->
 
 
 
