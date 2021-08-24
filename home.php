@@ -7,7 +7,17 @@ session_start();
 <?php include('dbcon.php'); 
 
 $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'HTADFpjYkD');
+
+if (isset($_GET['username'])) 
+{
+	$username = $_GET['username'];
+	$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$username'");
+	$row = mysqli_fetch_array($query);
+	$name = $row['firstname'];
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -33,7 +43,7 @@ $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'H
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<?php if(isset($_SESSION['loggedin'])){ ?>
 				<img src="iconLoggedIn.png" class="navbar-brand" style="width: 30px;">
-				<a class="navbar-brand" href="#"><?php echo $_SESSION["firstname"]; ?></a>
+				<a class="navbar-brand" href="#"><?php echo $username; ?></a>
   			<?php }else{ ?>
 				<img src="trolley.png" class="navbar-brand" style="width: 40px;">
 				<a class="navbar-brand" href="#">Online Grocery Shopping</a>
