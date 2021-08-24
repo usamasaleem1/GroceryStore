@@ -9,7 +9,7 @@ if (isset($_GET['productId']))
 	$productId = $_GET['productId'];
 	$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$productId'");
 	$row = mysqli_fetch_array($query);
-	$name = $row['price'];
+	$name = $row['name'];
 }
 
 ?>
