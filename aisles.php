@@ -92,30 +92,35 @@ if (isset($_GET['aisle']))
     $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
     $row = mysqli_fetch_array($query);
 
-    echo '
-    <!-- section name -->
-    <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-      <h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">'. $aisle . ' Aisle</h5>
-       <a class="btn btn-outline-primary" href="cart.php">Go To Cart <img src="trolley.png" width="30px" height="30px"> </a>
-      </div>
-
-    <!-- main body -->
-    <main>
-        <div class="row">
-        ';
-
-    while($row = mysqli_fetch_array($query))
+    if(count($row) > 0)
     {
-      echo '
-      <div class="col-sm-6 col-md-6 col-xl-3 mb-3">
-        <a href="productDescription.php?productId=' . $row['id'] . '">
-          <img class="img-thumbnail mb-3" src="' . $row['image'] . '" alt="Album screenshot" width="960" height="600">
-          <h6 class="mb-1" style="text-align: center;">' . $row['name'] . '</h6>
-        </a>
-      </div>
-      ';
 
+      echo '
+      <!-- section name -->
+      <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">'. $aisle . ' Aisle</h5>
+         <a class="btn btn-outline-primary" href="cart.php">Go To Cart <img src="trolley.png" width="30px" height="30px"> </a>
+        </div>
+  
+      <!-- main body -->
+      <main>
+          <div class="row">
+          ';
+  
+      while($row = mysqli_fetch_array($query))
+      {
+        echo '
+        <div class="col-sm-6 col-md-6 col-xl-3 mb-3">
+          <a href="productDescription.php?productId=' . $row['id'] . '">
+            <img class="img-thumbnail mb-3" src="' . $row['image'] . '" alt="Album screenshot" width="960" height="600">
+            <h6 class="mb-1" style="text-align: center;">' . $row['name'] . '</h6>
+          </a>
+        </div>
+        ';
+  
+      }
     }
+
   }
   else
   {
