@@ -96,7 +96,6 @@ if (isset($_GET['aisle']))
   {
     $aisle = $_GET['aisle'];
     $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
-    $row = mysqli_fetch_array($query);
 
     if(mysqli_num_rows($query) != 0)
     {
