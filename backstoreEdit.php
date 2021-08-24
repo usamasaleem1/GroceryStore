@@ -101,7 +101,7 @@ header('location:home.php');
 
 			<h1>Edit Product</h1>
 
-			<form action='backstoreEdit.php?productId='" . $productId . " method='post'>
+			<form action='backstoreEdit.php?productId='" . $productId . "' method='post'>
 		
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
