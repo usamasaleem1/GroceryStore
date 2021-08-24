@@ -24,10 +24,10 @@ session_start();
 <body>
 <!-- Nav bar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-	<img src="trolley.png" class="navbar-brand" style="width: 40px;">
 	<?php if(isset($_SESSION['loggedin'])){ ?>
 				<a class="navbar-brand" href="#">Need to display user's name here</a>
   			<?php }else{ ?>
+				<img src="trolley.png" class="navbar-brand" style="width: 40px;">
 				<a class="navbar-brand" href="#">Online Grocery Shopping</a>
   			<?php } ?>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
