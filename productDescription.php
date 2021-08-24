@@ -45,8 +45,13 @@ if (isset($_GET['productId']))
 
   <!-- Nav bar -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  	<img src="trolley.png" class="navbar-brand" style="width: 40px;">
-  	<a class="navbar-brand" href="#">Online Grocery Shopping</a>
+	<?php if(isset($_SESSION['loggedin'])){ ?>
+				<img src="iconLoggedIn.png" class="navbar-brand" style="width: 30px;">
+				<a class="navbar-brand" href="#"><?php echo "Welcome, ".$_SESSION["firstname"]; ?></a>
+  			<?php }else{ ?>
+				<img src="trolley.png" class="navbar-brand" style="width: 40px;">
+				<a class="navbar-brand" href="#">Online Grocery Shopping</a>
+  			<?php } ?>
 
   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   		<span class="navbar-toggler-icon"></span>
