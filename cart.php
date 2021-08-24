@@ -95,7 +95,7 @@ if (isset($_GET['action'])) {
   <!-- Nav bar -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<?php if(isset($_SESSION['loggedin'])){ ?>
-				<img src="iconLoggedIn.png" class="navbar-brand" style="width: 30px;">
+        <img src="trolley.png" class="navbar-brand" style="width: 40px;">
 				<a class="navbar-brand" href="#"><?php echo "Complete your order, ".$_SESSION["firstname"]."!"; ?></a>
   			<?php }else{ ?>
 				<img src="trolley.png" class="navbar-brand" style="width: 40px;">
