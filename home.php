@@ -26,7 +26,7 @@ session_start();
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<img src="trolley.png" class="navbar-brand" style="width: 40px;">
 	<?php if(isset($_SESSION['loggedin'])){ ?>
-				<a class="navbar-brand" href="#"><?php echo $_GET "$name" ?>;</a>
+				<a class="navbar-brand" href="#">Need to display user's name here</a>
   			<?php }else{ ?>
 				<a class="navbar-brand" href="#">Online Grocery Shopping</a>
   			<?php } ?>
