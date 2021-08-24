@@ -100,33 +100,29 @@ header('location:home.php');
 			$stock = $_POST['count'];
 			$id = $_GET['productId'];
 			$image = $_GET['image'];
-			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock, image=$image  WHERE id=$id";
+			$sql = "INSERT INTO MyGuests (name, price, image, description, aisle, stock)
+			VALUES ('$name', '$price', '$image', '$description', '$aisle', '$stock')";
 
 			if (mysqli_query($conn, $sql)) 
 			{
-				echo "Product updated successfully";
+				echo "Product added successfully";
 			} 
 			else 
 			{
-				echo "Error updating product: " . mysqli_error($conn);
+				echo "Error adding product: " . mysqli_error($conn);
 			}
 		}
-		if (isset($_GET['productId'])) 
-		{
-			$productId = $_GET['productId'];
-			$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$productId'");
-			$row = mysqli_fetch_array($query);
 
 			echo "
 
 			<h1>Edit Product</h1>
 
-			<form action='backstoreEdit.php?productId=" . $productId . "' method='post' enctype='multipart/form-data'>
+			<form action='backstoreAdd.php method='post' enctype='multipart/form-data'>
 		
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
 				<div class='col-md-7'>
-				  <input  class='form-control' id='colFormLabel' value='" . $row['name'] . "' name='name'>
+				  <input  class='form-control' id='colFormLabel' name='name'>
 				</div>
 			</div>
 		
@@ -134,25 +130,25 @@ header('location:home.php');
 				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Aisle</label>
 					<select id='colFormLabel' name='aisle' class='form-control'>
-						<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
-						<option value='Dairy' " . (($row['aisle'] == "Dairy") ? "selected='selected'":'') . ">Dairy</option>
-						<option value='Beverages' " . (($row['aisle'] == "Beverages") ? "selected='selected'":'') . ">Beverages</option>
-						<option value='Detergents' " . (($row['aisle'] == "Detergents") ? "selected='selected'":'') . ">Detergents</option>
-						<option value='Snacks' " . (($row['aisle'] == "Snacks") ? "selected='selected'":'') . ">Snacks</option>
-						<option value='Alcohol' " . (($row['aisle'] == "Alcohol") ? "selected='selected'":'') . ">Alcohol</option>
+						<option value='Meat'>Meat</option>
+						<option value='Dairy'>Dairy</option>
+						<option value='Beverages'>Beverages</option>
+						<option value='Detergents'>Detergents</option>
+						<option value='Snacks'>Snacks</option>
+						<option value='Alcohol'>Alcohol</option>
 				 	</select>
 				</div> 
 				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Price</label>
-					<input  class='form-control' id='colFormLabel' value='" . $row['price'] . "' name='price'>
+					<input  class='form-control' id='colFormLabel' name='price'>
 				</div>
 				<div class='form-group col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Stock count</label>
-					<input class='form-control' id='colFormLabel' value='" . $row['stock'] . "' name='count'>
+					<input class='form-control' id='colFormLabel' name='count'>
 				</div>
 				<div class='custom-file col-md-2'>
 					<label for='colFormLabel' class='col-form-label'>Image name**</label>
-					<input class='form-control' id='colFormLabel' value='" . $row['image'] . "' name='image'>
+					<input class='form-control' id='colFormLabel' name='image'>
 				</div>
 				<p>** New images must be uploaded to github with the same name.</p>
 			</div>
@@ -160,7 +156,7 @@ header('location:home.php');
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
 				<div class='col-md-7'>
-					<textarea  class='form-control' id='colFormLabel' value='" . $row['description'] . "' name='description'>" . $row['description'] . "</textarea>
+					<textarea  class='form-control' id='colFormLabel' name='description'></textarea>
 				</div>
 			</div>
 		
@@ -171,11 +167,7 @@ header('location:home.php');
 			</a>
 			
 			";
-		} 
-		else
-		{
-			echo "No product selected!";
-		}
+
 		
 	?>
 
