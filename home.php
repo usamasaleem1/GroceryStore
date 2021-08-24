@@ -11,7 +11,7 @@ $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'H
 
 if (isset($_GET['firstname'])) 
 {
-	$username = $_GET['firstname'];
+	$firstname = $_GET['firstname'];
 	$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$firstname'");
 	$row = mysqli_fetch_array($query);
 	$name = $row['firstname'];
