@@ -95,7 +95,7 @@ session_start();
     $aisle = $_GET['aisle'];
     $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
     $row = mysqli_fetch_array($query);
-    echo " <p>" . count($row) . "</p> ";
+    echo " <p>TESTSETSET</p> ";
     while($row = mysqli_fetch_array($query))
     {
       echo '
