@@ -11,11 +11,12 @@
 			$row		= mysqli_fetch_array($query);
 			$num_row 	= mysqli_num_rows($query);
 			
-			$firstname = $_SESSION['firstname'];
-			
-			$query2 	= mysqli_query($conn, "SELECT firstname FROM register");
+			$firstname = "yoyo";
+
+			$query2 	= mysqli_query($conn, "SELECT firstname FROM register WHERE email='$email'");
 			$row2		= mysqli_fetch_array($query2);
 			$num_row2 	= mysqli_num_rows($query2);
+			$firstname = $query2;
 			
 			if ($num_row > 0) 
 				{		
