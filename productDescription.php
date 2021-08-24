@@ -27,7 +27,7 @@ if (isset($_GET['productId']))
 
 	<meta charset="utf-8">
 	<title><?php echo $name; ?></title>
-	<link rel="icon" href="icon2.png">
+	<link rel="icon" href="trolley.png">
 
 </head>
 <body>
