@@ -16,12 +16,13 @@
 			$query2 	= mysqli_query($conn, "SELECT firstname FROM register WHERE email='$email'");
 			$row2		= mysqli_fetch_array($query2);
 			$num_row2 	= mysqli_num_rows($query2);
-			$firstname = "yoyoyo";
+			
 
 			if ($num_row > 0) 
 				{		
 					$_SESSION['loggedin'] = true;	
 					$_SESSION['email']=$row['email'];
+					$firstname = "yoyoyo";
 					if ($password == "admin" && $email == "admin"){
 						$_SESSION['permission'] = 'admin';
 						header('location:backstore.php');
