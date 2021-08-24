@@ -4,8 +4,14 @@ include('dbcon.php');
 
 $title = "No aisle selected!";
 if (isset($_GET['aisle'])) 
-{
-  $title = $_GET['aisle'];
+{    
+  $aisle = $_GET['aisle'];
+  $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
+
+  if(count($query) > 0)
+  {
+    $title = $_GET['aisle'];
+  }
 }
 
 ?>
@@ -92,7 +98,7 @@ if (isset($_GET['aisle']))
     $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
     $row = mysqli_fetch_array($query);
 
-    if(count($row) > 0)
+    if(count($query) > 0)
     {
 
       echo '
