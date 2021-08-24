@@ -161,7 +161,7 @@ if (isset($_GET['productId']))
 						?>
   
   
-						<form method="post" action="cart.php?action=add&id=1">
+						<form method="post" action="cart.php?action=add&id=<?php echo $row['id']; ?>">
 							<div class="form-group mt-4 product">
 								<label for="exampleInputPassword1">Quantity</label>
 								<input id="cartCount" onchange="updateCartPrice()" min="1" type="number" style="width: 100px;" class="form-control" value="1" id="cart" placeholder="Quantity" name="quantity">
