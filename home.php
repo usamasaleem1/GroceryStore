@@ -4,15 +4,7 @@ session_start();
 <?php include('dbcon.php'); 
 ?>
 
-<!-- // session_start();
-// $sql = "SELECT firstname FROM register";
-// $result = $conn->query($sql);
-// if ($result->num_rows > 0) {
-// 	$name = $row["firstname"];
-// 	}
-//   } else {
-// 	echo "0 results";
-//   } -->
+
 
 
 
@@ -41,7 +33,7 @@ session_start();
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<?php if(isset($_SESSION['loggedin'])){ ?>
 				<img src="iconLoggedIn.png" class="navbar-brand" style="width: 30px;">
-				<a class="navbar-brand" href="#"><?php echo "Welcome ".$name; ?></a>
+				<a class="navbar-brand" href="#"><?php echo "Welcome ".$firstname; ?></a>
   			<?php }else{ ?>
 				<img src="trolley.png" class="navbar-brand" style="width: 40px;">
 				<a class="navbar-brand" href="#">Online Grocery Shopping</a>
