@@ -6,7 +6,15 @@ $title = "Missing ";
 if (isset($_GET['aisle'])) 
 {    
   $aisle = $_GET['aisle'];
-  $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
+  if($aisle == "All")
+  {
+    $query = mysqli_query($conn, "SELECT * FROM products");
+  }
+  else
+  {
+    $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
+  }
+
 
   if(mysqli_num_rows($query) != 0)
   {
@@ -95,7 +103,14 @@ if (isset($_GET['aisle']))
   if (isset($_GET['aisle'])) 
   {
     $aisle = $_GET['aisle'];
-    $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
+    if($aisle == "All")
+    {
+      $query = mysqli_query($conn, "SELECT * FROM products");
+    }
+    else
+    {
+      $query = mysqli_query($conn, "SELECT * FROM products WHERE aisle='$aisle'");
+    }
 
     if(mysqli_num_rows($query) != 0)
     {
