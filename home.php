@@ -8,10 +8,10 @@ session_start();
 
 $connect = mysqli_connect('remotemysql.com:3306', 'HTADFpjYkD', 'wfJDJmJgdL', 'HTADFpjYkD');
 
-if (isset($_GET['username'])) 
+if (isset($_GET['firstname'])) 
 {
-	$username = $_GET['username'];
-	$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$username'");
+	$username = $_GET['firstname'];
+	$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$firstname'");
 	$row = mysqli_fetch_array($query);
 	$name = $row['firstname'];
 }
