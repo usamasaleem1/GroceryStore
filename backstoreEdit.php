@@ -135,7 +135,7 @@ header('location:home.php');
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
 				<div class='col-md-7'>
-					<textarea  class='form-control' id='colFormLabel' value='" . $row['description'] . "' name='description'></textarea>
+					<textarea  class='form-control' id='colFormLabel' value='" . $row['description'] . "' name='description'>" . $row['description'] . "</textarea>
 				</div>
 			</div>
 		
