@@ -5,7 +5,7 @@ include('dbcon.php');
 include('authenticate.php'); 
 include('session.php'); 
 
-$query = "DELETE FROM register WHERE id='$_GET[productId]'";
+$query = "DELETE FROM register WHERE id='$_GET[userId]'";
 
 if(mysqli_query($conn,$query))
 	header("refresh:1; url=backstoreUserList.php");
