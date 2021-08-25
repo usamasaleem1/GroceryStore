@@ -116,7 +116,7 @@ header('location:home.php');
 						<td class='align-middle text-center'>$" . $row['price'] . "</td>
 						<td class='align-middle text-center'>
 							<a class='btn btn-outline-success' href='backstoreEdit.php?productId=" . $row['id'] . "'>Edit <img src='edit.png' width='30px' height='30px'> </a>
-							<button class='btn btn-outline-danger' type""=button"" . $row['id'] . "'>Delete <img src='edit.png' width='30px' height='30px'> </button>
+							<a class='btn btn-outline-danger' href='backstoreEdit.php?productId=" . $row['id'] . "'>Delete <img src='edit.png' width='30px' height='30px'> </a>
 						</td>
 					</tr>
 					";
