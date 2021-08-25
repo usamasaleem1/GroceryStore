@@ -99,9 +99,9 @@ header('location:home.php');
 			$address = $_POST['address'];
 			$postal = $_POST['postal'];
 			$id = $_GET['userId'];
-			$sqluser = "UPDATE register SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
+			$sql = "UPDATE register SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
 
-			if (mysqli_query($conn, $sqluser)) 
+			if (mysqli_query($conn, $sql)) 
 			{
 				echo "User updated successfully";
 			} 
@@ -114,10 +114,10 @@ header('location:home.php');
 		{
 
 			$userId = $_GET['userId'];
-			$queryuser = mysqli_query($conn, "SELECT * FROM register WHERE id='$userId'");
-			$rowuser = mysqli_fetch_array($queryuser);
+			$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$userId'");
+			$row = mysqli_fetch_array($query);
 
-			if(mysqli_num_rows($queryuser) != 0)
+			if(mysqli_num_rows($query) != 0)
 			{
 				echo "
 
@@ -128,36 +128,36 @@ header('location:home.php');
 				<div class='form-group row'>
 					<label for='colFormLabel' class='col-sm-2 col-form-label'>First Name</label>
 					<div class='col-md-7'>
-						<input  class='form-control' id='colFormLabel' value='" . $rowuser['firstname'] . "' name='firstname'>
+						<input  class='form-control' id='colFormLabel' value='" . $row['firstname'] . "' name='firstname'>
 					</div>
 				</div>
 			
 				<div class='form-row'>
 					<div class='form-group col-md-2'>
 						<label for='colFormLabel' class='col-form-label'>Email</label>
-						<input  class='form-control' id='colFormLabel' value='" . $rowuser['email'] . "' name='email'>
+						<input  class='form-control' id='colFormLabel' value='" . $row['email'] . "' name='email'>
 					</div>
 					<div class='form-group col-md-2'>
 						<label for='colFormLabel' class='col-form-label'>Password</label>
-						<input  class='form-control' id='colFormLabel' value='" . $rowuser['password'] . "' name='password'>
+						<input  class='form-control' id='colFormLabel' value='" . $row['password'] . "' name='password'>
 					</div>
 					<div class='form-group col-md-2'>
 						<label for='colFormLabel' class='col-form-label'>Address</label>
-						<input class='form-control' id='colFormLabel' value='" . $rowuser['address'] . "' name='address'>
+						<input class='form-control' id='colFormLabel' value='" . $row['address'] . "' name='address'>
 					</div>
 					<div class='form-group col-md-2'>
 						<label for='colFormLabel' class='col-form-label'>Postal Code</label>
-						<input class='form-control' id='colFormLabel' value='" . $rowuser['postal'] . "' name='postal'>
+						<input class='form-control' id='colFormLabel' value='" . $row['postal'] . "' name='postal'>
 					</div>
 				</div>
 				
 
 				
 				<a href='backstoreUserList.php'>
-					<button type='submit' class='btn btn-primary' name='usersave'>Save</button>
+					<button type='submit' class='btn btn-primary' name='save'>Save</button>
 				</a>
 
-				<button type='submit' class='btn btn-primary' name='userback'><a href='backstoreUserList.php' style='color:white;'>Back</a></button>
+				<button type='submit' class='btn btn-primary' name='back'><a href='backstoreUserList.php' style='color:white;'>Back</a></button>
 				
 				";
 			}
