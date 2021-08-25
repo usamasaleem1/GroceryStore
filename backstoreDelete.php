@@ -10,6 +10,15 @@ if($_SESSION['permission'] != 'admin')
 header('location:home.php');
 }
 
+if (isset($_GET['id']))
+{
+	$id = $_GET['id'];
+	$sql = "DELETE FROM products WHERE id=''";
+	$res = mysql_query($sql) or die("Failed" . mysql_error());
+	echo "Success";
+}
+
+/*
 $sql = "DELETE FROM products WHERE productId='" . $_GET["id"] . "'";
 if (mysqli_query($conn, $sql))
 {
@@ -21,6 +30,8 @@ else
 }
 
 mysqli_close($conn);
+
+*/
 
 ?>
 
