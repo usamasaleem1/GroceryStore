@@ -22,7 +22,7 @@ header('location:home.php');
 	<link rel="stylesheet" type="text/css" href="project.css">
 	
 	<meta charset="utf-8">
-	<title>Backstore</title>
+	<title>BackstoreUser</title>
 	<link rel="icon" href="milkicon.png">
 
 </head>
@@ -157,7 +157,9 @@ header('location:home.php');
 					<button type='submit' class='btn btn-primary' name='save'>Save</button>
 				</a>
 
-				<button type='submit' class='btn btn-primary' name='back'><a href='backstoreUserList.php' style='color:white;'>Back</a></button>
+				<a href='backstoreUserList.php'>
+					<button type='submit' class='btn btn-primary' name='back'>Back</button>
+				</a>
 				
 				";
 			}
