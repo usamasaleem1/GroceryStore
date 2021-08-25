@@ -138,6 +138,10 @@ header('location:home.php');
 						<input  class='form-control' id='colFormLabel' value='" . $row['email'] . "' name='email'
 					</div>
 					<div class='form-group col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Email</label>
+						<input  class='form-control' id='colFormLabel' value='" . $row['email'] . "' name='email'
+					</div>
+					<div class='form-group col-md-2'>
 						<label for='colFormLabel' class='col-form-label'>Password</label>
 						<input  class='form-control' id='colFormLabel' value='" . $row['password'] . "' name='password'>
 					</div>
