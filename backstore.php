@@ -80,8 +80,10 @@ header('location:home.php');
 
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white">
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore</h5>
-	 <a class="btn btn-outline-primary" href="backstoreAdd.php">Add <img src="edit.png" width="30px" height="30px"> </a>
+	<button type='submit' style="background-color:#343A40; border-radius:30x; width:100px; height:40px; margin-right:5px;" id="borderradius" name='userlist'><a href='backstoreUserList.php' style='color:white; border-radius:30x;'>User List</a></button>
+	<button type='submit' style="background-color:#343A40; border-radius:30x; width:150px; height:40px;" id="borderradius" name='userlist'><a href='backstoreOrder.php' style='color:white; border-radius:30x;'>Backstore Order</a></button>
+	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin-left:30%">Backstore</h5>
+	<a class="btn btn-outline-primary" href="backstoreAdd.php">Add <img src="edit.png" width="30px" height="30px"> </a>
   </div>
 
 <!-- main section -->

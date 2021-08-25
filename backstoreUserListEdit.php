@@ -82,43 +82,96 @@ header('location:home.php');
 	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Edit User</h5>
   </div>
 
+
 <!-- main section -->
+
+
 <br>
 <main class="m-5">
-    <h1>Edit User</h1>
-    <div class="form-row">
-        <div class="form-group col-md-2">
-            <label for="inputState" class="col-form-label">User</label>
-            <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>abc12@gmail.com</option>
-                <option>yu287@concordia.ca</option>
-                <option>Yesssirrr@gmail.com</option>
-            </select>
-        </div>
-        <div class="form-group col-md-2">
-            <label for="colFormLabel" class="col-form-label">Gender</label>
-            <input  class="form-control" id="colFormLabel" placeholder="Gender">
-        </div>
-        <div class="form-group col-md-2">
-            <label for="colFormLabel" class="col-form-label">Age</label>
-            <input class="form-control" id="colFormLabel" placeholder="Age">
-        </div>
-        <div class="form-group col-md-2">
-            <label for="colFormLabel" class="col-form-label">Password</label>
-            <input class="form-control" id="colFormLabel" placeholder="Change Password">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="colFormLabel" class="col-sm-2 col-form-label">Reason for edit</label>
-        <div class="col-md-7">
-            <textarea  class="form-control" id="colFormLabel" placeholder="Input a reason for history log"></textarea>
-        </div>
-    </div>
 
-    <a href="backstoreUserList.php">
-        <button type="button" class="btn btn-primary">Save</button>
-    </a>
+	<?php
+
+		if (isset($_POST['firstname']))
+		{
+			$firstname = $_POST['firstname'];
+			$email = $_POST['email'];
+			$price = $_POST['password'];
+			$stock = $_POST['address'];
+			$image = $_POST['postal'];
+			$id = $_GET['userId'];
+			$sql = "UPDATE register SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
+
+			if (mysqli_query($conn, $sql)) 
+			{
+				echo "Product updated successfully";
+			} 
+			else 
+			{
+				echo "Error updating product: " . mysqli_error($conn);
+			}
+		}
+		if (isset($_GET['userId'])) 
+		{
+
+			$userId = $_GET['userId'];
+			$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$userId'");
+			$row = mysqli_fetch_array($query);
+
+			if(mysqli_num_rows($query) != 0)
+			{
+				echo "
+
+				<h1>Edit Product</h1>
+
+				<form action='backstoreEdit.php?userId=" . $userId . "' method='post' enctype='multipart/form-data'>
+			
+				<div class='form-group row'>
+					<label for='colFormLabel' class='col-sm-2 col-form-label'>First Name</label>
+					<div class='col-md-7'>
+						<input  class='form-control' id='colFormLabel' value='" . $row['firstname'] . "' name='firstname'>
+					</div>
+				</div>
+			
+				<div class='form-row'>
+					<div class='form-group col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Email</label>
+						<input  class='form-control' id='colFormLabel' value='" . $row['email'] . "' name='email'
+					</div>
+					<div class='form-group col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Email</label>
+						<input  class='form-control' id='colFormLabel' value='" . $row['email'] . "' name='email'
+					</div>
+					<div class='form-group col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Password</label>
+						<input  class='form-control' id='colFormLabel' value='" . $row['password'] . "' name='password'>
+					</div>
+					<div class='form-group col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Address</label>
+						<input class='form-control' id='colFormLabel' value='" . $row['address'] . "' name='address'>
+					</div>
+					<div class='form-group col-md-2'>
+						<label for='colFormLabel' class='col-form-label'>Postal Code</label>
+						<input class='form-control' id='colFormLabel' value='" . $row['postal'] . "' name='postal'>
+					</div>
+				</div>
+				
+
+				
+				<a href='backstore.php'>
+					<button type='submit' class='btn btn-primary' name='save'>Save</button>
+				</a>
+
+				<button type='submit' class='btn btn-primary' name='back'><a href='backstore.php' style='color:white;'>Back</a></button>
+				
+				";
+			}
+		} 
+		else
+		{
+			echo "No product selected!";
+		}
+		
+	?>
 
 </body>
 </html>

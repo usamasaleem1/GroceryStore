@@ -105,9 +105,11 @@ if($_SESSION['permission'] != 'admin')
 
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore Order List</h5>
-   <a class="btn btn-outline-primary" href="backstoreOrderAdd.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
-  </div>
+	<button type='submit' style="background-color:#343A40; border-radius:30x; width:100px; height:40px; margin-right:5px;" id="borderradius" name='userlist'><a href='backstore.php' style='color:white; border-radius:30x;'>Backstore</a></button>
+	<button type='submit' style="background-color:#343A40; border-radius:30x; width:100px; height:40px;" id="borderradius" name='userlist'><a href='backstoreUserList.php' style='color:white; border-radius:30x;'>User List</a></button>
+	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin-left:30%;">Backstore Order List</h5>
+  <a class="btn btn-outline-primary" href="backstoreOrderAdd.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
+</div>
 
 <!-- Order information table -->
 <table class="table">

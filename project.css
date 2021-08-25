@@ -22,3 +22,7 @@ color: white;
 .jumbotron{
 	padding: 40px 60px;
 }
+
+#borderradius{
+	border-radius: 3.5px;
+}

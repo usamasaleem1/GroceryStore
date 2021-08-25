@@ -76,37 +76,53 @@ header('location:home.php');
 
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore User List</h5>
-   <a class="btn btn-outline-primary" href="backstoreUserListEdit.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
-	 <button class="btn btn-outline-primary">Delete Items <img src="edit.png" width="30px" height="30px"> </button>
-   <button class="btn btn-outline-primary">Save <img src="edit.png" width="30px" height="30px"> </button>
-   <a class="btn btn-outline-primary" href="backstoreUserListEdit.php">Edit Items <img src="edit.png" width="30px" height="30px"> </a>
-  </div>
+	<button type='submit' style="background-color:#343A40; border-radius:30x; width:100px; height:40px; margin-right:5px;" id="borderradius" name='userlist'><a href='backstore.php' style='color:white; border-radius:30x;'>Backstore</a></button>
+	<button type='submit' style="background-color:#343A40; border-radius:30x; width:150px; height:40px;" id="borderradius" name='userlist'><a href='backstoreOrder.php' style='color:white; border-radius:30x;'>Backstore Order</a></button>
+	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin-left:30%;">Backstore User List</h5>
+	<a class="btn btn-outline-primary" href="backstoreUserListEdit.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
+</div>
 
 <!-- Order information table -->
 
+<br>
+<main>
+
+	<table class="table table-hover text-center">
+		<thead>
+			<tr>
+				<th scope="col">First Name</th>
+				<th scope="col">Email</th>
+				<th scope="col">Password</th>
+				<th scope="col">Address</th>
+				<th scope="col">Postal Code</th>
+				<th scope="col">Edit/Delete</th>
+			</tr>
+		</thead>
+		<tbody>
 
 			<?php 
-				$query = mysqli_query($conn, "SELECT * FROM products");
+				$query = mysqli_query($conn, "SELECT * FROM register");
 
 				while($row = mysqli_fetch_array($query))
 				{
 					echo "
 					<tr>
-						<td class='align-middle text-center'><img class='img-fluid' src='" . $row['image'] . "' alt='Album screenshot' width='100'></td>
-						<td class='align-middle text-center'>" . $row['name'] . "</td>
-						<td class='align-middle text-center'>" . $row['aisle'] . "</td>
-						<td class='align-middle text-center'>" . $row['stock'] . " in stock</td>
-						<td class='align-middle text-center'>$" . $row['price'] . "</td>
+						<td class='align-middle text-center'>" . $row['firstname'] . "</td>
+						<td class='align-middle text-center'>" . $row['email'] . "</td>
+						<td class='align-middle text-center'>" . $row['password'] . "</td>
+						<td class='align-middle text-center'>" . $row['address'] . "</td>
+						<td class='align-middle text-center'>" . $row['postal'] . "</td>
 						<td class='align-middle text-center'>
-							<a class='btn btn-outline-success' href='backstoreEdit.php?productId=" . $row['id'] . "'>Edit <img src='edit.png' width='30px' height='30px'> </a>
-							<a class='btn btn-outline-danger' href='backstoreDelete.php?productId=" . $row['id'] . "'>Delete <img src='edit.png' width='30px' height='30px'> </a>
+							<a class='btn btn-outline-success' href='backstoreUserListEdit.php?userId=" . $row['id'] . "'>Edit <img src='edit.png' width='30px' height='30px'> </a>
+							<a class='btn btn-outline-danger' href='backstoreUserDelete.php?userId=" . $row['id'] . "'>Delete <img src='edit.png' width='30px' height='30px'> </a>
 						</td>
 					</tr>
 					";
 
 				}
 			?>
-
+		</tbody>
+	</table>
   </body>
+
 </html>
