@@ -1,34 +1,4 @@
 <?php 
-$dbhost = 'remotemysql.com:3306';
-$dbuser = 'HTADFpjYkD';
-$dbpass = 'wfJDJmJgdL';
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbuser);
-
-if(! $conn ) {
-   die('Could not connect: ' . mysqli_error());
-}
-
-
-if ($conn)
-{
-	if ($_SERVER["REQUEST_METHOD"] == "GET") {
-      $order_id = $_GET['order_id'];
-      $product_name = $_GET['product_name'];	
-      $query = "DELETE FROM orders_products WHERE order_id = '$order_id' AND product_name='$product_name'";
-      $conn->query($query);
-  }
-
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $order_id = $_GET['order_id'];
-    $product_name = $_POST['product_name'];	
-    $product_price = $_POST['product_price'];
-    $product_quantity = $_POST['product_quantity'];
-    $query = "UPDATE orders_products SET product_name = '$product_name', product_price = '$product_price', 
-              product_quantity = '$product_quantity' WHERE order_id = '$order_id'";
-    $conn->query($query);
-  }
-}
-
 //include ('index.php');
 include('dbcon.php'); 
 include('authenticate.php'); 
@@ -36,7 +6,7 @@ include('session.php');
 
 if($_SESSION['permission'] != 'admin')
 {
-  header('location:home.php');
+header('location:home.php');
 }
 
 ?>
@@ -56,7 +26,7 @@ if($_SESSION['permission'] != 'admin')
 	
   </head>
   <body>
- <!-- Nav bar -->
+<!-- Nav bar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 	<img src="trolley.png" class="navbar-brand" style="width: 40px;">
 	<a class="navbar-brand" href="#">Online Grocery Shopping</a>
@@ -105,18 +75,17 @@ if($_SESSION['permission'] != 'admin')
 
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-	<button type='submit' style="background-color:#343A40; border-radius:30x; width:100px; height:40px; margin-right:5px;" id="borderradius" name='userlist'><a href='backstore.php' style='color:white; border-radius:30x;'>Backstore</a></button>
-	<button type='submit' style="background-color:#343A40; border-radius:30x; width:100px; height:40px;" id="borderradius" name='userlist'><a href='backstoreUserList.php' style='color:white; border-radius:30x;'>User List</a></button>
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin-left:30%;">Backstore Order List</h5>
-  <a class="btn btn-outline-primary" href="backstoreOrderAdd.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
+	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore Order List Editor</h5>
 </div>
 
 <!-- Order information table -->
 <table class="table">
+<form action="backstoreOrder.php?action=add" method="post">
     <thead>
       <tr>
-        <th scope="col">Order ID</th>
-        <th scope="col">Products List</th>
+        <th scope="col">Products Name</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Products Quantity</th>
         <th scope="col">Full Name</th>
         <th scope="col">Email</th>
         <th scope="col">Address</th>
@@ -124,32 +93,18 @@ if($_SESSION['permission'] != 'admin')
       </tr>
     </thead>
     <tbody>
-      <?php
-        $query = 
-        "SELECT o.order_id, op.product_name, op.product_price, op.product_quantity, r.firstname, r.email, r.address, r.postal 
-        FROM orders o 
-        JOIN register r ON o.register_id = r.id
-        JOIN orders_products op ON o.order_id = op.order_id;";
-        $result = $conn->query($query);
-        while ($row = $result->fetch_assoc()) {
-          $last_id = $row['order_id'];
-        ?>
-          <tr>
-            <th scope="row"><?php echo $row['order_id'] ?></th>
-            <td><?php echo $row['product_name'] . ' ' . '$' . $row['product_price']  .  ' ' . $row['product_quantity'] . 'x' ?></td>
-            <td><?php echo $row['firstname']?></td>
-            <td><?php echo $row['email']?></td>
-            <td><?php echo $row['address']?></td>
-            <td><?php echo $row['postal']?></td>
-            <td class='align-middle text-center'>
-              <a class="btn btn-outline-success" href="backstoreOrderEdit.php?action=edit&order_id=<?php echo $row["order_id"]; ?>&product_name=<?php echo $row["product_name"]; ?>&product_price=<?php echo $row["product_price"]; ?>&product_quantity=<?php echo $row["product_quantity"]; ?>&firstname=<?php echo $row["firstname"]; ?>&email=<?php echo $row["email"]; ?>&address=<?php echo $row["address"]; ?>&postal=<?php echo $row["postal"]; ?>">Edit <img src='edit.png' width='30px' height='30px'> </a>
-              <a class="btn btn-outline-danger" href="backstoreOrder.php?action=delete&order_id=<?php echo $row["order_id"]; ?>&product_name=<?php echo $row["product_name"]; ?>">Delete <img src='edit.png' width='30px' height='30px'> </a>
-            </td>
-          </tr>
-        <?php 
-          } 
-        ?>
+      <tr>
+        <td><input type="text" id="product_name" name="product_name" value=""></td>
+        <td><input type="text" id="product_price" name="product_price" value=""></td>
+        <td><input type="number" id="product_quantity" name="product_quantity" min="0" value=""></td>
+        <td><input type="text" id="firstname" name="firstname" value=""></td>
+        <td><input type="text" id="email" name="email" value=""></td>
+        <td><input type="text" id="address" name="address" value=""></td>
+        <td><input type="text" id="postal" name="postal" value=""></td>
+      </tr>
     </tbody>
+    <input type="submit" name="add" value="Add">
+    </form>
   </table>
 
   </body>

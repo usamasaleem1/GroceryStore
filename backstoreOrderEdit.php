@@ -1,5 +1,4 @@
 <?php 
-session_start();
 //include ('index.php');
 include('dbcon.php'); 
 include('authenticate.php'); 
@@ -77,81 +76,37 @@ header('location:home.php');
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
 	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore Order List Editor</h5>
-   <button class="btn btn-outline-primary"> Add <img src="edit.png" width="30px" height="30px"> </button>
-   <a class="btn btn-outline-primary" href="backstoreOrderEdit.php">Edit Items <img src="edit.png" width="30px" height="30px"> </a>
-  </div>
+</div>
 
 <!-- Order information table -->
 <table class="table">
+<form action="backstoreOrder.php?action=edit&order_id=<?php echo $_GET["order_id"]?>" method="post">
     <thead>
       <tr>
-        <th scope="col">Order ID</th>
-        <th scope="col">Order Date</th>
-        <th scope="col">Total</th>
-        <th scope="col">Ordered by</th>
+      <th scope="col">Order ID</th>
+        <th scope="col">Products Name</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Products Quantity</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Email</th>
         <th scope="col">Address</th>
-        <th scope="col">Order Status</th>
+        <th scope="col">Postal</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th scope="row">1</th>
-        <td>
-            <input type="date" id="start" name="trip-start"
-            value="2020-04-20"
-            min="1969-04-20" max="2169-06-09">
-        </td>
-        <td><input type="text" id="total" name="total" value="Placeholder"></td>
-        <td><input type="text" id="orderName" name="orderName" value="Placeholder"></td>
-        <td><input type="text" id="address" name="address" value="Placeholder"></td>
-        <td>
-          <select name="status" id="status">
-            <option value="selivered">Delivered</option>
-            <option value="sending">Pending</option>
-            <option value="shipped">Shipped</option>
-            <option value="cancelled">Cancelled</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>
-            <input type="date" id="start" name="trip-start"
-            value="2020-04-20"
-            min="1969-04-20" max="2169-06-09">
-        </td>
-        <td><input type="text" id="total" name="total" value="Placeholder"></td>
-        <td><input type="text" id="orderName" name="orderName" value="Placeholder"></td>
-        <td><input type="text" id="address" name="address" value="Placeholder"></td>
-        <td>
-          <select name="status" id="status">
-            <option value="selivered">Delivered</option>
-            <option value="sending">Pending</option>
-            <option value="shipped">Shipped</option>
-            <option value="cancelled">Cancelled</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>
-            <input type="date" id="start" name="trip-start"
-            value="2020-04-20"
-            min="1969-04-20" max="2169-06-09">
-        </td>
-        <td><input type="text" id="total" name="total" value="Placeholder"></td>
-        <td><input type="text" id="orderName" name="orderName" value="Placeholder"></td>
-        <td><input type="text" id="address" name="address" value="Placeholder"></td>
-        <td>
-          <select name="status" id="status">
-            <option value="selivered">Delivered</option>
-            <option value="sending">Pending</option>
-            <option value="shipped">Shipped</option>
-            <option value="cancelled">Cancelled</option>
-          </select>
-        </td>
+        <th scope="row"><input type="text" id="order_id" name="order_id" value="<?php echo $_GET['order_id'] ?>" disabled></th>
+        <td><input type="text" id="product_name" name="product_name" value="<?php echo $_GET['product_name']?>"></td>
+        <td><input type="text" id="product_price" name="product_price" value="<?php echo $_GET['product_price']?>"></td>
+        <td><input type="number" id="product_quantity" name="product_quantity" min="0" value="<?php echo $_GET['product_quantity']?>"></td>
+        <td><input type="text" id="firstname" name="firstname" value="<?php echo $_GET['firstname']?>" disabled></td>
+        <td><input type="text" id="email" name="email" value="<?php echo $_GET['email']?>" disabled ></td>
+        <td><input type="text" id="address" name="address" value="<?php echo $_GET['address']?>" disabled></td>
+        <td><input type="text" id="postal" name="postal" value="<?php echo $_GET['postal']?>" disabled></td>
       </tr>
     </tbody>
+    <input type="submit" name="edit" value="Edit">
+    </form>
   </table>
 
   </body>
