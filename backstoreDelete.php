@@ -5,11 +5,36 @@ include('dbcon.php');
 include('authenticate.php'); 
 include('session.php'); 
 
-$id = $_GET['id'];
 
-$deletequery = "delete from products where id=$id"
+mysqli_select_db($conn, 'HTADFpjYkD')
 
-$query = mysqli_query($conn, $deletequery);
+$sql = "DELETE FROM products WHERE id='$_GET[id]'";
+
+if(mysqli_query($conn,$sql))
+	header("refresh:1; url=backstore.php");
+else
+	echo "Not Deleted";
+
+/*
+mysqli_select_db($conn, 'HTADFpjYkD')
+
+$sql = "SELECT * FROM products";
+
+$records = mysqli_query($conn,$sql);
+
+while($row = mysqli_fetch_array($records))
+{
+	echo "<tr>";
+	echo "<td>".$row['name'].;
+	echo "<td>".$row['aisle'].;
+	echo "<td>".$row['description'].;
+	echo "<td>".$row['price'].;
+	echo "<td>".$row['count'].;
+	echo "<td>".$row['image'].;
+	echo "<td>"
+
+}
+*/
 
 /*
 if($query)
