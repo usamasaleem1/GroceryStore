@@ -84,44 +84,29 @@ header('location:home.php');
   </div>
 
 <!-- Order information table -->
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">User Number</th>
-        <th scope="col">Email</th>
-        <th scope="col">Date Signed Up</th>
-        <th scope="col">Number of Orders Made</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Age</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>abc12@gmail.com</td>
-        <td>March 25, 2019</td>
-        <td>31</td>
-        <td>Male</td>
-        <td>21</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>yu287@concordia.ca</td>
-        <td>July 1, 2021</td>
-        <td>1</td>
-        <td>Female</td>
-        <td>30</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Yesssirrr@gmail.com</td>
-        <td>April 1, 2021</td>
-        <td>19</td>
-        <td>Male</td>
-        <td>0</td>
-      </tr>
-    </tbody>
-  </table>
+
+
+			<?php 
+				$query = mysqli_query($conn, "SELECT * FROM products");
+
+				while($row = mysqli_fetch_array($query))
+				{
+					echo "
+					<tr>
+						<td class='align-middle text-center'><img class='img-fluid' src='" . $row['image'] . "' alt='Album screenshot' width='100'></td>
+						<td class='align-middle text-center'>" . $row['name'] . "</td>
+						<td class='align-middle text-center'>" . $row['aisle'] . "</td>
+						<td class='align-middle text-center'>" . $row['stock'] . " in stock</td>
+						<td class='align-middle text-center'>$" . $row['price'] . "</td>
+						<td class='align-middle text-center'>
+							<a class='btn btn-outline-success' href='backstoreEdit.php?productId=" . $row['id'] . "'>Edit <img src='edit.png' width='30px' height='30px'> </a>
+							<a class='btn btn-outline-danger' href='backstoreDelete.php?productId=" . $row['id'] . "'>Delete <img src='edit.png' width='30px' height='30px'> </a>
+						</td>
+					</tr>
+					";
+
+				}
+			?>
 
   </body>
 </html>
