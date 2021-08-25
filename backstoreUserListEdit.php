@@ -99,9 +99,9 @@ header('location:home.php');
 			$stock = $_POST['address'];
 			$image = $_POST['postal'];
 			$id = $_GET['userId'];
-			$sql = "UPDATE register SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
+			$sqluser = "UPDATE register SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
 
-			if (mysqli_query($conn, $sql)) 
+			if (mysqli_query($conn, $sqluser)) 
 			{
 				echo "User updated successfully";
 			} 
