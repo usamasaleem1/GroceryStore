@@ -5,17 +5,13 @@ include('dbcon.php');
 include('authenticate.php'); 
 include('session.php'); 
 
-if($_SESSION['permission'] != 'admin')
-{
-header('location:home.php');
-}
-
 $id = $_GET['id'];
 
 $deletequery = "delete from products where id=$id"
 
 $query = mysqli_query($conn, $deletequery);
 
+/*
 if($query)
 {
 	?>
@@ -33,6 +29,7 @@ else
 	</script>
 	<?php
 }
+*/
 
 /*
 if (isset($_GET['id']))
