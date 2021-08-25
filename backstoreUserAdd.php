@@ -91,81 +91,64 @@ header('location:home.php');
 
 	<?php
 
-		if (isset($_POST['name']))
+		if (isset($_POST['firstname']))
 		{
-			$name = $_POST['name'];
-			$aisle = $_POST['aisle'];
-			$description = $_POST['description'];
-			$price = $_POST['price'];
-			$stock = $_POST['count'];
-			$image = $_POST['image'];
-			$sql = "INSERT INTO products (name, price, image, description, aisle, stock)
-			VALUES ('$name', $price, '$image', '$description', '$aisle', $stock)";
+			$firstname = $_POST['firstname'];
+			$firstname = $_POST['email'];
+			$firstname = $_POST['password'];
+			$firstname = $_POST['address'];
+			$firstname = $_POST['postal'];
+			
+			$sql = "INSERT INTO products (firstname, email, password, address, postal)
+			VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
 
 			if (mysqli_query($conn, $sql)) 
 			{
-				echo "Product added successfully";
+				echo "User added successfully";
 			} 
 			else 
 			{
-				echo "Error adding product: " . mysqli_error($conn);
+				echo "Error adding user: " . mysqli_error($conn);
 			}
 		}
 
 			echo "
 
-			<h1>Add Product</h1>
+			<h1>Add User</h1>
 
-			<form action='backstoreAdd.php' method='post'>
+			<form action='backstoreUserAdd.php' method='post'>
 		
 			<div class='form-group row'>
-				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
+				<label for='colFormLabel' class='col-sm-2 col-form-label'>User Name</label>
 				<div class='col-md-7'>
-				  <input  class='form-control' id='colFormLabel' name='name'>
+				  <input  class='form-control' id='colFormLabel' name='firstname'>
 				</div>
 			</div>
 		
-			<div class='form-row'>
+			<div class='form-row'> 
 				<div class='form-group col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Aisle</label>
-					<select id='colFormLabel' name='aisle' class='form-control'>
-						<option value='Meat'>Meat</option>
-						<option value='Dairy'>Dairy</option>
-						<option value='Beverages'>Beverages</option>
-						<option value='Detergents'>Detergents</option>
-						<option value='Snacks'>Snacks</option>
-						<option value='Alcohol'>Alcohol</option>
-				 	</select>
-				</div> 
-				<div class='form-group col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Price</label>
-					<input  class='form-control' id='colFormLabel' name='price'>
+					<label for='colFormLabel' class='col-form-label'>Email</label>
+					<input  class='form-control' id='colFormLabel' name='email'>
 				</div>
 				<div class='form-group col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Stock count</label>
-					<input class='form-control' id='colFormLabel' name='count'>
+					<label for='colFormLabel' class='col-form-label'>Password</label>
+					<input class='form-control' id='colFormLabel' name='password'>
 				</div>
-				<div class='custom-file col-md-2'>
-					<label for='colFormLabel' class='col-form-label'>Image name**</label>
-					<input class='form-control' id='colFormLabel' name='image'>
+				<div class='form-group col-md-2'>
+					<label for='colFormLabel' class='col-form-label'>Address</label>
+					<input class='form-control' id='colFormLabel' name='address'>
 				</div>
-				<p>** New images must be uploaded to github with the same name.</p>
-			</div>
-	
-			<div class='form-group row'>
-				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
-				<div class='col-md-7'>
-					<textarea  class='form-control' id='colFormLabel' name='description'></textarea>
+				<div class='form-group col-md-2'>
+					<label for='colFormLabel' class='col-form-label'>Postal Code</label>
+					<input  class='form-control' id='colFormLabel' name='postal'>
 				</div>
 			</div>
 		
-			
-		
-			<a href='backstore.php'>
+			<a href='backstoreUserList.php'>
 				<button type='submit' class='btn btn-primary' name='save'>Save</button>
 			</a>
 			
-			<button type='submit' class='btn btn-primary' name='back'><a href='backstore.php' style='color:white;'>Back</a></button>
+			<button type='submit' class='btn btn-primary' name='back'><a href='backstoreUserList.php' style='color:white;'>Back</a></button>
 			
 			";
 
