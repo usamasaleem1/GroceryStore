@@ -153,7 +153,7 @@ header('location:home.php');
 				
 
 				
-				<a href='backstore.php'>
+				<a href='backstoreUserList.php'>
 					<button type='submit' class='btn btn-primary' name='save'>Save</button>
 				</a>
 
