@@ -13,7 +13,7 @@ header('location:home.php');
 if (isset($_GET['id']))
 {
 	$id = $_GET['id'];
-	$sql = "DELETE FROM products WHERE id=''";
+	$sql = "DELETE FROM products WHERE id='$id'";
 	$res = mysql_query($sql) or die("Failed" . mysql_error());
 	echo "Success";
 }
