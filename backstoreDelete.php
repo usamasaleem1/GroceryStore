@@ -5,10 +5,7 @@ include('dbcon.php');
 include('authenticate.php'); 
 include('session.php'); 
 
-
-mysqli_select_db($conn, 'HTADFpjYkD')
-
-$query = "DELETE FROM products WHERE id='$_GET[id]'";
+$query = "DELETE FROM products WHERE id='$_GET[productId]'";
 
 if(mysqli_query($conn,$query))
 	header("refresh:1; url=backstore.php");
