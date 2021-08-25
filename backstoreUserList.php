@@ -79,7 +79,7 @@ header('location:home.php');
 	<button type='submit' style="background-color:#343A40; border-radius:30x; width:100px; height:40px; margin-right:5px;" id="borderradius" name='userlist'><a href='backstore.php' style='color:white; border-radius:30x;'>Backstore</a></button>
 	<button type='submit' style="background-color:#343A40; border-radius:30x; width:150px; height:40px;" id="borderradius" name='userlist'><a href='backstoreOrder.php' style='color:white; border-radius:30x;'>Backstore Order</a></button>
 	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin-left:30%;">Backstore User List</h5>
-	<a class="btn btn-outline-primary" href="backstoreUserListEdit.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
+	<a class="btn btn-outline-primary" href="backstoreUserListAdd.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
 </div>
 
 <!-- Order information table -->
