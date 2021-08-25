@@ -82,7 +82,7 @@ header('location:home.php');
 
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Add Product</h5>
+	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Add User</h5>
   </div>
 
 <!-- main section -->
@@ -99,7 +99,7 @@ header('location:home.php');
 			$address = $_POST['address'];
 			$postal = $_POST['postal'];
 			
-			$sql = "INSERT INTO products (firstname, email, password, address, postal)
+			$sql = "INSERT INTO register (firstname, email, password, address, postal)
 			VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
 
 			if (mysqli_query($conn, $sql)) 
