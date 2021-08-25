@@ -128,7 +128,7 @@ header('location:home.php');
 				<div class='form-group row'>
 					<label for='colFormLabel' class='col-sm-2 col-form-label'>First Name</label>
 					<div class='col-md-7'>
-					<input  class='form-control' id='colFormLabel' value='" . $row['firstname'] . "' name='firstname'>
+						<input  class='form-control' id='colFormLabel' value='" . $row['firstname'] . "' name='firstname'>
 					</div>
 				</div>
 			
@@ -138,25 +138,20 @@ header('location:home.php');
 						<input  class='form-control' id='colFormLabel' value='" . $row['email'] . "' name='email'
 					</div>
 					<div class='form-group col-md-2'>
-						<label for='colFormLabel' class='col-form-label'>Price</label>
+						<label for='colFormLabel' class='col-form-label'>Password</label>
 						<input  class='form-control' id='colFormLabel' value='" . $row['password'] . "' name='password'>
 					</div>
 					<div class='form-group col-md-2'>
-						<label for='colFormLabel' class='col-form-label'>Stock count</label>
+						<label for='colFormLabel' class='col-form-label'>Address</label>
 						<input class='form-control' id='colFormLabel' value='" . $row['address'] . "' name='address'>
 					</div>
 					<div class='custom-file col-md-2'>
-						<label for='colFormLabel' class='col-form-label'>Image name**</label>
+						<label for='colFormLabel' class='col-form-label'>Postal Code</label>
 						<input class='form-control' id='colFormLabel' value='" . $row['postal'] . "' name='postal'>
 					</div>
 				</div>
 				
-				<div class='form-group row'>
-					
-					<div class='col-md-7'>
-						<p>test</p>
-					</div>
-				</div>
+
 				
 				<a href='backstore.php'>
 					<button type='submit' class='btn btn-primary' name='save'>Save</button>
