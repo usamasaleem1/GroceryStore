@@ -8,9 +8,9 @@ include('session.php');
 
 mysqli_select_db($conn, 'HTADFpjYkD')
 
-$sql = "DELETE FROM products WHERE id='$_GET[id]'";
+$query = "DELETE FROM products WHERE id='$_GET[id]'";
 
-if(mysqli_query($conn,$sql))
+if(mysqli_query($conn,$query))
 	header("refresh:1; url=backstore.php");
 else
 	echo "Not Deleted";
