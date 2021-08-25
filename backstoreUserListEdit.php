@@ -114,10 +114,10 @@ header('location:home.php');
 		{
 
 			$userId = $_GET['userId'];
-			$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$userId'");
-			$row = mysqli_fetch_array($query);
+			$queryuser = mysqli_query($conn, "SELECT * FROM register WHERE id='$userId'");
+			$row = mysqli_fetch_array($queryuser);
 
-			if(mysqli_num_rows($query) != 0)
+			if(mysqli_num_rows($queryuser) != 0)
 			{
 				echo "
 
