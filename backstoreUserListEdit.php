@@ -123,7 +123,7 @@ header('location:home.php');
 
 				<h1>Edit User</h1>
 
-				<form action='backstoreUserEditList.php?userId=" . $userId . "' method='post' enctype='multipart/form-data'>
+				<form action='backstoreUserListEdit.php?userId=" . $userId . "' method='post' enctype='multipart/form-data'>
 			
 				<div class='form-group row'>
 					<label for='colFormLabel' class='col-sm-2 col-form-label'>First Name</label>
