@@ -10,7 +10,7 @@ if($_SESSION['permission'] != 'admin')
 header('location:home.php');
 }
 
-$sql = "DELETE FROM products WHERE id='" . $_GET["id"] . "'";
+$sql = "DELETE FROM products WHERE productId='" . $_GET["id"] . "'";
 if (mysqli_query($conn, $sql))
 {
 	echo "Record deleted successfully.";
