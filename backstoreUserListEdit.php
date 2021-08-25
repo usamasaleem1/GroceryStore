@@ -103,11 +103,11 @@ header('location:home.php');
 
 			if (mysqli_query($conn, $sql)) 
 			{
-				echo "Product updated successfully";
+				echo "User updated successfully";
 			} 
 			else 
 			{
-				echo "Error updating product: " . mysqli_error($conn);
+				echo "Error updating user: " . mysqli_error($conn);
 			}
 		}
 		if (isset($_GET['userId'])) 
@@ -121,7 +121,7 @@ header('location:home.php');
 			{
 				echo "
 
-				<h1>Edit Product</h1>
+				<h1>Edit User</h1>
 
 				<form action='backstoreEdit.php?userId=" . $userId . "' method='post' enctype='multipart/form-data'>
 			
@@ -157,14 +157,14 @@ header('location:home.php');
 					<button type='submit' class='btn btn-primary' name='save'>Save</button>
 				</a>
 
-				<button type='submit' class='btn btn-primary' name='back'><a href='backstore.php' style='color:white;'>Back</a></button>
+				<button type='submit' class='btn btn-primary' name='back'><a href='backstoreUserList.php' style='color:white;'>Back</a></button>
 				
 				";
 			}
 		} 
 		else
 		{
-			echo "No product selected!";
+			echo "No User selected!";
 		}
 		
 	?>
