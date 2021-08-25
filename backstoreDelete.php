@@ -58,7 +58,7 @@ mysqli_close($conn);
 */
 
 ?>
-
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,3 +80,4 @@ mysqli_close($conn);
 
 </body>
 </html>
+-->
