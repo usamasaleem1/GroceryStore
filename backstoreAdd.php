@@ -93,15 +93,14 @@ header('location:home.php');
 
 		if (isset($_POST['name']))
 		{
-			$id = $_POST['productId'];
 			$name = $_POST['name'];
 			$aisle = $_POST['aisle'];
 			$description = $_POST['description'];
 			$price = $_POST['price'];
 			$stock = $_POST['count'];
 			$image = $_POST['image'];
-			$sql = "INSERT INTO products (productId, name, price, image, description, aisle, stock)
-			VALUES ($productId,'$name', $price, '$image', '$description', '$aisle', $stock)";
+			$sql = "INSERT INTO products (name, price, image, description, aisle, stock)
+			VALUES ('$name', $price, '$image', '$description', '$aisle', $stock)";
 
 			if (mysqli_query($conn, $sql)) 
 			{
