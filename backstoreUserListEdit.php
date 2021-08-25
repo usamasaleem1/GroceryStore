@@ -95,9 +95,9 @@ header('location:home.php');
 		{
 			$firstname = $_POST['firstname'];
 			$email = $_POST['email'];
-			$price = $_POST['password'];
-			$stock = $_POST['address'];
-			$image = $_POST['postal'];
+			$password = $_POST['password'];
+			$address = $_POST['address'];
+			$postal = $_POST['postal'];
 			$id = $_GET['userId'];
 			$sqluser = "UPDATE register SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
 
