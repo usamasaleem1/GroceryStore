@@ -99,7 +99,7 @@ header('location:home.php');
 			$stock = $_POST['address'];
 			$image = $_POST['postal'];
 			$id = $_GET['userId'];
-			$sql = "UPDATE products SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
+			$sql = "UPDATE register SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
 
 			if (mysqli_query($conn, $sql)) 
 			{
@@ -114,7 +114,7 @@ header('location:home.php');
 		{
 
 			$userId = $_GET['userId'];
-			$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$userId'");
+			$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$userId'");
 			$row = mysqli_fetch_array($query);
 
 			if(mysqli_num_rows($query) != 0)
