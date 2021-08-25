@@ -117,7 +117,7 @@ header('location:home.php');
 
 			<h1>Add Product</h1>
 
-			<form action='backstoreAdd.php' method='post'
+			<form action='backstoreAdd.php' method='post'>
 
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
