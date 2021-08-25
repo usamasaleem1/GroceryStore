@@ -98,7 +98,6 @@ if($_SESSION['permission'] != 'admin')
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
 	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore Order List</h5>
    <a class="btn btn-outline-primary" href="backstoreOrderEdit.php"> Add <img src="edit.png" width="30px" height="30px"> </a>
-   <button class="btn btn-outline-primary">Save <img src="edit.png" width="30px" height="30px"> </button>
    <a class="btn btn-outline-primary" href="backstoreOrderEdit.php">Edit Items <img src="edit.png" width="30px" height="30px"> </a>
   </div>
 
