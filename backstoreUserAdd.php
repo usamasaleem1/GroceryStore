@@ -5,12 +5,15 @@ include('dbcon.php');
 include('authenticate.php'); 
 include('session.php'); 
 
+
 if($_SESSION['permission'] != 'admin')
 {
 header('location:home.php');
 }
 
+
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +60,7 @@ header('location:home.php');
 		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Detergents">Detergents</a>
 		<a id="disabled" class="dropdown-item" href="aisles.php?aisle=Snacks">Snacks</a>
 		  <a id="disabled" class="dropdown-item" href="aisles.php?aisle=Alcohol">Alcohol</a>
-		</div>
+    </div>
 	  </li>
 	  <li class="nav-item active">
 		<a class="nav-link disabled" href="contact.php">Contact Us</a>
@@ -79,95 +82,98 @@ header('location:home.php');
 
 <!-- section name -->
 <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
-	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Edit User</h5>
+	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Add Product</h5>
   </div>
 
-
 <!-- main section -->
-
-
 <br>
 <main class="m-5">
 
 	<?php
 
-		if (isset($_POST['firstname']))
+		if (isset($_POST['name']))
 		{
-			$firstname = $_POST['firstname'];
-			$email = $_POST['email'];
-			$password = $_POST['password'];
-			$address = $_POST['address'];
-			$postal = $_POST['postal'];
-			$id = $_GET['userId'];
-			$sql = "UPDATE register SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
+			$name = $_POST['name'];
+			$aisle = $_POST['aisle'];
+			$description = $_POST['description'];
+			$price = $_POST['price'];
+			$stock = $_POST['count'];
+			$image = $_POST['image'];
+			$sql = "INSERT INTO products (name, price, image, description, aisle, stock)
+			VALUES ('$name', $price, '$image', '$description', '$aisle', $stock)";
 
 			if (mysqli_query($conn, $sql)) 
 			{
-				echo "User updated successfully";
+				echo "Product added successfully";
 			} 
 			else 
 			{
-				echo "Error updating user: " . mysqli_error($conn);
+				echo "Error adding product: " . mysqli_error($conn);
 			}
 		}
-		if (isset($_GET['userId'])) 
-		{
 
-			$userId = $_GET['userId'];
-			$query = mysqli_query($conn, "SELECT * FROM register WHERE id='$userId'");
-			$row = mysqli_fetch_array($query);
+			echo "
 
-			if(mysqli_num_rows($query) != 0)
-			{
-				echo "
+			<h1>Add Product</h1>
 
-				<h1>Edit User</h1>
-
-				<form action='backstoreUserEditList.php?userId=" . $userId . "' method='post' enctype='multipart/form-data'>
-			
-				<div class='form-group row'>
-					<label for='colFormLabel' class='col-sm-2 col-form-label'>First Name</label>
-					<div class='col-md-7'>
-						<input  class='form-control' id='colFormLabel' value='" . $row['firstname'] . "' name='firstname'>
-					</div>
+			<form action='backstoreAdd.php' method='post'>
+		
+			<div class='form-group row'>
+				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
+				<div class='col-md-7'>
+				  <input  class='form-control' id='colFormLabel' name='name'>
 				</div>
-			
-				<div class='form-row'>
-					<div class='form-group col-md-2'>
-						<label for='colFormLabel' class='col-form-label'>Email</label>
-						<input  class='form-control' id='colFormLabel' value='" . $row['email'] . "' name='email'>
-					</div>
-					<div class='form-group col-md-2'>
-						<label for='colFormLabel' class='col-form-label'>Password</label>
-						<input  class='form-control' id='colFormLabel' value='" . $row['password'] . "' name='password'>
-					</div>
-					<div class='form-group col-md-2'>
-						<label for='colFormLabel' class='col-form-label'>Address</label>
-						<input class='form-control' id='colFormLabel' value='" . $row['address'] . "' name='address'>
-					</div>
-					<div class='form-group col-md-2'>
-						<label for='colFormLabel' class='col-form-label'>Postal Code</label>
-						<input class='form-control' id='colFormLabel' value='" . $row['postal'] . "' name='postal'>
-					</div>
+			</div>
+		
+			<div class='form-row'>
+				<div class='form-group col-md-2'>
+					<label for='colFormLabel' class='col-form-label'>Aisle</label>
+					<select id='colFormLabel' name='aisle' class='form-control'>
+						<option value='Meat'>Meat</option>
+						<option value='Dairy'>Dairy</option>
+						<option value='Beverages'>Beverages</option>
+						<option value='Detergents'>Detergents</option>
+						<option value='Snacks'>Snacks</option>
+						<option value='Alcohol'>Alcohol</option>
+				 	</select>
+				</div> 
+				<div class='form-group col-md-2'>
+					<label for='colFormLabel' class='col-form-label'>Price</label>
+					<input  class='form-control' id='colFormLabel' name='price'>
 				</div>
-				
+				<div class='form-group col-md-2'>
+					<label for='colFormLabel' class='col-form-label'>Stock count</label>
+					<input class='form-control' id='colFormLabel' name='count'>
+				</div>
+				<div class='custom-file col-md-2'>
+					<label for='colFormLabel' class='col-form-label'>Image name**</label>
+					<input class='form-control' id='colFormLabel' name='image'>
+				</div>
+				<p>** New images must be uploaded to github with the same name.</p>
+			</div>
+	
+			<div class='form-group row'>
+				<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
+				<div class='col-md-7'>
+					<textarea  class='form-control' id='colFormLabel' name='description'></textarea>
+				</div>
+			</div>
+		
+			
+		
+			<a href='backstore.php'>
+				<button type='submit' class='btn btn-primary' name='save'>Save</button>
+			</a>
+			
+			<button type='submit' class='btn btn-primary' name='back'><a href='backstore.php' style='color:white;'>Back</a></button>
+			
+			";
 
-				
-				<a href='backstoreUserList.php'>
-					<button type='submit' class='btn btn-primary' name='save'>Save</button>
-				</a>
-
-				<button type='submit' class='btn btn-primary' name='back'><a href='backstoreUserList.php' style='color:white;'>Back</a></button>
-				
-				";
-			}
-		} 
-		else
-		{
-			echo "No User selected!";
-		}
 		
 	?>
 
 </body>
+
+
+
 </html>
