@@ -151,7 +151,13 @@ header('location:home.php');
 					</div>
 				</div>
 				
-			
+				<div class='form-group row'>
+					
+					<div class='col-md-7'>
+						<p>test</p>
+					</div>
+				</div>
+				
 				<a href='backstore.php'>
 					<button type='submit' class='btn btn-primary' name='save'>Save</button>
 				</a>
