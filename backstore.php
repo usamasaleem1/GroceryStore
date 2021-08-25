@@ -79,11 +79,9 @@ header('location:home.php');
 
 
 <!-- section name -->
-<div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white border-bottom box-shadow">
+<div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-4 bg-white">
 	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Backstore</h5>
 	 <a class="btn btn-outline-primary" href="backstoreAdd.php">Add <img src="edit.png" width="30px" height="30px"> </a>
-	 <!-- <a class="btn btn-outline-success" href="backstoreEdit.php">Edit <img src="edit.png" width="30px" height="30px"> </a>
-	 <a class="btn btn-outline-danger" href="backstoreEdit.php">Delete Items <img src="edit.png" width="30px" height="30px"> </a> -->
   </div>
 
 <!-- main section -->
