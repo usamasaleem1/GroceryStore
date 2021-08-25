@@ -154,10 +154,10 @@ header('location:home.php');
 
 				
 				<a href='backstoreUserList.php'>
-					<button type='submit' class='btn btn-primary' name='save'>Save</button>
+					<button type='submit' class='btn btn-primary' name='usersave'>Save</button>
 				</a>
 
-				<button type='submit' class='btn btn-primary' name='back'><a href='backstoreUserList.php' style='color:white;'>Back</a></button>
+				<button type='submit' class='btn btn-primary' name='userback'><a href='backstoreUserList.php' style='color:white;'>Back</a></button>
 				
 				";
 			}
