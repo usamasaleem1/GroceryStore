@@ -82,22 +82,24 @@ header('location:home.php');
 	<h5 class="my-0 mr-md-auto font-weight-normal" style="margin:auto;">Edit User</h5>
   </div>
 
+
 <!-- main section -->
+
+
 <br>
 <main class="m-5">
 
 	<?php
 
-		if (isset($_POST['name']))
+		if (isset($_POST['firstname']))
 		{
-			$name = $_POST['name'];
-			$aisle = $_POST['aisle'];
-			$description = $_POST['description'];
-			$price = $_POST['price'];
-			$stock = $_POST['count'];
-			$id = $_GET['productId'];
-			$image = $_POST['image'];
-			$sql = "UPDATE products SET name='$name', aisle='$aisle', description='$description', price=$price, stock=$stock, image='$image'  WHERE id=$id";
+			$firstname = $_POST['firstname'];
+			$email = $_POST['email'];
+			$price = $_POST['password'];
+			$stock = $_POST['address'];
+			$image = $_POST['postal'];
+			$id = $_GET['userId'];
+			$sql = "UPDATE products SET firstname='$firstname', email='$email', password='$password', address='$address', postal='$postal'  WHERE id=$id";
 
 			if (mysqli_query($conn, $sql)) 
 			{
@@ -108,11 +110,11 @@ header('location:home.php');
 				echo "Error updating product: " . mysqli_error($conn);
 			}
 		}
-		if (isset($_GET['productId'])) 
+		if (isset($_GET['userId'])) 
 		{
 
-			$productId = $_GET['productId'];
-			$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$productId'");
+			$userId = $_GET['userId'];
+			$query = mysqli_query($conn, "SELECT * FROM products WHERE id='$userId'");
 			$row = mysqli_fetch_array($query);
 
 			if(mysqli_num_rows($query) != 0)
@@ -121,49 +123,33 @@ header('location:home.php');
 
 				<h1>Edit Product</h1>
 
-				<form action='backstoreEdit.php?productId=" . $productId . "' method='post' enctype='multipart/form-data'>
+				<form action='backstoreEdit.php?userId=" . $userId . "' method='post' enctype='multipart/form-data'>
 			
 				<div class='form-group row'>
-					<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
+					<label for='colFormLabel' class='col-sm-2 col-form-label'>First Name</label>
 					<div class='col-md-7'>
-					<input  class='form-control' id='colFormLabel' value='" . $row['name'] . "' name='name'>
+					<input  class='form-control' id='colFormLabel' value='" . $row['firstname'] . "' name='firstname'>
 					</div>
 				</div>
 			
 				<div class='form-row'>
 					<div class='form-group col-md-2'>
-						<label for='colFormLabel' class='col-form-label'>Aisle</label>
-						<select id='colFormLabel' name='aisle' class='form-control'>
-							<option value='Meat' " . (($row['aisle'] == "Meat") ? "selected='selected'":'') . ">Meat</option>
-							<option value='Dairy' " . (($row['aisle'] == "Dairy") ? "selected='selected'":'') . ">Dairy</option>
-							<option value='Beverages' " . (($row['aisle'] == "Beverages") ? "selected='selected'":'') . ">Beverages</option>
-							<option value='Detergents' " . (($row['aisle'] == "Detergents") ? "selected='selected'":'') . ">Detergents</option>
-							<option value='Snacks' " . (($row['aisle'] == "Snacks") ? "selected='selected'":'') . ">Snacks</option>
-							<option value='Alcohol' " . (($row['aisle'] == "Alcohol") ? "selected='selected'":'') . ">Alcohol</option>
-						</select>
-					</div> 
+						<label for='colFormLabel' class='col-form-label'>Email</label>
+						<input  class='form-control' id='colFormLabel' value='" . $row['email'] . "' name='email'
+					</div>
 					<div class='form-group col-md-2'>
 						<label for='colFormLabel' class='col-form-label'>Price</label>
-						<input  class='form-control' id='colFormLabel' value='" . $row['price'] . "' name='price'>
+						<input  class='form-control' id='colFormLabel' value='" . $row['password'] . "' name='password'>
 					</div>
 					<div class='form-group col-md-2'>
 						<label for='colFormLabel' class='col-form-label'>Stock count</label>
-						<input class='form-control' id='colFormLabel' value='" . $row['stock'] . "' name='count'>
+						<input class='form-control' id='colFormLabel' value='" . $row['address'] . "' name='address'>
 					</div>
 					<div class='custom-file col-md-2'>
 						<label for='colFormLabel' class='col-form-label'>Image name**</label>
-						<input class='form-control' id='colFormLabel' value='" . $row['image'] . "' name='image'>
-					</div>
-					<p>** New images must be uploaded to github with the same name.</p>
-				</div>
-		
-				<div class='form-group row'>
-					<label for='colFormLabel' class='col-sm-2 col-form-label'>Description</label>
-					<div class='col-md-7'>
-						<textarea  class='form-control' id='colFormLabel' value='" . $row['description'] . "' name='description'>" . $row['description'] . "</textarea>
+						<input class='form-control' id='colFormLabel' value='" . $row['postal'] . "' name='postal'>
 					</div>
 				</div>
-			
 				
 			
 				<a href='backstore.php'>
