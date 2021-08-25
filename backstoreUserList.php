@@ -85,6 +85,22 @@ header('location:home.php');
 
 <!-- Order information table -->
 
+<br>
+<main>
+
+	<table class="table table-hover text-center">
+		<thead>
+			<tr>
+				<th scope="col"></th>
+				<th scope="col">First Name</th>
+				<th scope="col">Email</th>
+				<th scope="col">Password</th>
+				<th scope="col">Address</th>
+				<th scope="col">Postal Code</th>
+				<th scope="col">Edit/Delete</th>
+			</tr>
+		</thead>
+		<tbody>
 
 			<?php 
 				$query = mysqli_query($conn, "SELECT * FROM register");
@@ -107,6 +123,8 @@ header('location:home.php');
 
 				}
 			?>
-
+		</tbody>
+	</table>
   </body>
+
 </html>
