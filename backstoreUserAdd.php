@@ -94,10 +94,10 @@ header('location:home.php');
 		if (isset($_POST['firstname']))
 		{
 			$firstname = $_POST['firstname'];
-			$firstname = $_POST['email'];
-			$firstname = $_POST['password'];
-			$firstname = $_POST['address'];
-			$firstname = $_POST['postal'];
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+			$address = $_POST['address'];
+			$postal = $_POST['postal'];
 			
 			$sql = "INSERT INTO products (firstname, email, password, address, postal)
 			VALUES ('$firstname', '$email', '$password', '$address', '$postal')";
