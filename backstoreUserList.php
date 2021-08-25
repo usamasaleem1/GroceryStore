@@ -87,20 +87,20 @@ header('location:home.php');
 
 
 			<?php 
-				$query = mysqli_query($conn, "SELECT * FROM products");
+				$query = mysqli_query($conn, "SELECT * FROM register");
 
 				while($row = mysqli_fetch_array($query))
 				{
 					echo "
 					<tr>
-						<td class='align-middle text-center'><img class='img-fluid' src='" . $row['image'] . "' alt='Album screenshot' width='100'></td>
-						<td class='align-middle text-center'>" . $row['name'] . "</td>
-						<td class='align-middle text-center'>" . $row['aisle'] . "</td>
-						<td class='align-middle text-center'>" . $row['stock'] . " in stock</td>
-						<td class='align-middle text-center'>$" . $row['price'] . "</td>
+						<td class='align-middle text-center'>" . $row['firstname'] . "</td>
+						<td class='align-middle text-center'>" . $row['email'] . "</td>
+						<td class='align-middle text-center'>" . $row['password'] . "</td>
+						<td class='align-middle text-center'>" . $row['address'] . "</td>
+						<td class='align-middle text-center'>" . $row['postal'] . "</td>
 						<td class='align-middle text-center'>
-							<a class='btn btn-outline-success' href='backstoreEdit.php?productId=" . $row['id'] . "'>Edit <img src='edit.png' width='30px' height='30px'> </a>
-							<a class='btn btn-outline-danger' href='backstoreDelete.php?productId=" . $row['id'] . "'>Delete <img src='edit.png' width='30px' height='30px'> </a>
+							<a class='btn btn-outline-success' href='backstoreUserListEdit.php?userId=" . $row['id'] . "'>Edit <img src='edit.png' width='30px' height='30px'> </a>
+							<a class='btn btn-outline-danger' href='backstoreUserDelete.php?userId=" . $row['id'] . "'>Delete <img src='edit.png' width='30px' height='30px'> </a>
 						</td>
 					</tr>
 					";
