@@ -145,7 +145,7 @@ header('location:home.php');
 						<label for='colFormLabel' class='col-form-label'>Address</label>
 						<input class='form-control' id='colFormLabel' value='" . $row['address'] . "' name='address'>
 					</div>
-					<div class='custom-file col-md-2'>
+					<div class='form-group col-md-2'>
 						<label for='colFormLabel' class='col-form-label'>Postal Code</label>
 						<input class='form-control' id='colFormLabel' value='" . $row['postal'] . "' name='postal'>
 					</div>
