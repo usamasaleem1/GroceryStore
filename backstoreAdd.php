@@ -93,14 +93,15 @@ header('location:home.php');
 
 		if (isset($_POST['name']))
 		{
+			$id = $_POST['id'];
 			$name = $_POST['name'];
 			$aisle = $_POST['aisle'];
 			$description = $_POST['description'];
 			$price = $_POST['price'];
 			$stock = $_POST['count'];
 			$image = $_POST['image'];
-			$sql = "INSERT INTO products (name, price, image, description, aisle, stock)
-			VALUES ('$name', $price, '$image', '$description', '$aisle', $stock)";
+			$sql = "INSERT INTO products (id, name, price, image, description, aisle, stock)
+			VALUES ($id, '$name', $price, '$image', '$description', '$aisle', $stock)";
 
 			if (mysqli_query($conn, $sql)) 
 			{
@@ -116,8 +117,8 @@ header('location:home.php');
 
 			<h1>Add Product</h1>
 
-			<form action='backstoreAdd.php' method='post'>
-		
+			<form action='backstoreAdd.php' method='post'
+
 			<div class='form-group row'>
 				<label for='colFormLabel' class='col-sm-2 col-form-label'>Product Name</label>
 				<div class='col-md-7'>
