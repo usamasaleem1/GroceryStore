@@ -165,13 +165,8 @@ header('location:home.php');
 				<button type='submit' class='btn btn-primary' name='save'>Save</button>
 			</a>
 
-			<a href='backstore.php'>Go Back To Backstore
-				<button class='btn btn-secondary' name='back'>Back</button>
-			</a>
+			<a href='backstore.php' style='margin-left:10px;'>Go Back To Backstore</a>
 
-			<a href='backstore.php'>
-				<button id='backbutton' name='test'>Back</button>
-			</a>
 			
 			";
 
