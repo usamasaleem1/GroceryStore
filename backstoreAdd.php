@@ -166,7 +166,6 @@ header('location:home.php');
 			</a>
 
 			<a href='backstore.php' style='margin-left:10px;'>Go Back To Backstore</a>
-
 			
 			";
 
