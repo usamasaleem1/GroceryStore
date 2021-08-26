@@ -86,10 +86,7 @@ header('location:home.php');
         <th scope="col">Products Name</th>
         <th scope="col">Product Price</th>
         <th scope="col">Products Quantity</th>
-        <th scope="col">Full Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Address</th>
-        <th scope="col">Postal</th>
+        <th scope="col">Register ID</th>
       </tr>
     </thead>
     <tbody>
@@ -97,10 +94,21 @@ header('location:home.php');
         <td><input type="text" id="product_name" name="product_name" value=""></td>
         <td><input type="text" id="product_price" name="product_price" value=""></td>
         <td><input type="number" id="product_quantity" name="product_quantity" min="0" value=""></td>
-        <td><input type="text" id="firstname" name="firstname" value=""></td>
-        <td><input type="text" id="email" name="email" value=""></td>
-        <td><input type="text" id="address" name="address" value=""></td>
-        <td><input type="text" id="postal" name="postal" value=""></td>
+        <td>
+					<?php
+						$query = "SELECT * FROM register";
+						$results = $conn->query($query);
+						// echo '<pre>' , var_dump($results) , '</pre>';
+						 echo "<select id='register_id' name='register_id'>";
+						while($row = $results->fetch_assoc()) {
+						   $register_id = $row['id'];
+							 echo "<option value='$register_id'>";
+							 echo $row['id'] . " - " . $row['firstname'];
+							 echo "</option>";
+						}
+						echo "</select>";
+					?>
+				</td>
       </tr>
     </tbody>
     <input type="submit" name="add" value="Add">

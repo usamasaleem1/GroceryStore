@@ -17,15 +17,34 @@ if ($conn)
       $query = "DELETE FROM orders_products WHERE order_id = '$order_id' AND product_name='$product_name'";
       $conn->query($query);
   }
-
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $order_id = $_GET['order_id'];
-    $product_name = $_POST['product_name'];	
-    $product_price = $_POST['product_price'];
-    $product_quantity = $_POST['product_quantity'];
-    $query = "UPDATE orders_products SET product_name = '$product_name', product_price = '$product_price', 
+	
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if($_GET['action'] == 'edit') {
+      $order_id = $_GET['order_id'];
+      $product_name = $_POST['product_name'];	
+      $product_price = $_POST['product_price'];
+      $product_quantity = $_POST['product_quantity'];
+      $query = "UPDATE orders_products SET product_name = '$product_name', product_price = '$product_price', 
               product_quantity = '$product_quantity' WHERE order_id = '$order_id'";
-    $conn->query($query);
+      $conn->query($query);
+    }
+    
+    if($_GET['action'] == 'add') {
+      $register_id = $_POST['register_id'];
+      
+      //insert order 
+      $query = "INSERT INTO orders (register_id) VALUES ('$register_id')";
+      $conn->query($query);
+      $last_id = $conn->insert_id;
+
+      $product_name = $_POST['product_name'];	
+      $product_price = $_POST['product_price'];
+      $product_quantity = $_POST['product_quantity'];
+
+      $query = "INSERT INTO orders_products (order_id, product_name, product_price, product_quantity) 
+      VALUES ('$last_id', '$product_name','$product_price','$product_quantity')";
+      $conn->query($query);
+    }
   }
 }
 
