@@ -119,7 +119,7 @@ header('location:home.php');
 			<form action='backstoreUserAdd.php' method='post'>
 		
 			<div class='form-group row'>
-				<label for='colFormLabel' class='col-sm-2 col-form-label'>User Name</label>
+				<label for='colFormLabel' class='col-sm-2 col-form-label'>Full Name</label>
 				<div class='col-md-7'>
 				  <input  class='form-control' id='colFormLabel' name='firstname'>
 				</div>

@@ -126,7 +126,7 @@ header('location:home.php');
 				<form action='backstoreUserListEdit.php?userId=" . $userId . "' method='post' enctype='multipart/form-data'>
 			
 				<div class='form-group row'>
-					<label for='colFormLabel' class='col-sm-2 col-form-label'>First Name</label>
+					<label for='colFormLabel' class='col-sm-2 col-form-label'>Full Name</label>
 					<div class='col-md-7'>
 						<input  class='form-control' id='colFormLabel' value='" . $row['firstname'] . "' name='firstname'>
 					</div>
