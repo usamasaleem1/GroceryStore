@@ -196,7 +196,7 @@ if (isset($_GET['action'])) {
                   <tr>
                     <td> <?php echo $value["item_name"]; ?> </td>
                     
-                    <td> <input class="iquantity" min="0" onchange="updateLocalSave(this)" productId="<?php echo $value["product_id"]; ?>" value="<?php echo $value["item_quantity"]; ?>" name="quantity" type="number" id="qty1" onchange='subTotal();'></td>
+                    <td> <input class="iquantity" min="0" value="<?php echo $value["item_quantity"]; ?>" name="quantity" type="number" id="qty1" onchange='subTotal();'></td>
 
 
                     <td>$ <?php echo $value["product_price"]; ?><input type="hidden" class="iprice" value="<?php echo $value["product_price"]; ?>" > </td>
@@ -383,33 +383,6 @@ if (isset($_GET['action'])) {
     qst.innerText = "$0.00";
   }
 
-  //local storage
-  inputElement = document.getElementById("qty1");
-  loadedStorage = false;
-
-  function updateLocalSave(element)
-  {
-    localName = "product" + element.getAttribute("productId");
-    if (localStorage.getItem(String(localName))) 
-    {
-        if(!loadedStorage)
-        {
-            inputElement.value = Number(localStorage.getItem(String(localName)));
-            loadedStorage = true;
-        }
-        else
-        {
-            localStorage.setItem(String(localName), String(inputElement.value));
-        }
-    } 
-    else 
-    {
-        localStorage.setItem(String(localName), String(inputElement.value));
-        loadedStorage = true;
-    }
-  }
-
-  updateLocalSave();
   subTotal();
 
 </script>
