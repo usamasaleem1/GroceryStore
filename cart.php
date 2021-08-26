@@ -400,7 +400,6 @@ if (isset($_GET['action'])) {
         else
         {
             localStorage.setItem(String(localName), String(inputElement.value));
-            addToCart.innerText = "$" + (Number(localStorage.getItem(String(localName))) * Number(price.innerHTML.replace("$", ""))).toFixed(2) + " Add To Cart";
         }
     } 
     else 
