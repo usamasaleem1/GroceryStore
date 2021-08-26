@@ -166,7 +166,11 @@ header('location:home.php');
 			</a>
 
 			<a href='backstore.php'>Go Back To Backstore
-				<button class='btn btn-primary' name='back'>Back</button>
+				<button class='btn btn-secondary' name='back'>Back</button>
+			</a>
+
+			<a href='backstore.php'>
+				<button id='backbutton' name='test'>Back</button>
 			</a>
 			
 			";
