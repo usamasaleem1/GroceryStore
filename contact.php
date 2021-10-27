@@ -94,7 +94,7 @@ session_start();
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
                     <div class="speakers xs-mb30">
                         <div class="spk-img">
-                            <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="trainer-img" />
+                            <img class="img-fluid" src="avatar1.png" alt="trainer-img" />
                             <!-- <ul>
                                 <li>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
